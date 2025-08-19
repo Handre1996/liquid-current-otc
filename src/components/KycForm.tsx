@@ -288,7 +288,6 @@ export default function KycForm() {
                     handleFileChange={handleFileChange}
                   />
 
-                  <div className="bg-brand-50 rounded-lg p-4 border border-brand-100">
                   <div className="bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 rounded-lg p-4 border border-foam/50 dark:border-teal/30">
                     <p className="text-sm font-body text-navy dark:text-foam">
                       By submitting this form, you confirm that all information provided is accurate and that you consent to Liquid Current OTC Desk processing your personal data in accordance with our privacy policy and applicable regulations.

@@ -35,11 +35,9 @@ export default function KycProcess() {
     <section className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">
           <h2 className="text-3xl font-heading font-extrabold text-navy dark:text-foam sm:text-4xl">
             KYC Process
           </h2>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-400 mx-auto">
           <p className="mt-4 max-w-2xl text-xl font-body text-teal dark:text-foam/80 mx-auto">
             Complete our Know Your Customer process once to trade with confidence through Liquid Current OTC Desk.
           </p>

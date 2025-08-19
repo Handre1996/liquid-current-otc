@@ -109,11 +109,9 @@ export default function Register() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-md space-y-6">
             <div className="text-center">
-              <h1 className="text-3xl font-bold text-brand-800">
               <h1 className="text-3xl font-heading font-bold text-navy dark:text-foam">
                 Create an Account
               </h1>
-              <p className="mt-2 text-gray-600">
               <p className="mt-2 font-body text-teal dark:text-foam/80">
                 Register to start your KYC process
               </p>
@@ -122,9 +120,7 @@ export default function Register() {
               <CardHeader>
                 <CardTitle className="font-heading text-navy dark:text-foam">Register</CardTitle>
                 <CardDescription>
-                <CardDescription className="font-body text-teal dark:text-foam/70">
                   Create an account to start your verification process
-                </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleRegister} className="space-y-4">
@@ -217,7 +213,6 @@ export default function Register() {
                     {isLoading ? "Creating account..." : "Create Account"}
                   </Button>
                   <div className="text-center text-sm">
-                    <p className="text-gray-600">
                     <p className="font-body text-teal dark:text-foam/70">
                       Already have an account?{" "}
                       <Link to="/login" className="text-navy hover:text-teal dark:text-foam dark:hover:text-foam/80 font-medium">
@@ -234,6 +229,4 @@ export default function Register() {
       <Footer />
     </div>
   );
-}
-  )
 }
