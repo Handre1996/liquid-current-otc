@@ -86,7 +86,9 @@ export default function ResetPassword() {
               <CardHeader>
                 <CardTitle className="font-heading text-navy dark:text-foam">New Password</CardTitle>
                 <CardDescription>
+                <CardDescription className="font-body text-teal dark:text-foam/70">
                   Please enter and confirm your new password
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleResetPassword} className="space-y-4">
@@ -145,4 +147,8 @@ export default function ResetPassword() {
       <Footer />
     </div>
   );
+}
+  )
+}
+  )
 }
