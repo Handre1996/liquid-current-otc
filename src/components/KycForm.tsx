@@ -69,16 +69,16 @@ export default function KycForm() {
     }
   }, [user]);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSelectChange = (name, value) => {
+  const handleSelectChange = (name: string, value: string) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleRadioChange = (value) => {
+  const handleRadioChange = (value: string) => {
     setFormData((prev) => ({ 
       ...prev, 
       idType: value,
