@@ -89,7 +89,7 @@ export default {
 					approved: '#4caf50',
 					pending: '#ff9800',
 					rejected: '#f44336',
-				}
+				},
 				// New Liquid Current Brand Colors
 				navy: '#1C3F60',
 				foam: '#CDEAF9',
