@@ -252,7 +252,6 @@ export default function KycForm() {
             <CardHeader>
               <CardTitle className="font-heading text-navy dark:text-foam">Personal Information</CardTitle>
               <CardDescription>
-              <CardDescription className="font-body text-teal dark:text-foam/70">
                 Please provide your details as they appear on your official documents.
               </CardDescription>
             </CardHeader>
@@ -312,7 +311,5 @@ export default function KycForm() {
         </div>
       </div>
     </div>
-  );
-}
   )
 }
