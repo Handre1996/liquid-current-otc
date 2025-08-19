@@ -151,7 +151,7 @@ const Header = () => {
             {user ? (
               <>
                 {kycStatus === 'approved' ? (
-                  <Button variant="ghost\" onClick={handleDashboardClick} className="text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300">
+                  <Button variant="ghost" onClick={handleDashboardClick} className="text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300">
                     Trading Dashboard
                   </Button>
                 ) : !hasSubmittedKyc ? (
@@ -180,7 +180,6 @@ const Header = () => {
                   </Link>
                 </Button>
                 <Button asChild>
-                  <Link to="/register" className="bg-brand-600 hover:bg-brand-700 text-white dark:bg-brand-500 dark:hover:bg-brand-600">
                   <Link to="/register" className="bg-navy hover:bg-navy/90 text-blanc dark:bg-foam dark:hover:bg-foam/90 dark:text-navy">
                     Register
                   </Link>
