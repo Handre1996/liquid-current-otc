@@ -90,6 +90,15 @@ export default {
 					pending: '#ff9800',
 					rejected: '#f44336',
 				}
+				// New Liquid Current Brand Colors
+				navy: '#1C3F60',
+				foam: '#CDEAF9',
+				ivory: '#F4EFEB',
+				teal: '#7495A8',
+				blanc: '#FFFFFF',
+				redAccent: '#E3362E',
+				yellowAccent: '#F7B54A',
+				greenAccent: '#4FCF4D',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
