@@ -84,7 +84,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 onClick={handleCTAClick}
-                className="bg-gradient-to-r from-greenAccent to-yellowAccent hover:from-greenAccent/90 hover:to-yellowAccent/90 text-navy font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0"
               >
                 {!user ? '🚀 Get Started' : 
                  !hasSubmittedKyc ? '📋 Start KYC Process' : 
@@ -94,7 +94,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-foam/50 bg-blanc/10 backdrop-blur-sm text-foam hover:bg-blanc/20 hover:text-blanc hover:border-foam font-semibold transition-all duration-300 transform hover:scale-105" 
+                className="border-2 border-blue-400/50 bg-white/10 backdrop-blur-sm text-blue-100 hover:bg-white/20 hover:text-white hover:border-blue-300 font-semibold transition-all duration-300 transform hover:scale-105" 
                 asChild
               >
                 <Link to="/about">
