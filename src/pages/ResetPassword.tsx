@@ -85,7 +85,6 @@ export default function ResetPassword() {
             <Card>
               <CardHeader>
                 <CardTitle className="font-heading text-navy dark:text-foam">New Password</CardTitle>
-                <CardDescription>
                 <CardDescription className="font-body text-teal dark:text-foam/70">
                   Please enter and confirm your new password
                 </CardDescription>

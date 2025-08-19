@@ -121,6 +121,7 @@ export default function Register() {
                 <CardTitle className="font-heading text-navy dark:text-foam">Register</CardTitle>
                 <CardDescription>
                   Create an account to start your verification process
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleRegister} className="space-y-4">
