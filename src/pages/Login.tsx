@@ -109,11 +109,9 @@ export default function Login() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-md space-y-6">
             <div className="text-center">
-              <h1 className="text-3xl font-bold text-brand-800">
               <h1 className="text-3xl font-heading font-bold text-navy dark:text-foam">
                 Welcome Back
               </h1>
-              <p className="mt-2 text-gray-600">
               <p className="mt-2 font-body text-teal dark:text-foam/80">
                 Sign in to access your account
               </p>
@@ -121,7 +119,6 @@ export default function Login() {
             <Card>
               <CardHeader>
                 <CardTitle className="font-heading text-navy dark:text-foam">Sign In</CardTitle>
-                <CardDescription>
                 <CardDescription className="font-body text-teal dark:text-foam/70">
                   Enter your credentials to sign in to your account
                 </CardDescription>
@@ -129,7 +126,6 @@ export default function Login() {
               <CardContent>
                 <form onSubmit={handleLogin} className="space-y-4">
                   {errorMessage && (
-                    <div className="p-3 text-sm text-red-500 bg-red-50 rounded-md">
                     <div className="p-3 text-sm text-redAccent bg-redAccent/10 border border-redAccent/20 rounded-md">
                       {errorMessage}
                     </div>
@@ -185,7 +181,6 @@ export default function Login() {
                     {isLoading ? "Signing in..." : "Sign In"}
                   </Button>
                   <div className="text-center text-sm">
-                    <p className="text-gray-600">
                     <p className="font-body text-teal dark:text-foam/70">
                       Don't have an account?{" "}
                       <Link to="/register" className="text-navy hover:text-teal dark:text-foam dark:hover:text-foam/80 font-medium">
