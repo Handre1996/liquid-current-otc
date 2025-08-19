@@ -310,7 +310,5 @@ export default function KycForm() {
         </div>
       </div>
     </div>
-  )
-}
-  )
+  );
 }
