@@ -78,7 +78,7 @@ const Header = () => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center">
-                <span className="text-xl font-bold text-brand-600 dark:text-brand-400">Liquid Current</span>
+                <span className="text-xl font-logo text-navy dark:text-foam">Liquid Current</span>
                 <span className="ml-2 bg-brand-600 dark:bg-brand-500 text-white text-xs px-2 py-0.5 rounded-full">OTC</span>
               </Link>
             </div>
@@ -88,7 +88,7 @@ const Header = () => {
                 className={cn(
                   "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors",
                   isActive('/') 
-                    ? "border-brand-500 text-foreground" 
+                    ? "border-navy text-navy dark:border-foam dark:text-foam" 
                     : "border-transparent text-muted-foreground hover:border-border hover:text-foreground"
                 )}
               >
@@ -99,7 +99,7 @@ const Header = () => {
                 className={cn(
                   "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors",
                   isActive('/about') 
-                    ? "border-brand-500 text-foreground" 
+                    ? "border-navy text-navy dark:border-foam dark:text-foam" 
                     : "border-transparent text-muted-foreground hover:border-border hover:text-foreground"
                 )}
               >
@@ -181,6 +181,7 @@ const Header = () => {
                 </Button>
                 <Button asChild>
                   <Link to="/register" className="bg-brand-600 hover:bg-brand-700 text-white dark:bg-brand-500 dark:hover:bg-brand-600">
+                  <Link to="/register" className="bg-navy hover:bg-navy/90 text-blanc dark:bg-foam dark:hover:bg-foam/90 dark:text-navy">
                     Register
                   </Link>
                 </Button>

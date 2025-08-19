@@ -41,12 +41,13 @@ export default function Hero() {
   
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 dark:from-slate-950 dark:via-blue-950 dark:to-indigo-950 text-white">
+    <div className="relative overflow-hidden bg-gradient-to-br from-navy via-teal to-navy dark:from-navy dark:via-teal dark:to-navy text-blanc">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-conic from-blue-500/5 via-purple-500/5 to-cyan-500/5 rounded-full blur-3xl animate-spin" style={{ animationDuration: '20s' }}></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-foam/20 via-teal/20 to-foam/20 animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-foam/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-conic from-foam/5 via-teal/5 to-foam/5 rounded-full blur-3xl animate-spin" style={{ animationDuration: '20s' }}></div>
       </div>
       
       {/* Grid pattern overlay */}
@@ -65,15 +66,15 @@ export default function Hero() {
               </div>
               
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                <span className="block bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-blanc via-foam to-foam bg-clip-text text-transparent font-heading">
                   Liquid Current
                 </span>
-                <span className="block bg-gradient-to-r from-blue-200 via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-foam via-teal to-foam bg-clip-text text-transparent font-heading">
                   OTC Desk
                 </span>
               </h1>
               
-              <p className="mt-6 text-xl text-blue-100 dark:text-blue-200 max-w-3xl leading-relaxed">
+              <p className="mt-6 text-xl text-foam dark:text-foam max-w-3xl leading-relaxed font-body">
                 Trade cryptocurrency for fiat or fiat for crypto through our FSCA regulated OTC desk. 
                 Complete your KYC once and trade with confidence in a secure, professional environment.
               </p>
@@ -83,7 +84,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 onClick={handleCTAClick}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0"
+                className="bg-gradient-to-r from-greenAccent to-yellowAccent hover:from-greenAccent/90 hover:to-yellowAccent/90 text-navy font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0"
               >
                 {!user ? '🚀 Get Started' : 
                  !hasSubmittedKyc ? '📋 Start KYC Process' : 
@@ -93,7 +94,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-blue-400/50 bg-white/10 backdrop-blur-sm text-blue-100 hover:bg-white/20 hover:text-white hover:border-blue-300 font-semibold transition-all duration-300 transform hover:scale-105" 
+                className="border-2 border-foam/50 bg-blanc/10 backdrop-blur-sm text-foam hover:bg-blanc/20 hover:text-blanc hover:border-foam font-semibold transition-all duration-300 transform hover:scale-105" 
                 asChild
               >
                 <Link to="/about">

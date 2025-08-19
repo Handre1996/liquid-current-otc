@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-800 dark:bg-brand-950 text-white">
+    <footer className="bg-navy dark:bg-navy text-foam">
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-xl font-bold">Liquid Current OTC Desk</h3>
-            <p className="mt-2 text-brand-100 dark:text-brand-200">
+            <h3 className="text-xl font-logo text-foam">Liquid Current OTC Desk</h3>
+            <p className="mt-2 text-foam/80 dark:text-foam/80">
               FSP Number 53702 - Regulated by the Financial Sector Conduct Authority (FSCA)
             </p>
-            <p className="mt-4 text-sm text-brand-200 dark:text-brand-300">
+            <p className="mt-4 text-sm text-foam/70 dark:text-foam/70 font-body">
               We facilitate crypto-to-fiat and fiat-to-crypto transactions for our clients, ensuring regulatory compliance and security through our KYC process.
             </p>
           </div>
