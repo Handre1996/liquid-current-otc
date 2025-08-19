@@ -65,12 +65,16 @@ export default function Hero() {
               </div>
               
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                <span className="block bg-gradient-to-r from-blanc via-foam to-foam bg-clip-text text-transparent font-heading">
-                  Liquid Current
-                </span>
-                <span className="block bg-gradient-to-r from-foam via-teal to-foam bg-clip-text text-transparent font-heading">
-                  OTC Desk
-                </span>
+                <div className="flex flex-col items-center lg:items-start">
+                  <img 
+                    src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png" 
+                    alt="Liquid Current OTC Desk" 
+                    className="h-20 w-auto mb-4 filter brightness-0 invert"
+                  />
+                  <span className="block bg-gradient-to-r from-foam via-teal to-foam bg-clip-text text-transparent font-heading text-2xl sm:text-3xl lg:text-4xl">
+                    OTC Desk
+                  </span>
+                </div>
               </h1>
               
               <p className="mt-6 text-xl text-foam dark:text-foam max-w-3xl leading-relaxed font-body">

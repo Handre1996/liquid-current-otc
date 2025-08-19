@@ -78,7 +78,11 @@ const Header = () => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center">
-                <span className="text-xl font-logo text-navy dark:text-foam">Liquid Current</span>
+                <img 
+                  src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png" 
+                  alt="Liquid Current" 
+                  className="h-8 w-auto"
+                />
                 <span className="ml-2 bg-brand-600 dark:bg-brand-500 text-white text-xs px-2 py-0.5 rounded-full">OTC</span>
               </Link>
             </div>
