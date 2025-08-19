@@ -29,7 +29,7 @@ export default function Register() {
     const minLength = 6;
     const hasLetter = /[a-zA-Z]/.test(password);
     const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-    
+
     if (password.length < minLength) {
       return "Password must be at least 6 characters long";
     }
@@ -44,7 +44,7 @@ export default function Register() {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!firstName.trim() || !surname.trim()) {
       toast.error("Please enter both first name and surname");
       return;
@@ -55,7 +55,7 @@ export default function Register() {
       toast.error(passwordError);
       return;
     }
-    
+
     if (password !== confirmPassword) {
       toast.error("Passwords don't match", {
         description: "Please make sure your passwords match",
@@ -67,17 +67,17 @@ export default function Register() {
       toast.error("Please complete the CAPTCHA");
       return;
     }
-    
+
     setIsLoading(true);
 
     try {
       const { error } = await signUp(email, password, {
         data: {
           first_name: firstName,
-          surname: surname
-        }
+          surname: surname,
+        },
       });
-      
+
       if (!error) {
         navigate('/login');
       }
@@ -214,10 +214,12 @@ export default function Register() {
                     {isLoading ? "Creating account..." : "Create Account"}
                   </Button>
                   <div className="text-center text-sm">
-                    <p className="text-gray-600">
                     <p className="font-body text-teal dark:text-foam/70">
                       Already have an account?{" "}
-                      <Link to="/login" className="text-navy hover:text-teal dark:text-foam dark:hover:text-foam/80 font-medium">
+                      <Link
+                        to="/login"
+                        className="text-navy hover:text-teal dark:text-foam dark:hover:text-foam/80 font-medium"
+                      >
                         Sign In
                       </Link>
                     </p>
