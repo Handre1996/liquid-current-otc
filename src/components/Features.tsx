@@ -5,21 +5,21 @@ export default function Features() {
     {
       title: "Fiat to Crypto",
       description: "Send us fiat currency through bank transfer and receive cryptocurrency in your wallet.",
-      icon: <svg className="h-6 w-6 text-brand-600 dark:text-brand-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      icon: <svg className="h-6 w-6 text-navy dark:text-foam" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     },
     {
       title: "Crypto to Fiat",
       description: "Send us cryptocurrency and receive fiat currency in your bank account.",
-      icon: <svg className="h-6 w-6 text-brand-600 dark:text-brand-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      icon: <svg className="h-6 w-6 text-navy dark:text-foam" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 8h6m-5 0a3 3 0 110 6H9l3 3m-3-6h6m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     },
     {
       title: "FSCA Regulated",
       description: "We operate under FSP Number 53702, ensuring compliance with South African financial regulations.",
-      icon: <svg className="h-6 w-6 text-brand-600 dark:text-brand-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      icon: <svg className="h-6 w-6 text-navy dark:text-foam" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     },
@@ -49,27 +49,27 @@ export default function Features() {
         <div className="mt-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {features.map((feature, index) => (
-              <div key={index} className="bg-card rounded-lg shadow-brand p-6 border border-border hover:shadow-lg transition-all duration-200">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-brand-400 border border-brand-200 dark:border-brand-800">
+              <div key={index} className="bg-blanc dark:bg-navy rounded-lg shadow-lg p-6 border border-foam/30 dark:border-teal hover:shadow-xl transition-all duration-200 hover:scale-105">
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-foam/20 dark:bg-foam/10 text-navy dark:text-foam border border-foam/50 dark:border-teal">
                   {feature.icon}
                 </div>
-                <h3 className="mt-4 text-lg font-medium text-foreground">{feature.title}</h3>
-                <p className="mt-2 text-base text-muted-foreground">{feature.description}</p>
+                <h3 className="mt-4 text-lg font-heading font-semibold text-navy dark:text-foam">{feature.title}</h3>
+                <p className="mt-2 text-base font-body text-teal dark:text-foam/80">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-16 bg-brand-50 dark:bg-brand-950/50 rounded-lg shadow-sm border border-brand-100 dark:border-brand-800">
+        <div className="mt-16 bg-gradient-to-br from-foam/30 to-ivory dark:from-navy/50 dark:to-teal/20 rounded-lg shadow-lg border border-foam/50 dark:border-teal/30">
           <div className="px-6 py-8 md:p-10">
-            <h3 className="text-2xl font-bold text-brand-700 dark:text-brand-300 text-center">Why Choose Us</h3>
+            <h3 className="text-2xl font-heading font-bold text-navy dark:text-foam text-center">Why Choose Us</h3>
             <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
                   <div className="flex-shrink-0">
-                    <Check className="h-5 w-5 text-brand-500 dark:text-brand-400" />
+                    <Check className="h-5 w-5 text-greenAccent" />
                   </div>
-                  <p className="ml-3 text-base text-brand-700 dark:text-brand-300">{benefit}</p>
+                  <p className="ml-3 text-base font-body text-navy dark:text-foam">{benefit}</p>
                 </div>
               ))}
             </div>

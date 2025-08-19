@@ -76,16 +76,19 @@ export default function ResetPassword() {
           <div className="mx-auto max-w-md space-y-6">
             <div className="text-center">
               <h1 className="text-3xl font-bold text-brand-800">
+              <h1 className="text-3xl font-heading font-bold text-navy dark:text-foam">
                 Reset Password
               </h1>
               <p className="mt-2 text-gray-600">
+              <p className="mt-2 font-body text-teal dark:text-foam/80">
                 Enter your new password
               </p>
             </div>
             <Card>
               <CardHeader>
-                <CardTitle>New Password</CardTitle>
+                <CardTitle className="font-heading text-navy dark:text-foam">New Password</CardTitle>
                 <CardDescription>
+                <CardDescription className="font-body text-teal dark:text-foam/70">
                   Please enter and confirm your new password
                 </CardDescription>
               </CardHeader>

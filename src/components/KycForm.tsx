@@ -246,12 +246,13 @@ export default function KycForm() {
     <div className="py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold text-brand-800 mb-8">Complete Your KYC Process</h1>
+          <h1 className="text-3xl font-heading font-bold text-navy dark:text-foam mb-8">Complete Your KYC Process</h1>
           
           <Card>
             <CardHeader>
-              <CardTitle>Personal Information</CardTitle>
+              <CardTitle className="font-heading text-navy dark:text-foam">Personal Information</CardTitle>
               <CardDescription>
+              <CardDescription className="font-body text-teal dark:text-foam/70">
                 Please provide your details as they appear on your official documents.
               </CardDescription>
             </CardHeader>
@@ -289,7 +290,8 @@ export default function KycForm() {
                   />
 
                   <div className="bg-brand-50 rounded-lg p-4 border border-brand-100">
-                    <p className="text-sm text-brand-800">
+                  <div className="bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 rounded-lg p-4 border border-foam/50 dark:border-teal/30">
+                    <p className="text-sm font-body text-navy dark:text-foam">
                       By submitting this form, you confirm that all information provided is accurate and that you consent to Liquid Current OTC Desk processing your personal data in accordance with our privacy policy and applicable regulations.
                     </p>
                   </div>
@@ -298,7 +300,7 @@ export default function KycForm() {
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="bg-brand hover:bg-brand-600"
+                      className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-body"
                     >
                       {isSubmitting ? "Submitting..." : "Submit Documents"}
                     </Button>

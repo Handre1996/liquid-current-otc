@@ -36,9 +36,11 @@ export default function KycProcess() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">
+          <h2 className="text-3xl font-heading font-extrabold text-navy dark:text-foam sm:text-4xl">
             KYC Process
           </h2>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-400 mx-auto">
+          <p className="mt-4 max-w-2xl text-xl font-body text-teal dark:text-foam/80 mx-auto">
             Complete our Know Your Customer process once to trade with confidence through Liquid Current OTC Desk.
           </p>
         </div>
@@ -46,35 +48,35 @@ export default function KycProcess() {
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step) => (
-              <Card key={step.number} className="border-t-4 border-t-brand bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <Card key={step.number} className="border-t-4 border-t-navy bg-blanc dark:bg-navy/50 border-foam/30 dark:border-teal shadow-lg hover:shadow-xl transition-all duration-200">
                 <CardContent className="pt-6">
-                  <div className="h-10 w-10 rounded-full bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 font-bold text-lg flex items-center justify-center mb-4">
+                  <div className="h-10 w-10 rounded-full bg-gradient-to-r from-navy to-teal text-blanc font-bold text-lg flex items-center justify-center mb-4">
                     {step.number}
                   </div>
-                  <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100">{step.title}</h3>
-                  <p className="mt-2 text-gray-600 dark:text-gray-300">{step.description}</p>
+                  <h3 className="text-xl font-heading font-semibold text-navy dark:text-foam">{step.title}</h3>
+                  <p className="mt-2 font-body text-teal dark:text-foam/80">{step.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
 
-        <div className="mt-16 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700 p-8">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Required Documents</h3>
+        <div className="mt-16 bg-blanc dark:bg-navy/70 rounded-lg shadow-lg border border-foam/30 dark:border-teal/30 p-8">
+          <h3 className="text-2xl font-heading font-bold text-navy dark:text-foam">Required Documents</h3>
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {requiredDocuments.map((document, index) => (
               <div key={index} className="flex items-start">
                 <div className="flex-shrink-0">
-                  <svg className="h-5 w-5 text-brand-500 dark:text-brand-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <svg className="h-5 w-5 text-greenAccent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <p className="ml-3 text-base text-gray-700 dark:text-gray-300">{document}</p>
+                <p className="ml-3 text-base font-body text-navy dark:text-foam">{document}</p>
               </div>
             ))}
           </div>
-          <div className="mt-6 bg-brand-50 dark:bg-brand-950/50 rounded-md p-4 border border-brand-100 dark:border-brand-800">
-            <p className="text-sm text-brand-800 dark:text-brand-200">
+          <div className="mt-6 bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 rounded-md p-4 border border-foam/50 dark:border-teal/30">
+            <p className="text-sm font-body text-navy dark:text-foam">
               <strong>Note:</strong> We comply with FSCA regulations and South African anti-money laundering laws. All documents are stored securely and confidentially.
             </p>
           </div>

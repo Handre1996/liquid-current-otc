@@ -76,26 +76,26 @@ const Index = () => {
               </div>
             </div>
           ) : kycStatus === 'rejected' ? (
-            <div className="bg-red-50 dark:bg-red-950/50 py-8 border-b border-red-200 dark:border-red-800">
+            <div className="bg-redAccent/10 dark:bg-redAccent/20 py-8 border-b border-redAccent/30 dark:border-redAccent/50">
               <div className="container mx-auto px-4 text-center">
-                <h2 className="text-2xl font-bold text-red-800 dark:text-red-300 mb-4">
+                <h2 className="text-2xl font-heading font-bold text-redAccent dark:text-redAccent mb-4">
                   KYC Requires Attention
                 </h2>
-                <p className="text-red-600 dark:text-red-400 mb-6">
+                <p className="font-body text-redAccent dark:text-redAccent/80 mb-6">
                   Your KYC submission needs to be updated. Please contact support for assistance.
                 </p>
               </div>
             </div>
           ) : !hasSubmittedKyc ? (
-            <div className="bg-brand-50 dark:bg-brand-950/50 py-8 border-b border-brand-200 dark:border-brand-800">
+            <div className="bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 py-8 border-b border-foam/50 dark:border-teal/30">
               <div className="container mx-auto px-4 text-center">
-                <h2 className="text-2xl font-bold text-brand-800 dark:text-brand-300 mb-4">
+                <h2 className="text-2xl font-heading font-bold text-navy dark:text-foam mb-4">
                   Complete Your Verification
                 </h2>
-                <p className="text-muted-foreground mb-6">
+                <p className="font-body text-teal dark:text-foam/80 mb-6">
                   You're logged in as {user.email}. Complete your KYC process to start trading.
                 </p>
-                <Button onClick={handleKycClick} className="bg-brand-600 hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600">
+                <Button onClick={handleKycClick} className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-body">
                   Start KYC Process
                 </Button>
               </div>
@@ -103,19 +103,19 @@ const Index = () => {
           ) : null}
         </>
       ) : (
-        <div className="bg-brand-50 dark:bg-brand-950/50 py-8 border-b border-brand-200 dark:border-brand-800">
+        <div className="bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 py-8 border-b border-foam/50 dark:border-teal/30">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl font-bold text-brand-800 dark:text-brand-300 mb-4">
+            <h2 className="text-2xl font-heading font-bold text-navy dark:text-foam mb-4">
               Start Trading Today
             </h2>
-            <p className="text-muted-foreground mb-6">
+            <p className="font-body text-teal dark:text-foam/80 mb-6">
               Register and complete KYC to access our OTC trading platform.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button onClick={() => navigate('/register')} className="bg-brand-600 hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600">
+              <Button onClick={() => navigate('/register')} className="bg-gradient-to-r from-greenAccent to-yellowAccent hover:from-greenAccent/90 hover:to-yellowAccent/90 text-blanc font-body">
                 Register Now
               </Button>
-              <Button variant="outline" onClick={() => navigate('/login')}>
+              <Button variant="outline" onClick={() => navigate('/login')} className="border-navy text-navy hover:bg-navy hover:text-blanc dark:border-foam dark:text-foam dark:hover:bg-foam dark:hover:text-navy font-body">
                 Sign In
               </Button>
             </div>
