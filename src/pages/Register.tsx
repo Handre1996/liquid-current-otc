@@ -213,15 +213,17 @@ export default function Register() {
                   <Button type="submit" className="w-full" disabled={isLoading || !captchaToken}>
                     {isLoading ? "Creating account..." : "Create Account"}
                   </Button>
-                  <div className="text-center text-sm">
-                    <p className="text-gray-600">
-                    <p className="font-body text-teal dark:text-foam/70">
-                      Already have an account?{" "}
-                      <Link to="/login" className="text-navy hover:text-teal dark:text-foam dark:hover:text-foam/80 font-medium">
-                        Sign In
-                      </Link>
-                    </p>
-                  </div>
+                 <div className="text-center text-sm">
+                  <p className="font-body text-teal dark:text-foam/70">
+                    Already have an account?{" "}
+                    <Link 
+                      to="/login" 
+                      className="text-navy hover:text-teal dark:text-foam dark:hover:text-foam/80 font-medium"
+                    >
+                      Sign In
+                    </Link>
+                  </p>
+                </div>
                 </form>
               </CardContent>
             </Card>
@@ -232,5 +234,4 @@ export default function Register() {
     </div>
   );
 }
-  )
-}
+  
