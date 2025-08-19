@@ -231,10 +231,3 @@ export default function Register() {
       <Footer />
     </div>
   );
-}
-  )
-}
-  )
-}
-  )
-}
