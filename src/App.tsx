@@ -13,6 +13,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import TradingDashboardPage from "./pages/TradingDashboardPage";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
+import TermsAndConditions from "./pages/TermsAndConditions";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import AuthRouter from "./components/AuthRouter";
@@ -36,6 +37,7 @@ const App = () => (
                 <Route path="/admin" element={<AdminDashboard />} />
                 <Route path="/dashboard" element={<TradingDashboardPage />} />
                 <Route path="/about" element={<AboutUs />} />
+                <Route path="/terms" element={<TermsAndConditions />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </AuthRouter>
