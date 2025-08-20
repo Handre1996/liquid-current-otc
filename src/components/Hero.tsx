@@ -60,8 +60,11 @@ export default function Hero() {
         <div className="max-w-4xl">
           <div className="space-y-8">
             <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 backdrop-blur-sm">
+              <div className="flex justify-center lg:justify-start">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 backdrop-blur-sm">
                 <span className="text-sm font-medium text-blue-200">🏆 FSCA Regulated • FSP 53702</span>
+                </div>
+              </div>
               </div>
               
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -69,7 +72,7 @@ export default function Hero() {
                   <img 
                     src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png" 
                     alt="Liquid Current OTC Desk" 
-                    className="h-40 w-auto mb-4 filter brightness-0 invert -ml-5"
+                    className="h-40 w-auto mb-4 filter brightness-0 invert lg:-ml-5"
                   />
                   <span className="block bg-gradient-to-r from-foam via-teal to-foam bg-clip-text text-transparent font-heading text-2xl sm:text-3xl lg:text-4xl">
                     OTC Desk
