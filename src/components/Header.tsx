@@ -77,7 +77,7 @@ const Header = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="flex items-center ml-10">
+              <Link to="/" className="flex items-center">
                 <img 
                   src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png" 
                   alt="Liquid Current" 
@@ -86,7 +86,7 @@ const Header = () => {
                 <span className="ml-2 bg-brand-600 dark:bg-brand-500 text-white text-xs px-2 py-0.5 rounded-full">OTC</span>
               </Link>
             </div>
-            <nav className="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <nav className="hidden sm:ml-8 sm:flex sm:space-x-8">
               <Link 
                 to="/" 
                 className={cn(
