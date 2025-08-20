@@ -403,8 +403,8 @@ const TermsAndConditions = () => {
                     For questions regarding these Terms or our services, please contact us:
                   </p>
                   <div className="mt-4 space-y-2">
-                    <p><strong className="text-teal dark:text-yellowAccent">Email:</strong> support@liquidcurrent.com</p>
-                    <p><strong className="text-teal dark:text-yellowAccent">WhatsApp:</strong> +971 58 573 0141</p>
+                    <p><strong className="text-teal dark:text-yellowAccent">Email:</strong> support@liquidcurrent.co.za</p>
+                    <p><strong className="text-teal dark:text-yellowAccent">WhatsApp:</strong> +27 73 147 5549</p>
                     <p><strong className="text-teal dark:text-yellowAccent">FSP License:</strong> 53702</p>
                     <p><strong className="text-teal dark:text-yellowAccent">Regulatory Authority:</strong> Financial Sector Conduct Authority (FSCA)</p>
                   </div>
