@@ -69,7 +69,7 @@ export default function Hero() {
                   <img 
                     src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png" 
                     alt="Liquid Current OTC Desk" 
-                    className="h-40 w-auto mb-4 ml-6 filter brightness-0 invert"
+                    className="h-40 w-auto mb-4 filter brightness-0 invert"
                   />
                   <span className="block bg-gradient-to-r from-foam via-teal to-foam bg-clip-text text-transparent font-heading text-2xl sm:text-3xl lg:text-4xl">
                     OTC Desk
