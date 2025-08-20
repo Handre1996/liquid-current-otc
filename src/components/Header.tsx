@@ -81,7 +81,12 @@ const Header = () => {
                 <img 
                   src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png" 
                   alt="Liquid Current" 
-                  className="h-24 w-auto"
+                  className="h-24 w-auto dark:hidden"
+                />
+                <img 
+                  src="/LiquidCurrent_Logo_CMYK_SecondaryLogoFoam.png" 
+                  alt="Liquid Current" 
+                  className="h-24 w-auto hidden dark:block"
                 />
                 <span className="ml-2 bg-brand-600 dark:bg-brand-500 text-white text-xs px-2 py-0.5 rounded-full">OTC</span>
               </Link>
