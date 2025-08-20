@@ -261,74 +261,76 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
   const estimate = calculateDetailedEstimate();
 
   return (
-    <Card className="shadow-md border-blue-200">
-      <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-200">
-        <CardTitle className="flex items-center gap-2 text-lg sm:text-xl text-blue-800">
-          <Calculator className="h-5 w-5 text-blue-600" />
+    <Card className="shadow-lg border-navy/30 dark:border-foam/30 bg-gradient-to-br from-blanc to-foam/20 dark:from-navy/30 dark:to-teal/20">
+      <CardHeader className="bg-gradient-to-r from-foam/30 to-ivory/50 dark:from-teal/20 dark:to-navy/30 border-b border-navy/20 dark:border-foam/20">
+        <CardTitle className="flex items-center gap-2 text-lg sm:text-xl text-navy dark:text-foam font-heading">
+          <Calculator className="h-5 w-5 text-navy dark:text-foam" />
           Generate Quote
         </CardTitle>
-        <CardDescription className="text-sm text-blue-600">
+        <CardDescription className="text-sm text-navy/70 dark:text-foam/70 font-body">
           Get an instant quote for your crypto-fiat or crypto-crypto trade with full fee transparency
         </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-6 bg-gradient-to-br from-white to-blue-50 p-6">
+      <CardContent className="space-y-6 p-6">
         {/* Trade Type */}
         <div className="space-y-3">
-          <Label className="text-sm sm:text-base font-medium text-blue-800">Trade Type</Label>
+          <Label className="text-sm sm:text-base font-medium text-navy dark:text-foam font-heading">Trade Type</Label>
           <RadioGroup
             value={quoteType}
             onValueChange={(value) => setQuoteType(value as 'buy' | 'sell' | 'crypto')}
             className="grid grid-cols-1 gap-3"
           >
-            <div className="flex items-center space-x-3 p-4 border-2 border-blue-200 rounded-lg hover:bg-blue-50 cursor-pointer bg-white shadow-sm">
-              <RadioGroupItem value="buy" id="buy" className="text-blue-600" />
+            <div className="flex items-center space-x-3 p-4 border-2 border-navy/20 dark:border-foam/20 rounded-lg hover:bg-foam/20 dark:hover:bg-teal/20 cursor-pointer bg-blanc dark:bg-navy/50 shadow-sm">
+              <RadioGroupItem value="buy" id="buy" className="text-navy dark:text-foam" />
               <div className="flex-1">
-                <Label htmlFor="buy" className="font-bold text-sm sm:text-base cursor-pointer text-blue-800">💰 Buy Crypto</Label>
-                <p className="text-xs sm:text-sm text-blue-600">Pay with fiat currency (ZAR/NAD)</p>
+                <Label htmlFor="buy" className="font-bold text-sm sm:text-base cursor-pointer text-navy dark:text-foam font-heading">💰 Buy Crypto</Label>
+                <p className="text-xs sm:text-sm text-navy/70 dark:text-foam/70 font-body">Pay with fiat currency (ZAR/NAD)</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3 p-4 border-2 border-blue-200 rounded-lg hover:bg-blue-50 cursor-pointer bg-white shadow-sm">
-              <RadioGroupItem value="sell" id="sell" className="text-blue-600" />
+            <div className="flex items-center space-x-3 p-4 border-2 border-navy/20 dark:border-foam/20 rounded-lg hover:bg-foam/20 dark:hover:bg-teal/20 cursor-pointer bg-blanc dark:bg-navy/50 shadow-sm">
+              <RadioGroupItem value="sell" id="sell" className="text-navy dark:text-foam" />
               <div className="flex-1">
-                <Label htmlFor="sell" className="font-bold text-sm sm:text-base cursor-pointer text-blue-800">💸 Sell Crypto</Label>
-                <p className="text-xs sm:text-sm text-blue-600">Receive fiat currency (ZAR/NAD)</p>
+                <Label htmlFor="sell" className="font-bold text-sm sm:text-base cursor-pointer text-navy dark:text-foam font-heading">💸 Sell Crypto</Label>
+                <p className="text-xs sm:text-sm text-navy/70 dark:text-foam/70 font-body">Receive fiat currency (ZAR/NAD)</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3 p-4 border-2 border-blue-200 rounded-lg hover:bg-blue-50 cursor-pointer bg-white shadow-sm">
-              <RadioGroupItem value="crypto" id="crypto" className="text-blue-600" />
+            <div className="flex items-center space-x-3 p-4 border-2 border-navy/20 dark:border-foam/20 rounded-lg hover:bg-foam/20 dark:hover:bg-teal/20 cursor-pointer bg-blanc dark:bg-navy/50 shadow-sm">
+              <RadioGroupItem value="crypto" id="crypto" className="text-navy dark:text-foam" />
               <div className="flex-1">
-                <Label htmlFor="crypto" className="font-bold text-sm sm:text-base cursor-pointer text-blue-800">🔄 Crypto Swap</Label>
-                <p className="text-xs sm:text-sm text-blue-600">Exchange crypto for crypto (lower fees)</p>
+                <Label htmlFor="crypto" className="font-bold text-sm sm:text-base cursor-pointer text-navy dark:text-foam font-heading">🔄 Crypto Swap</Label>
+                <p className="text-xs sm:text-sm text-navy/70 dark:text-foam/70 font-body">Exchange crypto for crypto (lower fees)</p>
               </div>
             </div>
           </RadioGroup>
-          <p className="text-sm text-blue-700 bg-gradient-to-r from-blue-100 to-indigo-100 p-3 rounded-lg shadow-sm">{getTradeTypeDescription()}</p>
+          <p className="text-sm text-navy dark:text-foam bg-gradient-to-r from-foam/30 to-ivory/50 dark:from-teal/20 dark:to-navy/30 p-3 rounded-lg shadow-sm border border-navy/20 dark:border-foam/20 font-body">
+            {getTradeTypeDescription()}
+          </p>
         </div>
 
-        <Separator className="bg-blue-200" />
+        <Separator className="bg-navy/20 dark:bg-foam/20" />
 
         {/* Currency Selection */}
         <div className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="fromCurrency" className="text-sm sm:text-base font-medium text-blue-800">
+            <Label htmlFor="fromCurrency" className="text-sm sm:text-base font-medium text-navy dark:text-foam font-heading">
               From Currency {quoteType === 'buy' ? '(Pay with)' : quoteType === 'sell' ? '(Sell)' : '(From)'}
             </Label>
             <Select value={fromCurrency} onValueChange={setFromCurrency}>
-              <SelectTrigger className="h-12 border-blue-200 bg-white">
+              <SelectTrigger className="h-12 border-navy/20 dark:border-foam/20 bg-blanc dark:bg-navy/50">
                 <SelectValue placeholder="Select currency" />
               </SelectTrigger>
-              <SelectContent className="bg-white">
+              <SelectContent className="bg-blanc dark:bg-navy">
                 {getAvailableCurrencies(true).map((currency) => (
                   <SelectItem key={currency.id} value={currency.code}>
                     <div className="flex items-center gap-2">
                       <span className="font-bold">{currency.symbol || currency.code}</span>
                       <span>{currency.name}</span>
-                      <span className="text-gray-500">({currency.code})</span>
+                      <span className="text-navy/50 dark:text-foam/50">({currency.code})</span>
                     </div>
                   </SelectItem>
                 ))}
                 {getAvailableCurrencies(true).length === 0 && (
-                  <div className="px-2 py-1.5 text-sm text-gray-500">No currencies available</div>
+                  <div className="px-2 py-1.5 text-sm text-navy/50 dark:text-foam/50">No currencies available</div>
                 )}
               </SelectContent>
             </Select>
@@ -341,33 +343,33 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
                 size="icon"
                 onClick={swapCurrencies}
                 disabled={!fromCurrency || !toCurrency}
-                className="h-10 w-10 bg-gradient-to-r from-blue-100 to-indigo-100 border-blue-200"
+                className="h-10 w-10 bg-gradient-to-r from-foam/30 to-ivory/50 dark:from-teal/20 dark:to-navy/30 border-navy/20 dark:border-foam/20"
               >
-                <ArrowUpDown className="h-4 w-4 text-blue-600" />
+                <ArrowUpDown className="h-4 w-4 text-navy dark:text-foam" />
               </Button>
             </div>
           )}
 
           <div className="space-y-2">
-            <Label htmlFor="toCurrency" className="text-sm sm:text-base font-medium text-blue-800">
+            <Label htmlFor="toCurrency" className="text-sm sm:text-base font-medium text-navy dark:text-foam font-heading">
               To Currency {quoteType === 'buy' ? '(Receive)' : quoteType === 'sell' ? '(Receive)' : '(To)'}
             </Label>
             <Select value={toCurrency} onValueChange={setToCurrency}>
-              <SelectTrigger className="h-12 border-blue-200 bg-white">
+              <SelectTrigger className="h-12 border-navy/20 dark:border-foam/20 bg-blanc dark:bg-navy/50">
                 <SelectValue placeholder="Select currency" />
               </SelectTrigger>
-              <SelectContent className="bg-white">
+              <SelectContent className="bg-blanc dark:bg-navy">
                 {getAvailableCurrencies(false).map((currency) => (
                   <SelectItem key={currency.id} value={currency.code}>
                     <div className="flex items-center gap-2">
                       <span className="font-bold">{currency.symbol || currency.code}</span>
                       <span>{currency.name}</span>
-                      <span className="text-gray-500">({currency.code})</span>
+                      <span className="text-navy/50 dark:text-foam/50">({currency.code})</span>
                     </div>
                   </SelectItem>
                 ))}
                 {getAvailableCurrencies(false).length === 0 && (
-                  <div className="px-2 py-1.5 text-sm text-gray-500">No currencies available</div>
+                  <div className="px-2 py-1.5 text-sm text-navy/50 dark:text-foam/50">No currencies available</div>
                 )}
               </SelectContent>
             </Select>
@@ -376,30 +378,30 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
           {/* Chain/Network Selection */}
           {shouldShowChainSelection() && (
             <div className="space-y-2">
-              <Label htmlFor="selectedChain" className="text-sm sm:text-base font-medium flex items-center gap-2 text-blue-800">
-                <Network className="h-4 w-4 text-blue-600" />
+              <Label htmlFor="selectedChain" className="text-sm sm:text-base font-medium flex items-center gap-2 text-navy dark:text-foam font-heading">
+                <Network className="h-4 w-4 text-navy dark:text-foam" />
                 Blockchain Network
               </Label>
               <Select value={selectedChain} onValueChange={setSelectedChain}>
-                <SelectTrigger className="h-12 border-blue-200 bg-white">
+                <SelectTrigger className="h-12 border-navy/20 dark:border-foam/20 bg-blanc dark:bg-navy/50">
                   <SelectValue placeholder={`Select ${toCurrency} network`} />
                 </SelectTrigger>
-                <SelectContent className="bg-white">
+                <SelectContent className="bg-blanc dark:bg-navy">
                   {getAvailableChains().map((chain) => (
                     <SelectItem key={chain.id} value={chain.id}>
                       <div className="flex items-center gap-2">
                         <span className="font-bold">{chain.name}</span>
-                        <span className="text-gray-500">({chain.description})</span>
+                        <span className="text-navy/50 dark:text-foam/50">({chain.description})</span>
                       </div>
                     </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
-              <div className="bg-gradient-to-r from-blue-100 to-indigo-100 border border-blue-200 rounded-lg p-3 shadow-sm">
+              <div className="bg-gradient-to-r from-foam/30 to-ivory/50 dark:from-teal/20 dark:to-navy/30 border border-navy/20 dark:border-foam/20 rounded-lg p-3 shadow-sm">
                 <div className="flex items-start gap-2">
-                  <Network className="h-4 w-4 text-blue-600 mt-0.5" />
-                  <div className="text-sm text-blue-700">
-                    <p className="font-medium mb-1">Why choose a network?</p>
+                  <Network className="h-4 w-4 text-navy dark:text-foam mt-0.5" />
+                  <div className="text-sm text-navy dark:text-foam font-body">
+                    <p className="font-medium mb-1 font-heading">Why choose a network?</p>
                     <p>Different networks have different transaction fees and speeds. Choose the network that matches your wallet:</p>
                     <ul className="mt-2 space-y-1 text-xs">
                       <li>• <strong>ERC20 (Ethereum):</strong> Higher fees, most widely supported</li>
@@ -416,7 +418,7 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
 
         {/* Amount Input */}
         <div className="space-y-2">
-          <Label htmlFor="amount" className="text-sm sm:text-base font-medium text-blue-800">Amount ({fromCurrency || 'Currency'})</Label>
+          <Label htmlFor="amount" className="text-sm sm:text-base font-medium text-navy dark:text-foam font-heading">Amount ({fromCurrency || 'Currency'})</Label>
           <Input
             id="amount"
             type="number"
@@ -425,18 +427,18 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
             onChange={(e) => setAmount(e.target.value)}
             min="0"
             step="any"
-            className="h-12 text-lg border-blue-200 bg-white"
+            className="h-12 text-lg border-navy/20 dark:border-foam/20 bg-blanc dark:bg-navy/50 text-navy dark:text-foam"
           />
         </div>
 
         {/* Detailed Quote Display */}
         {exchangeRate && estimate && (
-          <div className="bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg p-4 sm:p-6 border border-blue-200 shadow-md">
+          <div className="bg-gradient-to-r from-foam/30 to-ivory/50 dark:from-teal/20 dark:to-navy/30 rounded-lg p-4 sm:p-6 border border-navy/20 dark:border-foam/20 shadow-md">
             <div className="flex items-center gap-2 mb-4">
-              <FileText className="h-5 w-5 text-blue-600" />
-              <h3 className="text-lg font-semibold text-blue-900">Quote Preview</h3>
+              <FileText className="h-5 w-5 text-navy dark:text-foam" />
+              <h3 className="text-lg font-semibold text-navy dark:text-foam font-heading">Quote Preview</h3>
               {shouldShowChainSelection() && selectedChain && (
-                <Badge variant="outline" className="text-blue-700 border-blue-300 bg-blue-50">
+                <Badge variant="outline" className="text-navy dark:text-foam border-navy/30 dark:border-foam/30 bg-blanc/50 dark:bg-navy/50 font-body">
                   {CRYPTO_CHAINS[toCurrency]?.find(c => c.id === selectedChain)?.name}
                 </Badge>
               )}
@@ -446,31 +448,31 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-blue-700">Exchange Rate:</span>
-                    <span className="text-sm font-mono text-blue-800">
+                    <span className="text-sm font-medium text-navy dark:text-foam font-body">Exchange Rate:</span>
+                    <span className="text-sm font-mono text-navy dark:text-foam">
                       1 {fromCurrency} = {estimate.rate.toFixed(8)} {toCurrency}
                     </span>
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-blue-700">Gross Amount:</span>
-                    <span className="text-sm font-mono text-blue-800">
+                    <span className="text-sm font-medium text-navy dark:text-foam font-body">Gross Amount:</span>
+                    <span className="text-sm font-mono text-navy dark:text-foam">
                       {estimate.grossAmount.toFixed(currencies.find(c => c.code === toCurrency)?.decimals || 2)} {toCurrency}
                     </span>
                   </div>
                 </div>
                 
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center text-red-600">
-                    <span className="text-sm font-medium">Admin Fee (0.5%):</span>
+                  <div className="flex justify-between items-center text-redAccent">
+                    <span className="text-sm font-medium font-body">Admin Fee (0.5%):</span>
                     <span className="text-sm font-mono">
                       -{estimate.adminFee.toFixed(currencies.find(c => c.code === fromCurrency)?.decimals || 2)} {fromCurrency}
                     </span>
                   </div>
                   
                   {estimate.withdrawalFee > 0 && (
-                    <div className="flex justify-between items-center text-red-600">
-                      <span className="text-sm font-medium">Withdrawal Fee:</span>
+                    <div className="flex justify-between items-center text-redAccent">
+                      <span className="text-sm font-medium font-body">Withdrawal Fee:</span>
                       <span className="text-sm font-mono">
                         -{estimate.withdrawalFee.toFixed(2)} {toCurrency}
                       </span>
@@ -479,22 +481,22 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
                 </div>
               </div>
               
-              <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-lg p-4 border border-green-200 shadow-sm">
+              <div className="bg-gradient-to-r from-greenAccent/20 to-teal/20 rounded-lg p-4 border border-greenAccent/30 shadow-sm">
                 <div className="flex justify-between items-center">
-                  <span className="text-lg font-bold text-green-800">Net Amount:</span>
-                  <span className="text-lg font-bold text-green-800 font-mono">
+                  <span className="text-lg font-bold text-greenAccent font-heading">Net Amount:</span>
+                  <span className="text-lg font-bold text-greenAccent font-mono">
                     {estimate.netAmount.toFixed(currencies.find(c => c.code === toCurrency)?.decimals || 2)} {toCurrency}
                   </span>
                 </div>
-                <p className="text-xs text-green-600 mt-1">Amount you will receive</p>
+                <p className="text-xs text-greenAccent/80 mt-1 font-body">Amount you will receive</p>
                 {shouldShowChainSelection() && selectedChain && (
-                  <p className="text-xs text-green-600 mt-1">
+                  <p className="text-xs text-greenAccent/80 mt-1 font-body">
                     On {CRYPTO_CHAINS[toCurrency]?.find(c => c.id === selectedChain)?.description}
                   </p>
                 )}
               </div>
               
-              <div className="text-xs text-gray-500 space-y-1">
+              <div className="text-xs text-navy/50 dark:text-foam/50 space-y-1 font-body">
                 <div className="flex items-center gap-1">
                   <Clock className="h-3 w-3" />
                   <span>Quote valid for 15 minutes</span>
@@ -509,7 +511,7 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
         <Button
           onClick={generateQuote}
           disabled={!fromCurrency || !toCurrency || !amount || !exchangeRate || generating || (shouldShowChainSelection() && !selectedChain)}
-          className="w-full h-12 text-lg font-bold bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white shadow-md"
+          className="w-full h-12 text-lg font-bold bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc shadow-md font-body"
           size="lg"
         >
           {generating ? 'Generating Quote...' : '🚀 Generate Quote'}
@@ -517,14 +519,14 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
 
         {/* Contract Notice and Disclaimers */}
         <div className="space-y-4">
-          <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border border-yellow-200 rounded-lg p-4 shadow-sm">
+          <div className="bg-gradient-to-r from-yellowAccent/20 to-greenAccent/20 border border-yellowAccent/30 rounded-lg p-4 shadow-sm">
             <div className="flex items-start gap-2">
-              <FileText className="h-5 w-5 text-yellow-600 mt-0.5" />
+              <FileText className="h-5 w-5 text-yellowAccent mt-0.5" />
               <div className="space-y-2">
-                <p className="text-sm font-semibold text-yellow-800">
+                <p className="text-sm font-semibold text-navy dark:text-foam font-heading">
                   Formal Contract Notice
                 </p>
-                <p className="text-xs text-yellow-700">
+                <p className="text-xs text-navy/80 dark:text-foam/80 font-body">
                   Please note all information will be stored as a formal contract to confirm this transaction between ourselves and you. 
                   By proceeding with this quote, you agree to the terms and conditions of this trading agreement.
                 </p>
@@ -532,14 +534,14 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-red-50 to-rose-50 border border-red-200 rounded-lg p-4 shadow-sm">
+          <div className="bg-gradient-to-r from-redAccent/10 to-redAccent/20 border border-redAccent/30 rounded-lg p-4 shadow-sm">
             <div className="flex items-start gap-2">
-              <AlertTriangle className="h-5 w-5 text-red-600 mt-0.5" />
+              <AlertTriangle className="h-5 w-5 text-redAccent mt-0.5" />
               <div className="space-y-2">
-                <p className="text-sm font-semibold text-red-800">
+                <p className="text-sm font-semibold text-redAccent font-heading">
                   Important Disclaimer
                 </p>
-                <p className="text-xs text-red-700">
+                <p className="text-xs text-redAccent/80 font-body">
                   We are a third party provider and in no way responsible or liable for whatever project you put your funds into. 
                   Please conduct your own research and due diligence before making any investment decisions.
                 </p>
@@ -547,8 +549,8 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
             </div>
           </div>
 
-          <div className="text-xs text-gray-500 bg-gradient-to-r from-gray-50 to-slate-50 border border-gray-200 rounded p-3 shadow-sm">
-            <p className="font-medium mb-2">Trading Information:</p>
+          <div className="text-xs text-navy/50 dark:text-foam/50 bg-gradient-to-r from-ivory/50 to-foam/30 dark:from-navy/50 dark:to-teal/20 border border-navy/20 dark:border-foam/20 rounded p-3 shadow-sm font-body">
+            <p className="font-medium mb-2 font-heading">Trading Information:</p>
             <ul className="space-y-1">
               <li>• Quotes are valid for 15 minutes from generation</li>
               <li>• Admin fee: 0.5% of transaction amount</li>

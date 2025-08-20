@@ -777,7 +777,7 @@ const TradingDashboard = () => {
 
         {/* Sidebar */}
         <div className={cn(
-          "fixed inset-y-0 left-0 z-30 w-80 bg-gradient-to-b from-blanc to-foam/30 dark:from-navy to-teal/20 border-r border-navy/20 dark:border-foam/20 shadow-xl transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0",
+          "fixed inset-y-0 left-0 z-30 w-80 bg-gradient-to-b from-blanc to-foam/30 dark:from-navy to-teal/20 border-r border-navy/20 dark:border-foam/20 shadow-xl transform transition-transform duration-300 ease-in-out lg:translate-x-0 top-16",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}>
           {/* Sidebar Header */}
@@ -891,7 +891,7 @@ const TradingDashboard = () => {
         )}
 
         {/* Main Content */}
-        <div className="flex-1 lg:ml-0">
+        <div className="flex-1 lg:ml-80">
           <div className="min-h-screen">
             {/* Header Section */}
             <div className="bg-gradient-to-r from-blanc to-foam/50 dark:from-navy to-teal/30 border-b border-navy/20 dark:border-foam/20 p-6 lg:p-8">
