@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
           <Card className="bg-blanc/90 dark:bg-navy/80 border-foam/50 dark:border-teal/30 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 border-b border-foam/50 dark:border-teal/30">
               <CardTitle className="font-heading text-navy dark:text-foam">
-                Liquid Current OTC Desk - Privacy Policy (Revision 2)
+                Liquid Current OTC Desk - Privacy Policy
               </CardTitle>
               <CardDescription className="font-body text-teal dark:text-foam/80">
                 Effective Date: January 2025
@@ -554,9 +554,9 @@ const PrivacyPolicy = () => {
                   </p>
                   <div className="space-y-2">
                     <p><strong className="text-teal dark:text-yellowAccent">Information Officer:</strong> Liquid Current OTC Desk</p>
-                    <p><strong className="text-teal dark:text-yellowAccent">Email:</strong> privacy@liquidcurrent.com</p>
+                    <p><strong className="text-teal dark:text-yellowAccent">Email:</strong> privacy@liquidcurrent.co.za</p>
                     <p><strong className="text-teal dark:text-yellowAccent">Support:</strong> support@liquidcurrent.com</p>
-                    <p><strong className="text-teal dark:text-yellowAccent">WhatsApp:</strong> +971 58 573 0141</p>
+                    <p><strong className="text-teal dark:text-yellowAccent">WhatsApp:</strong> +27 73 147 5549</p>
                     <p><strong className="text-teal dark:text-yellowAccent">FSP License:</strong> 53702</p>
                     <p><strong className="text-teal dark:text-yellowAccent">Regulatory Authority:</strong> Financial Sector Conduct Authority (FSCA)</p>
                   </div>
