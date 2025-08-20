@@ -77,7 +77,7 @@ const Header = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="flex items-center ml-6 lg:-ml-48">
+              <Link to="/" className="flex items-center ml-6 lg:ml-96">
                 <img 
                   src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png" 
                   alt="Liquid Current" 
