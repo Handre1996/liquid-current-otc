@@ -14,6 +14,7 @@ import TradingDashboardPage from "./pages/TradingDashboardPage";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import AuthRouter from "./components/AuthRouter";
@@ -38,6 +39,7 @@ const App = () => (
                 <Route path="/dashboard" element={<TradingDashboardPage />} />
                 <Route path="/about" element={<AboutUs />} />
                 <Route path="/terms" element={<TermsAndConditions />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </AuthRouter>
