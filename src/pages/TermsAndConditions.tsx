@@ -17,7 +17,7 @@ const TermsAndConditions = () => {
           <Card className="bg-blanc/90 dark:bg-navy/80 border-foam/50 dark:border-teal/30 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 border-b border-foam/50 dark:border-teal/30">
               <CardTitle className="font-heading text-navy dark:text-foam">
-                Liquid Current OTC Desk - Terms and Conditions (Revision 2)
+                Liquid Current OTC Desk - Terms and Conditions
               </CardTitle>
               <CardDescription className="font-body text-teal dark:text-foam/80">
                 Please read these terms carefully before using our services
