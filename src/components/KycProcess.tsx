@@ -139,6 +139,7 @@ export default function KycProcess() {
             </div>
           </div>
         </div>
+        </div>
       </div>
     </section>
   );
