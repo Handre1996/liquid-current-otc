@@ -208,12 +208,38 @@ const AboutUs = () => {
             </CardContent>
           </Card>
           
-          <div className="bg-gradient-to-br from-foam/30 to-ivory dark:from-navy/50 dark:to-teal/20 p-8 rounded-lg shadow-lg border border-foam/50 dark:border-teal/30">
-            <h2 className="text-2xl font-heading font-bold mb-4 text-center text-navy dark:text-foam">Our Vision for the Future</h2>
-            <p className="text-lg font-body text-navy dark:text-foam leading-relaxed">
-              As blockchain technology continues to evolve, Liquid Current OTC Desk remains committed to pioneering innovative solutions that make cryptocurrency trading more accessible, secure, and compliant. We envision a future where digital assets are seamlessly integrated into the global financial ecosystem, and we're proud to be at the forefront of this transformation in the African market.
-            </p>
-          </div>
+          {/* Our Vision for the Future */}
+          <Card className="mb-12 bg-blanc/90 dark:bg-navy/80 border-foam/50 dark:border-teal/30 shadow-lg">
+            <CardContent className="p-0">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                {/* Content Section */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                  <h2 className="text-3xl font-heading font-bold text-navy dark:text-foam mb-6">
+                    Our Vision for the Future
+                  </h2>
+                  
+                  <p className="text-lg font-body text-navy dark:text-foam leading-relaxed">
+                    As blockchain technology continues to evolve, Liquid Current OTC Desk remains committed to pioneering innovative solutions that make cryptocurrency trading more accessible, secure, and compliant. We envision a future where digital assets are seamlessly integrated into the global financial ecosystem, and we're proud to be at the forefront of this transformation in the African market.
+                  </p>
+                  
+                  <div className="mt-6 flex items-center gap-2 text-sm font-body text-teal dark:text-foam/80">
+                    <div className="w-2 h-2 bg-greenAccent rounded-full"></div>
+                    <span>Leading Africa's Digital Asset Evolution</span>
+                  </div>
+                </div>
+                
+                {/* Image Section */}
+                <div className="relative order-1 lg:order-2">
+                  <img 
+                    src="/Woman stair.png" 
+                    alt="Vision for the Future"
+                    className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-l from-navy/20 to-transparent"></div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </main>
       
