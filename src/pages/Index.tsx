@@ -112,7 +112,7 @@ const Index = () => {
               Register and complete KYC to access our OTC trading platform.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button onClick={() => navigate('/register')} className="bg-gradient-to-r from-greenAccent to-yellowAccent hover:from-greenAccent/90 hover:to-yellowAccent/90 text-blanc font-body">
+              <Button onClick={() => navigate('/register')} className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-body">
                 Register Now
               </Button>
               <Button variant="outline" onClick={() => navigate('/login')} className="border-navy text-navy hover:bg-navy hover:text-blanc dark:border-foam dark:text-foam dark:hover:bg-foam dark:hover:text-navy font-body">

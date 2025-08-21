@@ -189,7 +189,7 @@ const Header = () => {
                   </Link>
                 </Button>
                 <Button asChild>
-                  <Link to="/register" className="bg-navy hover:bg-navy/90 text-blanc dark:bg-foam dark:hover:bg-foam/90 dark:text-navy">
+                  <Link to="/register" className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc">
                     Register
                   </Link>
                 </Button>
@@ -327,7 +327,7 @@ const Header = () => {
                   </Link>
                 </Button>
                 <Button asChild className="w-full bg-brand-600 hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600">
-                  <Link to="/register" className="text-white">
+                  <Link to="/register" className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc">
                     Register
                   </Link>
                 </Button>
