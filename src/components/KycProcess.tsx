@@ -54,6 +54,17 @@ export default function KycProcess() {
                   <h3 className="text-xl font-heading font-semibold text-navy dark:text-foam">{step.title}</h3>
                   <p className="mt-2 font-body text-teal dark:text-foam/80">{step.description}</p>
                   
+                  {/* Add image for step 2 */}
+                  {step.number === 2 && (
+                    <div className="mt-6 -mx-6 -mb-6">
+                      <img 
+                        src="/Step2.png" 
+                        alt="Upload Documents Process"
+                        className="w-full h-32 object-cover"
+                      />
+                    </div>
+                  )}
+                  
                   {/* Add image for step 3 */}
                   {step.number === 3 && (
                     <div className="mt-6 -mx-6 -mb-6">
