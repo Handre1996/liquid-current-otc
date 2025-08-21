@@ -60,7 +60,7 @@ export default function KycProcess() {
                       <img 
                         src="/Step1.png" 
                         alt="Registration Process"
-                        className="w-full h-32 object-cover"
+                        className="w-full h-32 object-cover object-center"
                       />
                     </div>
                   )}
@@ -71,7 +71,7 @@ export default function KycProcess() {
                       <img 
                         src="/Step2.png" 
                         alt="Upload Documents Process"
-                        className="w-full h-32 object-cover"
+                        className="w-full h-32 object-cover object-center"
                       />
                     </div>
                   )}
@@ -82,7 +82,7 @@ export default function KycProcess() {
                       <img 
                         src="/Step3.png" 
                         alt="Verification Process"
-                        className="w-full h-32 object-cover"
+                        className="w-full h-32 object-cover object-center"
                       />
                     </div>
                   )}
@@ -91,9 +91,9 @@ export default function KycProcess() {
                   {step.number === 4 && (
                     <div className="mt-6 -mx-6 -mb-6">
                       <img 
-                        src="/image.png" 
+                        src="/image.png"
                         alt="Approval Process"
-                        className="w-full h-32 object-cover"
+                        className="w-full h-32 object-cover object-center"
                       />
                     </div>
                   )}
