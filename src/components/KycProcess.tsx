@@ -153,7 +153,7 @@ export default function KycProcess() {
                     <div className="flex-shrink-0">
                       <IconComponent className="h-5 w-5 text-navy" />
                     </div>
-                    <p className="ml-3 text-base font-body text-foam">
+                    <p className="ml-3 text-base font-body text-ivory">
                       {document.text}
                     </p>
                   </div>
