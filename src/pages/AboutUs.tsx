@@ -105,6 +105,109 @@ const AboutUs = () => {
             </Card>
           </div>
           
+          {/* Leadership Team Section */}
+          <Card className="mb-12 bg-blanc/80 dark:bg-navy/70 border-foam/50 dark:border-teal/30 shadow-lg">
+            <CardHeader className="bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 border-b border-foam/50 dark:border-teal/30">
+              <CardTitle className="text-2xl font-heading text-center text-navy dark:text-foam">Our Leadership Team</CardTitle>
+              <CardDescription className="text-center font-body text-teal dark:text-foam/80">
+                Meet the experienced professionals driving our success
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="p-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Janine Miller - CEO */}
+                <div className="text-center group">
+                  <div className="relative mb-4">
+                    <img
+                      src={`https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format&q=80`}
+                      alt="Janine Miller"
+                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
+                    />
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-navy to-teal text-blanc px-3 py-1 rounded-full text-xs font-bold">
+                        CEO
+                      </div>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Janine Miller</h3>
+                  <p className="text-sm font-body text-teal dark:text-foam/80">Chief Executive Officer</p>
+                </div>
+
+                {/* Tiffany Miller - Project and Operations Manager */}
+                <div className="text-center group">
+                  <div className="relative mb-4">
+                    <img
+                      src={`https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face&auto=format&q=80`}
+                      alt="Tiffany Miller"
+                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
+                    />
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-teal to-greenAccent text-blanc px-3 py-1 rounded-full text-xs font-bold">
+                        Operations
+                      </div>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Tiffany Miller</h3>
+                  <p className="text-sm font-body text-teal dark:text-foam/80">Project and Operations Manager</p>
+                </div>
+
+                {/* David Armstrong - Company KI */}
+                <div className="text-center group">
+                  <div className="relative mb-4">
+                    <img
+                      src={`https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format&q=80`}
+                      alt="David Armstrong"
+                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
+                    />
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-yellowAccent to-redAccent text-blanc px-3 py-1 rounded-full text-xs font-bold">
+                        KI
+                      </div>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">David Armstrong</h3>
+                  <p className="text-sm font-body text-teal dark:text-foam/80">Company KI</p>
+                </div>
+
+                {/* Jaryd Templar - Processing Team */}
+                <div className="text-center group">
+                  <div className="relative mb-4">
+                    <img
+                      src={`https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format&q=80`}
+                      alt="Jaryd Templar"
+                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
+                    />
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-greenAccent to-teal text-blanc px-3 py-1 rounded-full text-xs font-bold">
+                        Processing
+                      </div>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Jaryd Templar</h3>
+                  <p className="text-sm font-body text-teal dark:text-foam/80">Processing Team</p>
+                </div>
+
+                {/* Christelle Lazarus - Processing Team */}
+                <div className="text-center group">
+                  <div className="relative mb-4">
+                    <img
+                      src={`https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80`}
+                      alt="Christelle Lazarus"
+                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
+                    />
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-greenAccent to-teal text-blanc px-3 py-1 rounded-full text-xs font-bold">
+                        Processing
+                      </div>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Christelle Lazarus</h3>
+                  <p className="text-sm font-body text-teal dark:text-foam/80">Processing Team</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          
           <div className="bg-gradient-to-br from-foam/30 to-ivory dark:from-navy/50 dark:to-teal/20 p-8 rounded-lg shadow-lg border border-foam/50 dark:border-teal/30">
             <h2 className="text-2xl font-heading font-bold mb-4 text-center text-navy dark:text-foam">Our Vision for the Future</h2>
             <p className="text-lg font-body text-navy dark:text-foam leading-relaxed">
