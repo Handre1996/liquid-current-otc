@@ -151,7 +151,7 @@ export default function KycProcess() {
                   return (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0">
-                      <IconComponent className="h-5 w-5 text-foam" />
+                      <IconComponent className="h-5 w-5 text-navy" />
                     </div>
                     <p className="ml-3 text-base font-body text-foam">
                       {document.text}
