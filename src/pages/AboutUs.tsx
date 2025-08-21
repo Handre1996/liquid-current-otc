@@ -121,11 +121,6 @@ const AboutUs = () => {
                     <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
                       <span className="text-2xl font-bold text-blanc">JM</span>
                     </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-navy to-teal text-blanc px-3 py-1 rounded-full text-xs font-bold">
-                        CEO
-                      </div>
-                    </div>
                   </div>
                   <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Janine Miller</h3>
                   <p className="text-sm font-body text-teal dark:text-foam/80">Chief Executive Officer</p>
@@ -136,11 +131,6 @@ const AboutUs = () => {
                   <div className="relative mb-4">
                     <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
                       <span className="text-2xl font-bold text-blanc">TM</span>
-                    </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-teal to-greenAccent text-blanc px-3 py-1 rounded-full text-xs font-bold">
-                        Operations
-                      </div>
                     </div>
                   </div>
                   <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Tiffany Miller</h3>
@@ -153,11 +143,6 @@ const AboutUs = () => {
                     <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
                       <span className="text-2xl font-bold text-blanc">DA</span>
                     </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-yellowAccent to-redAccent text-blanc px-3 py-1 rounded-full text-xs font-bold">
-                        KI
-                      </div>
-                    </div>
                   </div>
                   <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">David Armstrong</h3>
                   <p className="text-sm font-body text-teal dark:text-foam/80">Company KI</p>
@@ -169,11 +154,6 @@ const AboutUs = () => {
                     <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
                       <span className="text-2xl font-bold text-blanc">JT</span>
                     </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-greenAccent to-teal text-blanc px-3 py-1 rounded-full text-xs font-bold">
-                        Processing
-                      </div>
-                    </div>
                   </div>
                   <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Jaryd Templar</h3>
                   <p className="text-sm font-body text-teal dark:text-foam/80">Processing Team</p>
@@ -184,11 +164,6 @@ const AboutUs = () => {
                   <div className="relative mb-4">
                     <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
                       <span className="text-2xl font-bold text-blanc">CL</span>
-                    </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-greenAccent to-teal text-blanc px-3 py-1 rounded-full text-xs font-bold">
-                        Processing
-                      </div>
                     </div>
                   </div>
                   <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Christelle Lazarus</h3>
