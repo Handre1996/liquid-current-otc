@@ -21,7 +21,7 @@ export default function Footer() {
               <img 
                 src="/LiquidCurrent_Logo_CMYK_PrimaryLogoFoam.png" 
                 alt="Liquid Current" 
-                className="h-38 w-auto opacity-80 hover:opacity-100 transition-opacity duration-200"
+                className="h-36 w-auto opacity-80 hover:opacity-100 transition-opacity duration-200"
               />
             </div>
             <p className="text-sm text-foam/60 dark:text-foam/60 text-center font-body">
