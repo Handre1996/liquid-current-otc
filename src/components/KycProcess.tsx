@@ -106,7 +106,7 @@ export default function KycProcess() {
         </div>
 
         {/* Required documents section */}
-        <div className="mt-16 bg-navy rounded-lg shadow-lg border border-foam/50 dark:border-teal/30 overflow-hidden">
+        <div className="mt-16 bg-teal rounded-lg shadow-lg border border-foam/50 dark:border-teal/30 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Image Section */}
             <div className="relative order-2 lg:order-1">
@@ -116,18 +116,19 @@ export default function KycProcess() {
                 className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-navy/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-teal/20 to-transparent"></div>
             </div>
 
             {/* Content Section */}
             <div className="p-8 lg:p-12 flex flex-col justify-center order-1 lg:order-2">
-              <h3 className="text-2xl font-heading font-bold text-foam mb-8">Why Choose Us</h3>
+              <h3 className="text-2xl font-heading font-bold text-blanc mb-8">Why Choose Us</h3>
               <div className="space-y-4">
                 {requiredDocuments.map((document, index) => (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0">
                       <svg
                         className="h-5 w-5 text-greenAccent"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <p className="ml-3 text-base font-body text-blanc">{benefit}</p>
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -143,7 +144,7 @@ export default function KycProcess() {
                 ))}
               </div>
 
-              <div className="mt-6 bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 rounded-md p-4 border border-foam/50 dark:border-teal/30">
+              <div className="mt-6 bg-navy rounded-md p-4 border border-foam/50 dark:border-teal/30">
                 <p className="text-sm font-body text-navy dark:text-foam">
                   <strong>Note:</strong> We comply with FSCA regulations and South African anti-money laundering laws. All documents are stored securely and confidentially.
                 </p>
