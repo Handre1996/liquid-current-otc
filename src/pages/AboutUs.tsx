@@ -11,7 +11,13 @@ const AboutUs = () => {
       
       <main className="flex-grow container mx-auto px-4 py-10 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-heading font-bold text-center mb-8 text-navy dark:text-foam">About Liquid Current OTC Desk</h1>
+          <div className="text-center mb-8">
+            <img 
+              src="/image copy.png" 
+              alt="About Liquid Current OTC Desk"
+              className="mx-auto max-w-full h-auto"
+            />
+          </div>
           
           <Card className="mb-12 bg-blanc/80 dark:bg-navy/70 border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
             <CardContent className="p-0">
