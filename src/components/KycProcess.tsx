@@ -142,7 +142,7 @@ export default function KycProcess() {
 
             {/* Content Section */}
             <div className="p-8 lg:p-12 flex flex-col justify-center order-1 lg:order-2">
-              <h3 className="text-2xl font-heading font-bold text-blanc mb-8">
+              <h3 className="text-2xl font-heading font-bold text-foam mb-8">
                 Required Documents
               </h3>
               <div className="space-y-4">
