@@ -13,41 +13,13 @@ const AboutUs = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-heading font-bold text-center mb-8 text-navy dark:text-foam">About Liquid Current OTC Desk</h1>
           
-          <Card className="mb-12 bg-blanc/80 dark:bg-navy/70 border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
-            <CardContent className="p-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                {/* Image Section */}
-                <div className="relative">
-                  <img 
-                    src="/lack on call.png" 
-                    alt="Liquid Current Team"
-                    className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-navy/20 to-transparent"></div>
-                </div>
-                
-                {/* Content Section */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  <h2 className="text-3xl font-heading font-bold text-navy dark:text-foam mb-6">
-                    Our Mission
-                  </h2>
-                  
-                  <p className="text-lg mb-6 font-body text-navy dark:text-foam leading-relaxed">
-                    Liquid Current OTC Desk was founded with a vision to bridge the gap between traditional finance and the emerging world of digital assets. As South Africa's premier over-the-counter cryptocurrency trading desk, we provide a secure, regulated, and efficient platform for high-volume traders, institutions, and individuals seeking to execute large transactions outside the volatility of public exchanges.
-                  </p>
-                  
-                  <p className="text-lg font-body text-navy dark:text-foam leading-relaxed">
-                    With regulatory compliance at our core (FSP Number 53702 - Regulated by the Financial Sector Conduct Authority), we've created a trusted environment where clients can confidently navigate the cryptocurrency market, backed by our team of financial experts and blockchain specialists.
-                  </p>
-                  
-                  <div className="mt-6 flex items-center gap-2 text-sm font-body text-teal dark:text-foam/80">
-                    <div className="w-2 h-2 bg-greenAccent rounded-full"></div>
-                    <span>FSP Number 53702 - FSCA Regulated</span>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="mb-12">
+            <img 
+              src="/image copy.png" 
+              alt="About Liquid Current OTC Desk"
+              className="w-full rounded-lg shadow-lg"
+            />
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <Card className="bg-teal border-foam/50 dark:border-teal/30 shadow-lg hover:shadow-xl transition-all duration-200">
