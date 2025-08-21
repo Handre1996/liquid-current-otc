@@ -60,18 +60,31 @@ export default function Features() {
           </div>
         </div>
 
-        <div className="mt-16 bg-gradient-to-br from-foam/30 to-ivory dark:from-navy/50 dark:to-teal/20 rounded-lg shadow-lg border border-foam/50 dark:border-teal/30">
-          <div className="px-6 py-8 md:p-10">
-            <h3 className="text-2xl font-heading font-bold text-navy dark:text-foam text-center">Why Choose Us</h3>
-            <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-5 w-5 text-greenAccent" />
+        <div className="mt-16 bg-gradient-to-br from-blanc to-ivory/80 dark:from-navy/80 dark:to-teal/40 rounded-lg shadow-lg border border-foam/50 dark:border-teal/30 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            {/* Text Content Section */}
+            <div className="p-8 lg:p-12 flex flex-col justify-center order-1">
+              <h3 className="text-2xl font-heading font-bold text-navy dark:text-foam mb-8">Why Choose Us</h3>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <Check className="h-5 w-5 text-greenAccent" />
+                    </div>
+                    <p className="ml-3 text-base font-body text-navy dark:text-foam">{benefit}</p>
                   </div>
-                  <p className="ml-3 text-base font-body text-navy dark:text-foam">{benefit}</p>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+            
+            {/* Image Section */}
+            <div className="relative order-2">
+              <img 
+                src="/choose.png" 
+                alt="Why Choose Liquid Current"
+                className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent"></div>
             </div>
           </div>
         </div>
