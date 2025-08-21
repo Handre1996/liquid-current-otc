@@ -89,7 +89,9 @@ export default function Features() {
                   return (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0">
-                      <IconComponent className="h-5 w-5 text-navy" />
+                      <div className="w-8 h-8 rounded-full bg-foam/20 flex items-center justify-center">
+                        <IconComponent className="h-5 w-5 text-teal font-bold" />
+                      </div>
                     </div>
                     <p className="ml-3 text-base font-body text-foam">{benefit.text}</p>
                   </div>
