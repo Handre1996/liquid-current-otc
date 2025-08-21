@@ -106,9 +106,9 @@ const AboutUs = () => {
           </div>
           
           {/* Leadership Team Section */}
-          <Card className="mb-12 bg-blanc/80 dark:bg-navy/70 border-foam/50 dark:border-teal/30 shadow-lg">
+          <Card className="mb-12 bg-ivory border-foam/50 dark:border-teal/30 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 border-b border-foam/50 dark:border-teal/30">
-              <CardTitle className="text-2xl font-heading text-center text-navy dark:text-foam">Our Leadership Team</CardTitle>
+              <CardTitle className="text-2xl font-heading text-center text-teal">Our Leadership Team</CardTitle>
               <CardDescription className="text-center font-body text-teal dark:text-foam/80">
                 Meet the experienced professionals driving our success
               </CardDescription>
