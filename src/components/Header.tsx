@@ -88,7 +88,6 @@ const Header = () => {
                   alt="Liquid Current" 
                   className="h-24 w-auto hidden dark:block"
                 />
-                <span className="ml-2 bg-brand-600 dark:bg-brand-500 text-white text-xs px-2 py-0.5 rounded-full">OTC</span>
               </Link>
             </div>
             <nav className="hidden sm:ml-8 sm:flex sm:space-x-8">
