@@ -162,7 +162,7 @@ export default function KycProcess() {
               </div>
 
               <div className="mt-6 bg-navy rounded-md p-4 border border-foam/50 dark:border-teal/30">
-                <p className="text-sm font-body text-teal">
+                <p className="text-sm font-body text-ivory">
                   <strong>Note:</strong> We comply with FSCA regulations and
                   South African anti-money laundering laws. All documents are
                   stored securely and confidentially.
