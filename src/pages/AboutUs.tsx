@@ -119,7 +119,7 @@ const AboutUs = () => {
                 <div className="text-center group">
                   <div className="relative mb-4">
                     <img
-                      src="https://api.dicebear.com/8.x/avataaars/svg?seed=janine-miller&backgroundColor=b6e3f4"
+                      src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
                       alt="Janine Miller"
                       className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
                     />
@@ -137,7 +137,7 @@ const AboutUs = () => {
                 <div className="text-center group">
                   <div className="relative mb-4">
                     <img
-                      src="https://api.dicebear.com/8.x/avataaars/svg?seed=tiffany-miller&backgroundColor=fef3c7"
+                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
                       alt="Tiffany Miller"
                       className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
                     />
@@ -155,7 +155,7 @@ const AboutUs = () => {
                 <div className="text-center group">
                   <div className="relative mb-4">
                     <img
-                      src="https://api.dicebear.com/8.x/avataaars/svg?seed=david-armstrong&backgroundColor=ddd6fe"
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
                       alt="David Armstrong"
                       className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
                     />
@@ -173,7 +173,7 @@ const AboutUs = () => {
                 <div className="text-center group">
                   <div className="relative mb-4">
                     <img
-                      src="https://api.dicebear.com/7.x/avataaars/svg?seed=jaryd&backgroundColor=d1fae5&clothesColor=5199e4&topType=shortHairShortCurly&hairColor=d08b5b&accessoriesType=blank&facialHairType=blank&clothesType=collarSweater&eyeType=happy&eyebrowType=default&mouthType=smile&skinColor=light"
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
                       alt="Jaryd Templar"
                       className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
                     />
@@ -191,7 +191,7 @@ const AboutUs = () => {
                 <div className="text-center group">
                   <div className="relative mb-4">
                     <img
-                      src="https://api.dicebear.com/7.x/avataaars/svg?seed=christelle&backgroundColor=fce7f3&clothesColor=77dd77&topType=longHairBigHair&hairColor=724133&accessoriesType=blank&facialHairType=blank&clothesType=overall&eyeType=happy&eyebrowType=default&mouthType=smile&skinColor=light"
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
                       alt="Christelle Lazarus"
                       className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
                     />
