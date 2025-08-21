@@ -105,6 +105,7 @@ export default function KycProcess() {
 
         <div className="mt-16 bg-blanc dark:bg-navy/70 rounded-lg shadow-lg border border-foam/30 dark:border-teal/30 overflow-hidden">
         <div className="mt-16 bg-ivory dark:bg-navy/70 rounded-lg shadow-lg border border-foam/30 dark:border-teal/30 overflow-hidden">
+        <div className="mt-16 bg-navy rounded-lg shadow-lg border border-foam/50 dark:border-teal/30 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Image Section */}
             <div className="relative order-2 lg:order-1">
@@ -118,7 +119,7 @@ export default function KycProcess() {
             
             {/* Content Section */}
             <div className="p-8 lg:p-12 flex flex-col justify-center order-1 lg:order-2">
-              <h3 className="text-2xl font-heading font-bold text-navy dark:text-foam mb-6">Required Documents</h3>
+              <h3 className="text-2xl font-heading font-bold text-foam mb-8">Why Choose Us</h3>
               <div className="space-y-4">
                 {requiredDocuments.map((document, index) => (
                   <div key={index} className="flex items-start">
@@ -127,12 +128,14 @@ export default function KycProcess() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <p className="ml-3 text-base font-body text-navy dark:text-foam">{document}</p>
+                    <p className="ml-3 text-base font-body text-foam">{benefit}</p>
                   </div>
                 ))}
               </div>
               <div className="mt-6 bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 rounded-md p-4 border border-foam/50 dark:border-teal/30">
+              <div className="mt-6 bg-navy rounded-md p-4 border border-foam/50 dark:border-teal/30">
                 <p className="text-sm font-body text-navy dark:text-foam">
+                <p className="text-sm font-body text-foam">
                   <strong>Note:</strong> We comply with FSCA regulations and South African anti-money laundering laws. All documents are stored securely and confidentially.
                 </p>
               </div>
