@@ -118,11 +118,9 @@ const AboutUs = () => {
                 {/* Janine Miller - CEO */}
                 <div className="text-center group">
                   <div className="relative mb-4">
-                    <img
-                      src="https://i.pravatar.cc/150?img=45"
-                      alt="Janine Miller"
-                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
-                    />
+                    <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
+                      <span className="text-2xl font-bold text-blanc">JM</span>
+                    </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-navy to-teal text-blanc px-3 py-1 rounded-full text-xs font-bold">
                         CEO
@@ -136,11 +134,9 @@ const AboutUs = () => {
                 {/* Tiffany Miller - Project and Operations Manager */}
                 <div className="text-center group">
                   <div className="relative mb-4">
-                    <img
-                      src="https://i.pravatar.cc/150?img=47"
-                      alt="Tiffany Miller"
-                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
-                    />
+                    <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
+                      <span className="text-2xl font-bold text-blanc">TM</span>
+                    </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-teal to-greenAccent text-blanc px-3 py-1 rounded-full text-xs font-bold">
                         Operations
@@ -154,11 +150,9 @@ const AboutUs = () => {
                 {/* David Armstrong - Company KI */}
                 <div className="text-center group">
                   <div className="relative mb-4">
-                    <img
-                      src="https://i.pravatar.cc/150?img=52"
-                      alt="David Armstrong"
-                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
-                    />
+                    <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
+                      <span className="text-2xl font-bold text-blanc">DA</span>
+                    </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-yellowAccent to-redAccent text-blanc px-3 py-1 rounded-full text-xs font-bold">
                         KI
@@ -172,11 +166,9 @@ const AboutUs = () => {
                 {/* Jaryd Templar - Processing Team */}
                 <div className="text-center group">
                   <div className="relative mb-4">
-                    <img
-                      src="https://i.pravatar.cc/150?img=33"
-                      alt="Jaryd Templar"
-                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
-                    />
+                    <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
+                      <span className="text-2xl font-bold text-blanc">JT</span>
+                    </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-greenAccent to-teal text-blanc px-3 py-1 rounded-full text-xs font-bold">
                         Processing
@@ -190,11 +182,9 @@ const AboutUs = () => {
                 {/* Christelle Lazarus - Processing Team */}
                 <div className="text-center group">
                   <div className="relative mb-4">
-                    <img
-                      src="https://i.pravatar.cc/150?img=44"
-                      alt="Christelle Lazarus"
-                      className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200"
-                    />
+                    <div className="w-24 h-24 rounded-full mx-auto border-4 border-navy/20 dark:border-foam/20 shadow-lg group-hover:shadow-xl transition-all duration-200 bg-teal flex items-center justify-center">
+                      <span className="text-2xl font-bold text-blanc">CL</span>
+                    </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-greenAccent to-teal text-blanc px-3 py-1 rounded-full text-xs font-bold">
                         Processing
