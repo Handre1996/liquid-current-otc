@@ -43,54 +43,56 @@ export default function KycProcess() {
           </p>
         </div>
 
+        {/* Steps */}
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step) => (
-              <Card key={step.number} className={`border-t-4 border-t-navy bg-ivory dark:bg-navy/50 border-foam/30 dark:border-teal shadow-lg hover:shadow-xl transition-all duration-200 ${step.number === 4 ? 'overflow-hidden' : ''}`}>
+              <Card
+                key={step.number}
+                className={`border-t-4 border-t-navy bg-ivory dark:bg-navy/50 border-foam/30 dark:border-teal shadow-lg hover:shadow-xl transition-all duration-200 ${
+                  step.number === 4 ? "overflow-hidden" : ""
+                }`}
+              >
                 <CardContent className="pt-6">
                   <div className="h-10 w-10 rounded-full bg-gradient-to-r from-navy to-teal text-blanc font-bold text-lg flex items-center justify-center mb-4">
                     {step.number}
                   </div>
-                  <h3 className="text-xl font-heading font-semibold text-navy dark:text-foam">{step.title}</h3>
+                  <h3 className="text-xl font-heading font-semibold text-navy dark:text-foam">
+                    {step.title}
+                  </h3>
                   <p className="mt-2 font-body text-teal dark:text-foam/80">{step.description}</p>
-                  
-                  {/* Add image for step 1 */}
+
+                  {/* Step images */}
                   {step.number === 1 && (
                     <div className="mt-6 -mx-6 -mb-6">
-                      <img 
-                        src="/Step1.png" 
+                      <img
+                        src="/Step1.png"
                         alt="Registration Process"
                         className="w-full h-32 object-cover object-center"
                       />
                     </div>
                   )}
-                  
-                  {/* Add image for step 2 */}
                   {step.number === 2 && (
                     <div className="mt-6 -mx-6 -mb-6">
-                      <img 
-                        src="/Step2.png" 
+                      <img
+                        src="/Step2.png"
                         alt="Upload Documents Process"
                         className="w-full h-32 object-cover object-center"
                       />
                     </div>
                   )}
-                  
-                  {/* Add image for step 3 */}
                   {step.number === 3 && (
                     <div className="mt-6 -mx-6 -mb-6">
-                      <img 
-                        src="/Step3.png" 
+                      <img
+                        src="/Step3.png"
                         alt="Verification Process"
                         className="w-full h-32 object-cover object-center"
                       />
                     </div>
                   )}
-                  
-                  {/* Add image for step 4 */}
                   {step.number === 4 && (
                     <div className="mt-6 -mx-6 -mb-6">
-                      <img 
+                      <img
                         src="/image.png"
                         alt="Approval Process"
                         className="w-full h-32 object-cover object-center"
@@ -103,20 +105,19 @@ export default function KycProcess() {
           </div>
         </div>
 
-        <div className="mt-16 bg-blanc dark:bg-navy/70 rounded-lg shadow-lg border border-foam/30 dark:border-teal/30 overflow-hidden">
-        <div className="mt-16 bg-ivory dark:bg-navy/70 rounded-lg shadow-lg border border-foam/30 dark:border-teal/30 overflow-hidden">
+        {/* Required documents section */}
         <div className="mt-16 bg-navy rounded-lg shadow-lg border border-foam/50 dark:border-teal/30 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Image Section */}
             <div className="relative order-2 lg:order-1">
-              <img 
-                src="/woman Blue.png" 
+              <img
+                src="/woman Blue.png"
                 alt="Professional Woman"
                 className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-navy/20 to-transparent"></div>
             </div>
-            
+
             {/* Content Section */}
             <div className="p-8 lg:p-12 flex flex-col justify-center order-1 lg:order-2">
               <h3 className="text-2xl font-heading font-bold text-foam mb-8">Why Choose Us</h3>
@@ -124,24 +125,31 @@ export default function KycProcess() {
                 {requiredDocuments.map((document, index) => (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0">
-                      <svg className="h-5 w-5 text-greenAccent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <svg
+                        className="h-5 w-5 text-greenAccent"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     </div>
-                    <p className="ml-3 text-base font-body text-foam">{benefit}</p>
+                    <p className="ml-3 text-base font-body text-foam">{document}</p>
                   </div>
                 ))}
               </div>
+
               <div className="mt-6 bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 rounded-md p-4 border border-foam/50 dark:border-teal/30">
-              <div className="mt-6 bg-navy rounded-md p-4 border border-foam/50 dark:border-teal/30">
                 <p className="text-sm font-body text-navy dark:text-foam">
-                <p className="text-sm font-body text-foam">
                   <strong>Note:</strong> We comply with FSCA regulations and South African anti-money laundering laws. All documents are stored securely and confidentially.
                 </p>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
