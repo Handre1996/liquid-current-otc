@@ -60,18 +60,18 @@ export default function Features() {
           </div>
         </div>
 
-        <div className="mt-16 bg-gradient-to-br from-ivory to-ivory/80 dark:from-navy/80 dark:to-teal/40 rounded-lg shadow-lg border border-foam/50 dark:border-teal/30 overflow-hidden">
+        <div className="mt-16 bg-navy rounded-lg shadow-lg border border-foam/50 dark:border-teal/30 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Text Content Section */}
             <div className="p-8 lg:p-12 flex flex-col justify-center order-1">
-              <h3 className="text-2xl font-heading font-bold text-navy dark:text-foam mb-8">Why Choose Us</h3>
+              <h3 className="text-2xl font-heading font-bold text-foam mb-8">Why Choose Us</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0">
                       <Check className="h-5 w-5 text-greenAccent" />
                     </div>
-                    <p className="ml-3 text-base font-body text-navy dark:text-foam">{benefit}</p>
+                    <p className="ml-3 text-base font-body text-foam">{benefit}</p>
                   </div>
                 ))}
               </div>
