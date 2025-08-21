@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { CreditCard, Home, Camera, FileText } from "lucide-react";
 
 export default function KycProcess() {
   const steps = [
@@ -29,10 +30,22 @@ export default function KycProcess() {
   ];
 
   const requiredDocuments = [
-    "Valid government-issued ID (passport, ID card)",
-    "Proof of address (utility bill, bank statement, not older than 3 months)",
-    "Selfie with ID document",
-    "Additional documents may be required based on transaction volumes",
+    {
+      text: "Valid government-issued ID (passport, ID card)",
+      icon: CreditCard
+    },
+    {
+      text: "Proof of address (utility bill, bank statement, not older than 3 months)",
+      icon: Home
+    },
+    {
+      text: "Selfie with ID document",
+      icon: Camera
+    },
+    {
+      text: "Additional documents may be required based on transaction volumes",
+      icon: FileText
+    }
   ];
 
   return (
@@ -133,27 +146,19 @@ export default function KycProcess() {
                 Required Documents
               </h3>
               <div className="space-y-4">
-                {requiredDocuments.map((document, index) => (
+                {requiredDocuments.map((document, index) => {
+                  const IconComponent = document.icon;
+                  return (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0">
-                      <svg
-                        className="h-5 w-5 text-greenAccent"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                      <IconComponent className="h-5 w-5 text-foam" />
                     </div>
                     <p className="ml-3 text-base font-body text-foam">
-                      {document}
+                      {document.text}
                     </p>
                   </div>
-                ))}
+                  );
+                })}
               </div>
 
               <div className="mt-6 bg-navy rounded-md p-4 border border-foam/50 dark:border-teal/30">
