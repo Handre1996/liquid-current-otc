@@ -93,7 +93,7 @@ export default function Features() {
                         <IconComponent className="h-5 w-5 text-teal font-bold" />
                       </div>
                     </div>
-                    <p className="ml-3 text-base font-body text-foam">{benefit.text}</p>
+                    <p className="ml-3 text-base font-body text-ivory">{benefit.text}</p>
                   </div>
                   );
                 })}
