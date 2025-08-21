@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy dark:bg-navy text-foam">
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-logo text-foam">Liquid Current OTC Desk</h3>
             <p className="mt-2 text-foam/80 dark:text-foam/80">
@@ -12,6 +12,20 @@ export default function Footer() {
             </p>
             <p className="mt-4 text-sm text-foam/70 dark:text-foam/70 font-body">
               We facilitate crypto-to-fiat and fiat-to-crypto transactions for our clients, ensuring regulatory compliance and security through our KYC process.
+            </p>
+          </div>
+          
+          {/* Center Logo */}
+          <div className="flex flex-col items-center justify-center">
+            <div className="mb-4">
+              <img 
+                src="/LiquidCurrent_Logo_CMYK_PrimaryLogoFoam.png" 
+                alt="Liquid Current" 
+                className="h-24 w-auto opacity-80 hover:opacity-100 transition-opacity duration-200"
+              />
+            </div>
+            <p className="text-sm text-foam/60 dark:text-foam/60 text-center font-body">
+              Bridging Traditional Finance<br />with Digital Assets
             </p>
           </div>
           
