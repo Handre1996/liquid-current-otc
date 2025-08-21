@@ -58,19 +58,19 @@ const AboutUs = () => {
               <CardContent>
                 <ul className="space-y-2 font-body text-ivory">
                   <li className="flex items-start">
-                    <span className="font-medium mr-2 text-greenAccent">•</span>
+                    <span className="font-medium mr-2 text-ivory">•</span>
                     <span>Deep liquidity access across major cryptocurrencies</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-medium mr-2 text-greenAccent">•</span>
+                    <span className="font-medium mr-2 text-ivory">•</span>
                     <span>Competitive pricing with minimal slippage</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-medium mr-2 text-greenAccent">•</span>
+                    <span className="font-medium mr-2 text-ivory">•</span>
                     <span>Institutional-grade security protocols</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-medium mr-2 text-greenAccent">•</span>
+                    <span className="font-medium mr-2 text-ivory">•</span>
                     <span>Personalized trading solutions</span>
                   </li>
                 </ul>
@@ -85,19 +85,19 @@ const AboutUs = () => {
               <CardContent>
                 <ul className="space-y-2 font-body text-ivory">
                   <li className="flex items-start">
-                    <span className="font-medium mr-2 text-greenAccent">•</span>
+                    <span className="font-medium mr-2 text-ivory">•</span>
                     <span>Absolute confidentiality for all transactions</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-medium mr-2 text-greenAccent">•</span>
+                    <span className="font-medium mr-2 text-ivory">•</span>
                     <span>Transparent fee structure with no hidden costs</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-medium mr-2 text-greenAccent">•</span>
+                    <span className="font-medium mr-2 text-ivory">•</span>
                     <span>Swift settlement times</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-medium mr-2 text-greenAccent">•</span>
+                    <span className="font-medium mr-2 text-ivory">•</span>
                     <span>Dedicated account managers</span>
                   </li>
                 </ul>
