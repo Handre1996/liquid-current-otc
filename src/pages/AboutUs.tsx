@@ -50,13 +50,13 @@ const AboutUs = () => {
           </Card>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <Card className="bg-blanc/80 dark:bg-navy/70 border-foam/50 dark:border-teal/30 shadow-lg hover:shadow-xl transition-all duration-200">
+            <Card className="bg-teal border-foam/50 dark:border-teal/30 shadow-lg hover:shadow-xl transition-all duration-200">
               <CardHeader>
-                <CardTitle className="font-heading text-navy dark:text-foam">Our Expertise</CardTitle>
-                <CardDescription className="font-body text-teal dark:text-foam/80">What sets us apart</CardDescription>
+                <CardTitle className="font-heading text-foam">Our Expertise</CardTitle>
+                <CardDescription className="font-body"><span className="font-bold text-ivory">What sets us apart</span></CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 font-body text-navy dark:text-foam">
+                <ul className="space-y-2 font-body text-ivory">
                   <li className="flex items-start">
                     <span className="font-medium mr-2 text-greenAccent">•</span>
                     <span>Deep liquidity access across major cryptocurrencies</span>
@@ -77,13 +77,13 @@ const AboutUs = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-blanc/80 dark:bg-navy/70 border-foam/50 dark:border-teal/30 shadow-lg hover:shadow-xl transition-all duration-200">
+            <Card className="bg-teal border-foam/50 dark:border-teal/30 shadow-lg hover:shadow-xl transition-all duration-200">
               <CardHeader>
-                <CardTitle className="font-heading text-navy dark:text-foam">Our Promise</CardTitle>
-                <CardDescription className="font-body text-teal dark:text-foam/80">What you can expect</CardDescription>
+                <CardTitle className="font-heading text-foam">Our Promise</CardTitle>
+                <CardDescription className="font-body"><span className="font-bold text-ivory">What you can expect</span></CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 font-body text-navy dark:text-foam">
+                <ul className="space-y-2 font-body text-ivory">
                   <li className="flex items-start">
                     <span className="font-medium mr-2 text-greenAccent">•</span>
                     <span>Absolute confidentiality for all transactions</span>
