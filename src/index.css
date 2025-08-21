@@ -6,12 +6,12 @@
   :root {
     --background: 42 28% 96%; /* ivory as base background */
     --foreground: 209 47% 25%; /* navy as foreground */
-    --card: 0 0% 100%;
+    --card: 42 28% 96%; /* ivory instead of white */
     --card-foreground: 209 47% 25%;
-    --popover: 0 0% 100%;
+    --popover: 42 28% 96%; /* ivory instead of white */
     --popover-foreground: 209 47% 25%;
     --primary: 209 47% 25%; /* navy */
-    --primary-foreground: 0 0% 100%; /* blanc */
+    --primary-foreground: 42 28% 96%; /* ivory for better contrast */
     --secondary: 42 28% 96%; /* ivory */
     --secondary-foreground: 209 47% 25%; /* navy */
     --muted: 202 69% 84%; /* foam */
@@ -117,7 +117,7 @@
 
 /* Professional Card Backgrounds */
 .card-gradient-light {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: linear-gradient(135deg, #F4EFEB 0%, #f8fafc 100%);
 }
 
 .dark .card-gradient-light {
@@ -189,7 +189,7 @@
 /* Trading dashboard specific enhancements */
 .trading-card {
   @apply bg-card border border-border rounded-lg shadow-sm transition-all duration-200;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: linear-gradient(135deg, #F4EFEB 0%, #f8fafc 100%);
 }
 
 .dark .trading-card {
@@ -315,15 +315,15 @@
 
 /* Glass morphism effects */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(244, 239, 235, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(244, 239, 235, 0.18);
 }
 
 .dark .glass-effect {
   background: rgba(15, 23, 42, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(244, 239, 235, 0.08);
 }
 
 /* Animated gradient backgrounds */

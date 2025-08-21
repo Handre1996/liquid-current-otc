@@ -46,7 +46,7 @@ export default function KycProcess() {
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step) => (
-              <Card key={step.number} className={`border-t-4 border-t-navy bg-blanc dark:bg-navy/50 border-foam/30 dark:border-teal shadow-lg hover:shadow-xl transition-all duration-200 ${step.number === 4 ? 'overflow-hidden' : ''}`}>
+              <Card key={step.number} className={`border-t-4 border-t-navy bg-ivory dark:bg-navy/50 border-foam/30 dark:border-teal shadow-lg hover:shadow-xl transition-all duration-200 ${step.number === 4 ? 'overflow-hidden' : ''}`}>
                 <CardContent className="pt-6">
                   <div className="h-10 w-10 rounded-full bg-gradient-to-r from-navy to-teal text-blanc font-bold text-lg flex items-center justify-center mb-4">
                     {step.number}
@@ -104,6 +104,7 @@ export default function KycProcess() {
         </div>
 
         <div className="mt-16 bg-blanc dark:bg-navy/70 rounded-lg shadow-lg border border-foam/30 dark:border-teal/30 overflow-hidden">
+        <div className="mt-16 bg-ivory dark:bg-navy/70 rounded-lg shadow-lg border border-foam/30 dark:border-teal/30 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Image Section */}
             <div className="relative order-2 lg:order-1">

@@ -49,7 +49,7 @@ export default function Features() {
         <div className="mt-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {features.map((feature, index) => (
-              <div key={index} className="bg-blanc dark:bg-navy rounded-lg shadow-lg p-6 border border-foam/30 dark:border-teal hover:shadow-xl transition-all duration-200 hover:scale-105">
+              <div key={index} className="bg-ivory dark:bg-navy rounded-lg shadow-lg p-6 border border-foam/30 dark:border-teal hover:shadow-xl transition-all duration-200 hover:scale-105">
                 <div className="flex items-center justify-center h-12 w-12 rounded-md bg-foam/20 dark:bg-foam/10 text-navy dark:text-foam border border-foam/50 dark:border-teal">
                   {feature.icon}
                 </div>
@@ -60,7 +60,7 @@ export default function Features() {
           </div>
         </div>
 
-        <div className="mt-16 bg-gradient-to-br from-blanc to-ivory/80 dark:from-navy/80 dark:to-teal/40 rounded-lg shadow-lg border border-foam/50 dark:border-teal/30 overflow-hidden">
+        <div className="mt-16 bg-gradient-to-br from-ivory to-ivory/80 dark:from-navy/80 dark:to-teal/40 rounded-lg shadow-lg border border-foam/50 dark:border-teal/30 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Text Content Section */}
             <div className="p-8 lg:p-12 flex flex-col justify-center order-1">

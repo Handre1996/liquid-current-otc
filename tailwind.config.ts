@@ -95,7 +95,7 @@ export default {
 				foam: '#CDEAF9',
 				ivory: '#F4EFEB',
 				teal: '#7495A8',
-				blanc: '#FFFFFF',
+				blanc: '#F4EFEB', // Changed from pure white to ivory
 				redAccent: '#E3362E',
 				yellowAccent: '#F7B54A',
 				greenAccent: '#4FCF4D',
