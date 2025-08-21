@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { UserCheck, TrendingDown, Zap, Shield, FileCheck, Headphones } from "lucide-react";
 
 export default function Features() {
   const features = [
@@ -26,12 +26,30 @@ export default function Features() {
   ];
 
   const benefits = [
-    "One-time KYC process",
-    "Competitive rates",
-    "Fast processing",
-    "Secure transactions",
-    "Compliance with regulations",
-    "Expert customer support"
+    {
+      text: "One-time KYC process",
+      icon: UserCheck
+    },
+    {
+      text: "Competitive rates",
+      icon: TrendingDown
+    },
+    {
+      text: "Fast processing",
+      icon: Zap
+    },
+    {
+      text: "Secure transactions",
+      icon: Shield
+    },
+    {
+      text: "Compliance with regulations",
+      icon: FileCheck
+    },
+    {
+      text: "Expert customer support",
+      icon: Headphones
+    }
   ];
 
   return (
@@ -66,14 +84,17 @@ export default function Features() {
             <div className="p-8 lg:p-12 flex flex-col justify-center order-1">
               <h3 className="text-2xl font-heading font-bold text-foam mb-8">Why Choose Us</h3>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefit, index) => {
+                  const IconComponent = benefit.icon;
+                  return (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0">
-                      <Check className="h-5 w-5 text-greenAccent" />
+                      <IconComponent className="h-5 w-5 text-navy" />
                     </div>
-                    <p className="ml-3 text-base font-body text-foam">{benefit}</p>
+                    <p className="ml-3 text-base font-body text-foam">{benefit.text}</p>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
             
