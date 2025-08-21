@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export default function Features() {
   const features = [
@@ -14,7 +15,8 @@ export default function Features() {
       description: "Send us cryptocurrency and receive fiat currency in your bank account.",
       icon: <svg className="h-6 w-6 text-navy dark:text-foam" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 8h6m-5 0a3 3 0 110 6H9l3 3m-3-6h6m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
+      </svg>,
+      badge: "USDT"
     },
     {
       title: "FSCA Regulated",
@@ -50,10 +52,17 @@ export default function Features() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {features.map((feature, index) => (
               <div key={index} className="bg-blanc dark:bg-navy rounded-lg shadow-lg p-6 border border-foam/30 dark:border-teal hover:shadow-xl transition-all duration-200 hover:scale-105">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-foam/20 dark:bg-foam/10 text-navy dark:text-foam border border-foam/50 dark:border-teal">
-                  {feature.icon}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-foam/20 dark:bg-foam/10 text-navy dark:text-foam border border-foam/50 dark:border-teal">
+                    {feature.icon}
+                  </div>
+                  {feature.badge && (
+                    <Badge variant="outline" className="bg-gradient-to-r from-greenAccent to-teal text-blanc border-greenAccent/30 font-bold">
+                      {feature.badge}
+                    </Badge>
+                  )}
                 </div>
-                <h3 className="mt-4 text-lg font-heading font-semibold text-navy dark:text-foam">{feature.title}</h3>
+                <h3 className="text-lg font-heading font-semibold text-navy dark:text-foam">{feature.title}</h3>
                 <p className="mt-2 text-base font-body text-teal dark:text-foam/80">{feature.description}</p>
               </div>
             ))}
