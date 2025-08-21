@@ -112,7 +112,7 @@ const AboutUs = () => {
           </div>
           
           {/* Leadership Team Section */}
-          <Card className="mb-12 bg-ivory border-foam/50 dark:border-teal/30 shadow-lg">
+          <Card className="mb-12 bg-ivory dark:bg-ivory border-foam/50 dark:border-teal/30 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30 border-b border-foam/50 dark:border-teal/30">
               <CardTitle className="text-2xl font-heading text-center text-teal">Our Leadership Team</CardTitle>
               <CardDescription className="text-center font-body text-teal dark:text-foam/80">
@@ -128,8 +128,8 @@ const AboutUs = () => {
                       <span className="text-2xl font-bold text-blanc">JM</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Janine Miller</h3>
-                  <p className="text-sm font-body text-teal dark:text-foam/80">Chief Executive Officer</p>
+                  <h3 className="text-lg font-heading font-bold text-navy">Janine Miller</h3>
+                  <p className="text-sm font-body text-navy">Chief Executive Officer</p>
                 </div>
 
                 {/* Tiffany Miller - Project and Operations Manager */}
@@ -139,8 +139,8 @@ const AboutUs = () => {
                       <span className="text-2xl font-bold text-blanc">TM</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Tiffany Miller</h3>
-                  <p className="text-sm font-body text-teal dark:text-foam/80">Project and Operations Manager</p>
+                  <h3 className="text-lg font-heading font-bold text-navy">Tiffany Miller</h3>
+                  <p className="text-sm font-body text-navy">Project and Operations Manager</p>
                 </div>
 
                 {/* David Armstrong - Company KI */}
@@ -150,8 +150,8 @@ const AboutUs = () => {
                       <span className="text-2xl font-bold text-blanc">DA</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">David Armstrong</h3>
-                  <p className="text-sm font-body text-teal dark:text-foam/80">Company KI</p>
+                  <h3 className="text-lg font-heading font-bold text-navy">David Armstrong</h3>
+                  <p className="text-sm font-body text-navy">Company KI</p>
                 </div>
 
                 {/* Jaryd Templar - Processing Team */}
@@ -161,8 +161,8 @@ const AboutUs = () => {
                       <span className="text-2xl font-bold text-blanc">JT</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Jaryd Templar</h3>
-                  <p className="text-sm font-body text-teal dark:text-foam/80">Processing Team</p>
+                  <h3 className="text-lg font-heading font-bold text-navy">Jaryd Templar</h3>
+                  <p className="text-sm font-body text-navy">Processing Team</p>
                 </div>
 
                 {/* Christelle Lazarus - Processing Team */}
@@ -172,8 +172,8 @@ const AboutUs = () => {
                       <span className="text-2xl font-bold text-blanc">CL</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-navy dark:text-foam">Christelle Lazarus</h3>
-                  <p className="text-sm font-body text-teal dark:text-foam/80">Processing Team</p>
+                  <h3 className="text-lg font-heading font-bold text-navy">Christelle Lazarus</h3>
+                  <p className="text-sm font-body text-navy">Processing Team</p>
                 </div>
               </div>
             </CardContent>
