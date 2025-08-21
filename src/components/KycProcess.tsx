@@ -46,13 +46,24 @@ export default function KycProcess() {
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step) => (
-              <Card key={step.number} className="border-t-4 border-t-navy bg-blanc dark:bg-navy/50 border-foam/30 dark:border-teal shadow-lg hover:shadow-xl transition-all duration-200">
+              <Card key={step.number} className={`border-t-4 border-t-navy bg-blanc dark:bg-navy/50 border-foam/30 dark:border-teal shadow-lg hover:shadow-xl transition-all duration-200 ${step.number === 4 ? 'overflow-hidden' : ''}`}>
                 <CardContent className="pt-6">
                   <div className="h-10 w-10 rounded-full bg-gradient-to-r from-navy to-teal text-blanc font-bold text-lg flex items-center justify-center mb-4">
                     {step.number}
                   </div>
                   <h3 className="text-xl font-heading font-semibold text-navy dark:text-foam">{step.title}</h3>
                   <p className="mt-2 font-body text-teal dark:text-foam/80">{step.description}</p>
+                  
+                  {/* Add image for step 4 */}
+                  {step.number === 4 && (
+                    <div className="mt-6 -mx-6 -mb-6">
+                      <img 
+                        src="/image.png" 
+                        alt="Approval Process"
+                        className="w-full h-32 object-cover"
+                      />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
