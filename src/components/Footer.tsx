@@ -30,22 +30,22 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <h3 className="text-lg font-semibold font-heading">Quick Links</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link to="/" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors">Home</Link>
+                <Link to="/" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors font-body">Home</Link>
               </li>
               <li>
-                <Link to="/kyc" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors">KYC Process</Link>
+                <Link to="/kyc" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors font-body">KYC Process</Link>
               </li>
               <li>
-                <Link to="/about" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors">About Us</Link>
+                <Link to="/about" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors font-body">About Us</Link>
               </li>
               <li>
-                <Link to="/terms" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors">Terms & Conditions</Link>
+                <Link to="/terms" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors font-body">Terms & Conditions</Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors">Privacy Policy</Link>
+                <Link to="/privacy" className="text-brand-100 dark:text-brand-200 hover:text-white dark:hover:text-brand-100 transition-colors font-body">Privacy Policy</Link>
               </li>
             </ul>
           </div>
@@ -53,7 +53,7 @@ export default function Footer() {
         
         <div className="mt-8 pt-8 border-t border-brand-700 dark:border-brand-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-brand-200 dark:text-brand-300 text-sm">
+            <p className="text-brand-200 dark:text-brand-300 text-sm font-body">
               &copy; {new Date().getFullYear()} Liquid Current OTC Desk. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-4">

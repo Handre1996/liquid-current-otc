@@ -138,11 +138,11 @@ export default {
 				'slide-in': 'slide-in 0.3s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['Helvetica', 'Inter', 'system-ui', 'sans-serif'],
 				mono: ['JetBrains Mono', 'Consolas', 'monospace'],
-				heading: ['Bodoni', 'serif'],
+				heading: ['Bodoni', 'Playfair Display', 'serif'],
 				body: ['Helvetica', 'sans-serif'],
-				logo: ['"Vania Regular"', 'serif'],
+				logo: ['"Vania Regular"', 'Playfair Display', 'serif'],
 			},
 			fontSize: {
 				'2xs': ['0.625rem', { lineHeight: '0.75rem' }],

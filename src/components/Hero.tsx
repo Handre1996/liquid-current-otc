@@ -97,7 +97,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 onClick={handleCTAClick}
-                className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0"
+                className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 font-body"
               >
                 {!user
                   ? '🚀 Get Started'
@@ -110,7 +110,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-foam/50 bg-blanc/10 backdrop-blur-sm text-foam hover:bg-blanc/20 hover:text-blanc hover:border-foam font-semibold transition-all duration-300 transform hover:scale-105"
+                className="border-2 border-foam/50 bg-blanc/10 backdrop-blur-sm text-foam hover:bg-blanc/20 hover:text-blanc hover:border-foam font-semibold transition-all duration-300 transform hover:scale-105 font-body"
                 asChild
               >
                 <Link to="/about">📖 Learn More</Link>

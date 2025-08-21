@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Font Faces for Premium Fonts */
+@font-face {
+  font-family: 'Vania Regular';
+  src: url('data:font/woff2;base64,') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  src: url('data:font/woff2;base64,') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 42 28% 96%; /* ivory as base background */

@@ -38,10 +38,10 @@ export default function Features() {
     <div className="bg-background py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl font-heading">
             Our Services
           </h2>
-          <p className="mt-4 max-w-2xl text-xl text-muted-foreground mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-muted-foreground mx-auto font-body">
             Liquid Current OTC Desk offers seamless crypto-fiat trading services, all backed by FSCA regulation.
           </p>
         </div>
