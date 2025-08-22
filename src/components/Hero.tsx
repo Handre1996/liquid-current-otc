@@ -33,9 +33,9 @@ export default function Hero() {
           alt="Background"
           className="w-full h-full object-cover"
           style={{
-            objectPosition: "50% 50%",     // shift the focal point left (default is 50% 50%)
-            transform: "scale(1.0)",      // zoom in
-            transformOrigin: "left center" // anchor zooming from the left instead of center
+            objectPosition: "30% 50%",      // shift more left than before (40% → 30%)
+            transform: "scale(1.45)",       // slightly more zoom to bring subject closer
+            transformOrigin: "left center", // anchor zooming from the left side
           }}
         />
       </div>
