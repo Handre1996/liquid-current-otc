@@ -81,7 +81,7 @@ export default function Hero() {
                     🏆 FSCA Regulated • FSP 53702
                   </span>
                 </div>
-              </di
+              </div>
       
 
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
