@@ -90,13 +90,13 @@ export default function Hero() {
                     alt="Liquid Current OTC Desk"
                     className="h-40 w-auto mb-4 filter brightness-0 invert lg:-ml-5"
                   />
-                  <span className="block bg-gradient-to-r from-foam via-teal to-foam bg-clip-text text-transparent font-heading text-2xl sm:text-3xl lg:text-4xl">
+                  <span className="block bg-black text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
                     OTC Desk
                   </span>
                 </div>
               </h1>
 
-              <p className="mt-6 text-xl text-foam dark:text-foam max-w-3xl leading-relaxed font-body">
+              <p className="mt-6 text-xl text-navy max-w-3xl leading-relaxed font-body">
                 Trade cryptocurrency for fiat or fiat for crypto through our FSCA regulated OTC desk.
                 Complete your KYC once and trade with confidence in a secure, professional environment.
               </p>
@@ -119,10 +119,10 @@ export default function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-foam/50 bg-blanc/10 backdrop-blur-sm text-foam hover:bg-blanc/20 hover:text-blanc hover:border-foam font-semibold transition-all duration-300 transform hover:scale-105 font-body"
+                className="border-2 border-navy bg-foam text-navy hover:bg-foam/80 hover:text-navy hover:border-navy font-semibold transition-all duration-300 transform hover:scale-105 font-body"
                 asChild
               >
-                <Link to="/about">📖 Learn More</Link>
+                <Link to="/about">📞 Contact Us</Link>
               </Button>
             </div>
           </div>
