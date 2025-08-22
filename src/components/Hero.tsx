@@ -32,7 +32,7 @@ export default function Hero() {
           src="/beautiful.jpg"
           alt="Background"
           className="w-full h-full object-cover"
-          style={{ objectPosition: "center 70%", transform: "scale(1.4)" }}
+          style={{ objectPosition: "center 900%", transform: "scale(1.4)" }}
         />
       </div>
 
