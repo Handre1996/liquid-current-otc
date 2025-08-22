@@ -34,15 +34,8 @@ export default function Footer() {
                 <img 
                   src="/LiquidCurrent_Logo_CMYK_PrimaryLogoFoam.png" 
                   alt="Liquid Current" 
-                  className="h-37 w-auto opacity-80 hover:opacity-100 transition-opacity duration-200"
+                  className="h-40 w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
                 />
-              ) : (
-                <img 
-                  src="/LiquidCurrent_Logo_CMYK_PrimaryLogoNavy.png" 
-                  alt="Liquid Current" 
-                  className="h-36 w-auto opacity-80 hover:opacity-100 transition-opacity duration-200"
-                />
-              )}
             </div>
           </div>
           
