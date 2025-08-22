@@ -100,7 +100,9 @@ export default function Hero() {
               </div>
 
               {/* Disclaimer under buttons */}
-              <p className="mt-4 text-xs sm:text-sm text-navy dark:text-foam font-body px-2 py-1 rounded bg-white/70 dark:bg-navy/70 backdrop-blur-sm inline-block">
+              <p className="mt-4 text-xs sm:text-sm text-navy dark:text-foam font-body px-2 py-1 rounded 
+                            bg-white/70 dark:bg-navy/70 backdrop-blur-sm inline-block 
+                            sm:bg-transparent sm:backdrop-blur-0 sm:px-0 sm:py-0 sm:rounded-none">
                 Regulated by the Financial Sector Conduct Authority (FSCA) under FSP Number 53702
               </p>
             </div>
