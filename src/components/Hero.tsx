@@ -91,7 +91,7 @@ export default function Hero() {
                     alt="Liquid Current OTC Desk"
                     className="h-40 w-auto mb-4 filter brightness-0 invert lg:-ml-5"
                   />
-                  <span className="block bg-black text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
+                  <span className="block bg-white text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
                     OTC Desk
                   </span>
                 </div>
