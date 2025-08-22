@@ -70,7 +70,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-brand-700 dark:border-brand-800 bg-foam rounded-lg p-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-navy text-sm font-body font-bold">
-              &copy; {new Date().getFullYear()} <span className="text-teal">Liquid Current OTC Desk</span>. All rights reserved.
+              &copy; {new Date().getFullYear()} <span className="text-navy">Liquid Current OTC Desk</span>. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-4">
               {/* Socials left as-is */}
