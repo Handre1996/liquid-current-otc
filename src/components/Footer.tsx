@@ -5,6 +5,12 @@ export default function Footer() {
   const location = useLocation();
   const isAboutPage = location.pathname === "/about";
 
+  // Color schemes
+  const headingColor = isAboutPage ? "text-teal" : "text-teal";
+  const textColor = isAboutPage ? "text-blanc" : "text-navy";
+  const linkColor = isAboutPage ? "text-teal" : "text-navy";
+  const linkHoverColor = isAboutPage ? "hover:text-blanc" : "hover:text-teal";
+
   return (
     <footer
       className={`w-full ${
@@ -13,26 +19,14 @@ export default function Footer() {
     >
       {/* Main Card */}
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div
-          className={`grid grid-cols-1 md:grid-cols-3 gap-8 items-center ${
-            isAboutPage ? "bg-navy" : "bg-blanc"
-          }`}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Left Section */}
           <div className="flex flex-col justify-center">
-            <p
-              className={`mt-2 font-body font-bold ${
-                isAboutPage ? "text-blanc" : "text-teal"
-              }`}
-            >
-              <span>FSP Number 53702</span> – Regulated by the Financial Sector
-              Conduct Authority (FSCA)
+            <p className={`mt-2 font-body font-bold ${headingColor}`}>
+              FSP Number 53702 – Regulated by the Financial Sector Conduct
+              Authority (FSCA)
             </p>
-            <p
-              className={`mt-4 text-sm font-body font-bold ${
-                isAboutPage ? "text-blanc" : "text-navy"
-              }`}
-            >
+            <p className={`mt-4 text-sm font-body font-bold ${textColor}`}>
               We facilitate crypto-to-fiat and fiat-to-crypto transactions for
               our clients, ensuring regulatory compliance and security through
               our KYC process.
@@ -44,16 +38,14 @@ export default function Footer() {
             <img
               src="/LiquidCurrent_Logo_CMYK_PrimaryLogoTeal.png"
               alt="Liquid Current"
-              className="h-[250px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
+              className="h-[46px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
             />
           </div>
 
           {/* Quick Links */}
           <div className="flex flex-col justify-center">
             <h3
-              className={`text-xl font-semibold font-heading font-bold ${
-                isAboutPage ? "text-blanc" : "text-teal"
-              }`}
+              className={`text-xl font-semibold font-heading font-bold ${headingColor}`}
             >
               Quick Links
             </h3>
@@ -61,7 +53,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                  className={`${linkColor} ${linkHoverColor}`}
                 >
                   Home
                 </Link>
@@ -69,7 +61,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/about"
-                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                  className={`${linkColor} ${linkHoverColor}`}
                 >
                   About Us
                 </Link>
@@ -77,7 +69,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/kyc"
-                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                  className={`${linkColor} ${linkHoverColor}`}
                 >
                   KYC Process
                 </Link>
@@ -85,7 +77,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/terms"
-                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                  className={`${linkColor} ${linkHoverColor}`}
                 >
                   Terms & Conditions
                 </Link>
@@ -93,7 +85,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/privacy"
-                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                  className={`${linkColor} ${linkHoverColor}`}
                 >
                   Privacy Policy
                 </Link>
@@ -104,13 +96,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div
-        className={`w-full ${
-          isAboutPage ? "bg-foam" : "bg-foam"
-        } border-t border-gray-200`}
-      >
+      <div className="w-full bg-foam border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm font-body font-bold text-navy">
+          <p className={`text-sm font-body font-bold ${textColor}`}>
             © {new Date().getFullYear()} Liquid Current OTC Desk. All rights
             reserved.
           </p>
@@ -120,7 +108,7 @@ export default function Footer() {
             {/* Mail */}
             <a
               href="mailto:info@liquidcurrent.com"
-              className="text-navy hover:text-teal transition-colors"
+              className={`${linkColor} ${linkHoverColor} transition-colors`}
             >
               <span className="sr-only">Email</span>
               <svg
@@ -141,7 +129,7 @@ export default function Footer() {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-navy hover:text-teal transition-colors"
+              className={`${linkColor} ${linkHoverColor} transition-colors`}
             >
               <span className="sr-only">WhatsApp</span>
               <svg
@@ -154,12 +142,7 @@ export default function Footer() {
                 0C5.39 0 .02 5.37.02 12c0 2.11.55 4.16 
                 1.61 5.98L0 24l6.21-1.63A11.96 
                 11.96 0 0012 24c6.63 0 12-5.37 
-                12-12 0-3.19-1.24-6.19-3.48-8.52zM12 
-                21.82a9.77 9.77 0 01-4.99-1.37l-.36-.21-3.69.97.99-3.6-.23-.37A9.79 
-                9.79 0 012.2 12c0-5.39 4.42-9.8 
-                9.81-9.8 2.62 0 5.09 1.02 6.94 
-                2.87a9.74 9.74 0 012.87 6.93c0 
-                5.39-4.42 9.82-9.82 9.82z" />
+                12-12 0-3.19-1.24-6.19-3.48-8.52z" />
               </svg>
             </a>
 
@@ -168,7 +151,7 @@ export default function Footer() {
               href="https://linkedin.com/company/liquidcurrent"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-navy hover:text-teal transition-colors"
+              className={`${linkColor} ${linkHoverColor} transition-colors`}
             >
               <span className="sr-only">LinkedIn</span>
               <svg
