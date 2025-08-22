@@ -25,14 +25,16 @@ export default function Hero() {
   }, [user]);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-navy via-teal to-navy dark:from-navy dark:via-teal dark:to-navy text-blanc">
-      {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 flex justify-center">
         <img
           src="/beautiful.jpg"
           alt="Background"
-          className="w-full h-full object-cover sm:scale-100 sm:[object-position:80%_40%] scale-100 [object-position:center]"
-          style={{ transformOrigin: "left center" }}
+          className="h-full object-cover max-w-screen-xl w-full"
+          style={{
+            objectPosition: "80% 30%",
+            transform: "scale(1.2)",   // zoom so it fills margins
+            transformOrigin: "center",
+          }}
         />
       </div>
 
