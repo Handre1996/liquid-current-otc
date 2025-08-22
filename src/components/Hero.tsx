@@ -110,6 +110,11 @@ export default function Hero() {
                 <Link to="/about">Contact Us</Link>
               </Button>
             </div>
+
+            {/* Disclaimer under buttons */}
+            <p className="mt-4 text-sm text-navy font-body">
+              Regulated by the Financial Sector Conduct Authority (FSCA) under FSP Number 53702
+            </p>
           </div>
         </div>
       </div>
