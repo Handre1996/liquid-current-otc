@@ -21,7 +21,6 @@ export default function Hero() {
         console.error("Error checking KYC status:", error);
       }
     };
-
     checkKyc();
   }, [user]);
 
@@ -29,12 +28,12 @@ export default function Hero() {
     <div className="relative overflow-hidden bg-gradient-to-br from-navy via-teal to-navy dark:from-navy dark:via-teal dark:to-navy text-blanc">
       {/* Background Image */}
       <div className="absolute inset-0">
-      <img
-        src="/beautiful.jpg"
-        alt="Background"
-        className="w-full h-full object-cover"
-        style={{ objectPosition: "center 50%", transform: "scale(1.5)" }}
-      />
+        <img
+          src="/beautiful.jpg"
+          alt="Background"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "center 50%", transform: "scale(1.5)" }}
+        />
       </div>
 
       {/* Gradient overlays */}
@@ -81,29 +80,30 @@ export default function Hero() {
                 KYC once and trade with confidence.
               </p>
 
-            {/* Call-to-action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                size="lg"
-                onClick={() => navigate('/register')}
-                className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 font-body"
-              >
-                Start KYC Process
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-navy bg-foam text-navy hover:bg-foam/80 hover:text-navy hover:border-navy font-semibold transition-all duration-300 transform hover:scale-105 font-body"
-                asChild
-              >
-                <Link to="/about">Contact Us</Link>
-              </Button>
-            </div>
+              {/* Call-to-action buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button
+                  size="lg"
+                  onClick={() => navigate('/register')}
+                  className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 font-body"
+                >
+                  Start KYC Process
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-navy bg-foam text-navy hover:bg-foam/80 hover:text-navy hover:border-navy font-semibold transition-all duration-300 transform hover:scale-105 font-body"
+                  asChild
+                >
+                  <Link to="/about">Contact Us</Link>
+                </Button>
+              </div>
 
-            {/* Disclaimer under buttons */}
-            <p className="mt-4 text-sm text-navy font-body">
-              Regulated by the Financial Sector Conduct Authority (FSCA) under FSP Number 53702
-            </p>
+              {/* Disclaimer under buttons */}
+              <p className="mt-4 text-sm text-navy font-body">
+                Regulated by the Financial Sector Conduct Authority (FSCA) under FSP Number 53702
+              </p>
+            </div>
           </div>
         </div>
       </div>
