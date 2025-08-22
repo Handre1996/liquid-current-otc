@@ -25,18 +25,18 @@ export default function Hero() {
   }, [user]);
 
   return (
-      <div className="absolute inset-0 flex justify-center">
-        <img
-          src="/beautiful.jpg"
-          alt="Background"
-          className="h-full object-cover max-w-screen-xl w-full"
-          style={{
-            objectPosition: "80% 30%",
-            transform: "scale(1.2)",   // zoom so it fills margins
-            transformOrigin: "center",
-          }}
-        />
-      </div>
+<div className="absolute inset-0 flex justify-center">
+  <img
+    src="/beautiful.jpg"
+    alt="Background"
+    className="h-full object-cover max-w-screen-xl w-full"
+    style={{
+      objectPosition: "80% 30%",
+      transform: "scale(1.2)",
+      transformOrigin: "center",
+    }}
+  />
+</div>
 
       {/* Gradient overlays */}
       <div className="absolute inset-0">
