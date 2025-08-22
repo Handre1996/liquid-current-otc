@@ -10,6 +10,7 @@ export default function Footer() {
       className={`${isAboutPage ? 'bg-navy dark:bg-navy' : 'bg-blanc dark:bg-blanc'} 
                   ${isAboutPage ? 'text-foam' : 'text-navy dark:text-navy'}`}
     >
+      
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
   {/* Left section */}
   <div className="flex flex-col justify-center">
