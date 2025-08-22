@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
             <p className="mt-4 text-sm font-body font-bold">
               <span className="text-navy">We facilitate crypto-to-fiat and fiat-to-crypto transactions</span><br />
-              <span className="text-teal">Ensuring regulatory compliance</span><br />
+              <span className="text-navy">Ensuring regulatory compliance</span><br />
               <span className="text-navy">Security through our KYC process</span>
             </p>
           </div>
