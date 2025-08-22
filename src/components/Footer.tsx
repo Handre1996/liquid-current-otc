@@ -18,7 +18,7 @@ export default function Footer() {
               Liquid Current OTC Desk
             </h3>
             <p className="mt-2 font-body font-bold text-navy">
-              <span className="text-navy">FSP Number 53702</span> – 
+              <span className="text-teal">FSP Number 53702</span> – 
               <span className="text-teal"> Regulated by the Financial Sector Conduct Authority (FSCA)</span>
             </p>
             <p className="mt-4 text-sm font-body font-bold">
