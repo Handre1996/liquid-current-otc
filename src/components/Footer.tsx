@@ -6,50 +6,47 @@ export default function Footer() {
 
   return (
     <footer
-      className={`${isAboutPage ? 'bg-navy dark:bg-navy' : 'bg-blanc dark:bg-blanc'} 
-                  ${isAboutPage ? 'text-foam' : 'text-navy dark:text-navy'}`}
+      className={`${isAboutPage ? 'bg-navy' : 'bg-blanc'} py-12 px-4 sm:px-6 lg:px-8`}
     >
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        {/* Top grid with 3 sections */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          {/* Left section */}
-          <div className="flex flex-col justify-center">
-            <p className="mt-2 font-body font-bold text-teal">
-              <span className="text-teal">FSP Number 53702</span> – 
-              <span className="text-teal"> Regulated by the Financial Sector Conduct Authority (FSCA)</span>
-            </p>
-            <p className="mt-4 text-sm font-body font-bold">
-              <span className="text-navy">We facilitate crypto-to-fiat and fiat-to-crypto transactions</span><br />
-              <span className="text-navy">Ensuring regulatory compliance</span><br />
-              <span className="text-navy">Security through our KYC process</span>
-            </p>
+      <div className="max-w-6xl mx-auto">
+        {/* Card Container */}
+        <div className="bg-white rounded-xl shadow-md p-8">
+          {/* 3 Column Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            
+            {/* Left section */}
+            <div className="flex flex-col justify-center">
+              <p className="font-body font-bold text-teal">
+                FSP Number 53702 - Regulated by the Financial Sector Conduct Authority (FSCA)
+              </p>
+              <p className="mt-4 text-sm font-body text-navy">
+                We facilitate crypto-to-fiat and fiat-to-crypto transactions for our clients, 
+                ensuring regulatory compliance and security through our KYC process.
+              </p>
+            </div>
+
+            {/* Center Logo */}
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="/LiquidCurrent_Logo_CMYK_PrimaryLogoTeal.png"
+                alt="Liquid Current"
+                className="h-[45px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
+              />
+            </div>
+
+            {/* Quick Links */}
+            <div className="flex flex-col justify-center">
+              <h3 className="text-lg font-heading font-bold text-teal">Quick Links</h3>
+              <ul className="mt-4 space-y-2 font-bold">
+                <li><Link to="/" className="text-navy hover:text-teal">Home</Link></li>
+                <li><Link to="/about" className="text-navy hover:text-teal">About Us</Link></li>
+                <li><Link to="/kyc" className="text-navy hover:text-teal">KYC Process</Link></li>
+              </ul>
+            </div>
           </div>
 
-          {/* Center Logo */}
-          <div className="flex flex-col items-center justify-center">
-            <img
-              src="/LiquidCurrent_Logo_CMYK_PrimaryLogoTeal.png"
-              alt="Liquid Current"
-              className="h-[250px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
-            />
-          </div>
-
-          {/* Quick Links */}
-          <div className="flex flex-col justify-center">
-            <h3 className="text-xl font-semibold font-heading font-bold text-teal">Quick Links</h3>
-            <ul className="mt-4 space-y-2 font-bold">
-              <li><Link to="/" className="text-navy hover:text-navy">Home</Link></li>
-              <li><Link to="/kyc" className="text-navy hover:text-navy">KYC Process</Link></li>
-              <li><Link to="/about" className="text-navy hover:text-navy">About Us</Link></li>
-              <li><Link to="/terms" className="text-navy hover:text-navy">Terms & Conditions</Link></li>
-              <li><Link to="/privacy" className="text-navy hover:text-navy">Privacy Policy</Link></li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom section */}
-        <div className="mt-8 pt-8 border-t border-brand-700 dark:border-brand-800 bg-foam rounded-lg p-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          {/* Bottom Section */}
+          <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
             <p className="text-navy text-sm font-body font-bold">
               &copy; {new Date().getFullYear()} <span className="text-navy">Liquid Current OTC Desk</span>. All rights reserved.
             </p>
@@ -62,12 +59,8 @@ export default function Footer() {
                 className="text-navy hover:text-teal transition-colors"
               >
                 <span className="sr-only">Email</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 font-bold"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 font-bold" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 
                            2 0 01-2 2H4a2 2 0 01-2-2V4zm2 
                            0v.01L12 13l8-8.99V4H4zm16 
@@ -83,12 +76,8 @@ export default function Footer() {
                 className="text-navy hover:text-teal transition-colors"
               >
                 <span className="sr-only">WhatsApp</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 font-bold"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 font-bold" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.52 3.48A11.85 11.85 0 0012.01 0C5.39 
                            0 .02 5.37.02 12c0 2.11.55 4.16 
                            1.61 5.98L0 24l6.21-1.63A11.96 
@@ -117,14 +106,9 @@ export default function Footer() {
                 className="text-navy hover:text-teal transition-colors"
               >
                 <span className="sr-only">LinkedIn</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 font-bold"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fillRule="evenodd"
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 font-bold" fill="currentColor" viewBox="0 0 24 24">
+                  <path fillRule="evenodd"
                     d="M19 0h-14C2.24 0 0 2.24 0 
                            5v14c0 2.76 2.24 5 5 
                            5h14c2.76 0 5-2.24 
@@ -134,8 +118,7 @@ export default function Footer() {
                            010 3.73zM20 19h-3v-5.6c0-3.37-4-3.12-4 
                            0V19h-3V8h3v1.76C14.4 
                            7.17 20 6.93 20 11.55V19z"
-                    clipRule="evenodd"
-                  />
+                    clipRule="evenodd" />
                 </svg>
               </a>
             </div>
