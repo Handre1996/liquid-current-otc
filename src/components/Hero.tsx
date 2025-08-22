@@ -25,18 +25,6 @@ export default function Hero() {
     checkKyc();
   }, [user]);
 
-  const handleCTAClick = () => {
-    if (!user) {
-      navigate('/login');
-    } else if (!hasSubmittedKyc) {
-      navigate('/kyc');
-    } else if (kycStatus === 'approved') {
-      navigate('/dashboard');
-    } else {
-      navigate('/');
-    }
-  };
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-navy via-teal to-navy dark:from-navy dark:via-teal dark:to-navy text-blanc">
       {/* Background Image */}
@@ -96,7 +84,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
-                onClick={handleCTAClick}
+                onClick={() => navigate('/register')}
                 className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 font-body"
               >
                 Start KYC Process
