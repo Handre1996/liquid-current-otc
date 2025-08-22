@@ -33,7 +33,7 @@ export default function Hero() {
           alt="Background"
           className="w-full h-full object-cover"
           style={{
-            objectPosition: "20% 80%",     // shift the focal point left (default is 50% 50%)
+            objectPosition: "80% 20%",     // shift the focal point left (default is 50% 50%)
             transform: "scale(1.4)",      // zoom in
             transformOrigin: "left center" // anchor zooming from the left instead of center
           }}
