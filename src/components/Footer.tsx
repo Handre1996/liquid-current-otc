@@ -57,11 +57,11 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="mt-4 space-y-2 font-bold">
-              <li><Link to="/" className="text-navy hover:text-teal">Home</Link></li>
-              <li><Link to="/kyc" className="text-navy hover:text-teal">KYC Process</Link></li>
-              <li><Link to="/about" className="text-navy hover:text-teal">About Us</Link></li>
-              <li><Link to="/terms" className="text-navy hover:text-teal">Terms & Conditions</Link></li>
-              <li><Link to="/privacy" className="text-navy hover:text-teal">Privacy Policy</Link></li>
+              <li><Link to="/" className="text-navy hover:text-navy">Home</Link></li>
+              <li><Link to="/kyc" className="text-navy hover:text-navy">KYC Process</Link></li>
+              <li><Link to="/about" className="text-navy hover:text-navy">About Us</Link></li>
+              <li><Link to="/terms" className="text-navy hover:text-navy">Terms & Conditions</Link></li>
+              <li><Link to="/privacy" className="text-navy hover:text-navy">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
