@@ -83,24 +83,22 @@ export default function Hero() {
                 </div>
               </div>
       
-<h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-  <div className="flex flex-col items-center lg:items-start">
-    {/* Light mode: Navy logo */}
-    <img
-      src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png"
-      alt="Liquid Current OTC Desk"
-      className="h-40 w-auto mb-4 lg:-ml-5 dark:hidden"
-    />
-
-        {/* Dark mode: White logo */}
-    <img
-      src="/LiquidCurrent_Logo_CMYK_SecondaryLogoWhite.png"
-      alt="Liquid Current OTC Desk"
-      className="h-40 w-auto mb-4 lg:-ml-5 hidden dark:block"
-    />
-  </div>
-</h1>
-    
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                <div className="flex flex-col items-center lg:items-start">
+                  {/* Light mode: Navy logo */}
+                  <img
+                    src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png"
+                    alt="Liquid Current OTC Desk"
+                    className="h-40 w-auto mb-4 lg:-ml-5 dark:hidden"
+                  />
+              
+                  {/* Dark mode: White logo */}
+                  <img
+                    src="/LiquidCurrent_Logo_CMYK_SecondaryLogoWhite.png"
+                    alt="Liquid Current OTC Desk"
+                    className="h-40 w-auto mb-4 lg:-ml-5 hidden dark:block"
+                  />
+              
                   <span className="block bg-white text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
                     OTC Desk
                   </span>
