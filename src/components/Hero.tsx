@@ -74,26 +74,26 @@ export default function Hero() {
         <div className="max-w-4xl">
           <div className="space-y-8">
             <div className="space-y-6">
-              {/* Logo + OTC Desk */}
-              <div className="flex flex-col items-start">
-                {/* Light mode: Navy logo */}
-                <img
-                  src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png"
-                  alt="Liquid Current OTC Desk"
-                  className="h-40 w-auto mb-4 -ml-4 dark:hidden"
-                />
-                {/* Dark mode: White logo */}
-                <img
-                  src="/LiquidCurrent_Logo_CMYK_SecondaryLogoWhite.png"
-                  alt="Liquid Current OTC Desk"
-                  className="h-40 w-auto mb-4 -ml-4 hidden dark:block"
-                />
-
-                {/* OTC Desk sub-heading */}
-                <span className="inline-block bg-white text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
-                  OTC Desk
-                </span>
-              </div>
+            {/* Logo + OTC Desk */}
+            <div className="flex flex-col items-start">
+              {/* Light mode: Navy logo */}
+              <img
+                src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png"
+                alt="Liquid Current OTC Desk"
+                className="h-40 w-auto mb-4 -ml-10 dark:hidden"
+              />
+              {/* Dark mode: White logo */}
+              <img
+                src="/LiquidCurrent_Logo_CMYK_SecondaryLogoWhite.png"
+                alt="Liquid Current OTC Desk"
+                className="h-40 w-auto mb-4 -ml-10 hidden dark:block"
+              />
+            
+              {/* OTC Desk sub-heading */}
+              <span className="inline-block bg-white text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
+                OTC Desk
+              </span>
+            </div>
 
               {/* Description */}
               <p className="mt-6 text-xl text-navy max-w-3xl leading-relaxed font-body">
