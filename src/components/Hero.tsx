@@ -31,12 +31,8 @@ export default function Hero() {
         <img
           src="/beautiful.jpg"
           alt="Background"
-          className="w-full h-full object-cover"
-          style={{
-            objectPosition: "80% 30%",      // shift more left than before (40% → 30%)
-            transform: "scale(1.00)",       // slightly more zoom to bring subject closer
-            transformOrigin: "left center", // anchor zooming from the left side
-          }}
+          className="w-full h-full object-cover sm:scale-100 sm:[object-position:80%_30%] scale-110 [object-position:center]"
+          style={{ transformOrigin: "left center" }}
         />
       </div>
 
@@ -52,12 +48,12 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <div className="relative container mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8 z-10">
         <div className="max-w-4xl">
           <div className="space-y-8">
             <div className="space-y-6">
               {/* Logo + OTC Desk */}
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start relative z-10">
                 {/* Light mode: Navy logo */}
                 <img
                   src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png"
@@ -78,7 +74,7 @@ export default function Hero() {
               </div>
 
               {/* Tagline */}
-              <p className="mt-6 text-xl text-navy max-w-3xl leading-relaxed font-body">
+              <p className="mt-6 text-lg sm:text-xl text-navy max-w-lg sm:max-w-3xl leading-relaxed font-body">
                 Trade cryptocurrency for fiat or fiat for crypto through<br />
                 our FSCA regulated OTC desk. Complete your KYC<br />
                 once and trade with confidence.
@@ -104,7 +100,7 @@ export default function Hero() {
               </div>
 
               {/* Disclaimer under buttons */}
-              <p className="mt-4 text-xs text-navy font-body">
+              <p className="mt-4 text-xs sm:text-sm text-navy dark:text-foam font-body px-2 py-1 rounded bg-white/70 dark:bg-navy/70 backdrop-blur-sm inline-block">
                 Regulated by the Financial Sector Conduct Authority (FSCA) under FSP Number 53702
               </p>
             </div>
