@@ -41,23 +41,34 @@ export default function Hero() {
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-navy via-teal to-navy dark:from-navy dark:via-teal dark:to-navy text-blanc">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/beautiful.jpg" 
+          alt="Background" 
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay to maintain readability */}
+        <div className="absolute inset-0 bg-navy/60"></div>
+      </div>
+      
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-foam/20 via-teal/20 to-foam/20 animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-foam/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-foam/10 via-teal/10 to-foam/10 animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-foam/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-conic from-foam/5 via-teal/5 to-foam/5 rounded-full blur-3xl animate-spin"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-conic from-foam/3 via-teal/3 to-foam/3 rounded-full blur-3xl animate-spin"
           style={{ animationDuration: '20s' }}
         ></div>
       </div>
 
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
         ></div>
       </div>
