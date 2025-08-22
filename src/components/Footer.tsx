@@ -27,11 +27,10 @@ export default function Footer() {
             </p>
           </div>
           
-          {/* Center Logo */}
-          <div className="flex flex-col items-center justify-center">
-            <div className="mb-4">
-              {isAboutPage ? (
-                <img 
+              {/* Center Logo */}
+              <div className="flex flex-col items-center justify-center">
+                <div className="mb-4">
+                  <img 
                   src="/LiquidCurrent_Logo_CMYK_PrimaryLogoFoam.png" 
                   alt="Liquid Current" 
                   className="h-40 w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
