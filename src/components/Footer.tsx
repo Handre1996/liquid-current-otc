@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer
       className={`w-full ${
-        isAboutPage ? "bg-navy text-foam" : "bg-blanc text-navy"
+        isAboutPage ? "bg-navy text-blanc" : "bg-blanc text-navy"
       }`}
     >
       {/* Main Card */}
@@ -22,18 +22,20 @@ export default function Footer() {
           <div className="flex flex-col justify-center">
             <p
               className={`mt-2 font-body font-bold ${
-                isAboutPage ? "text-foam" : "text-teal"
+                isAboutPage ? "text-blanc" : "text-teal"
               }`}
             >
               <span>FSP Number 53702</span> – Regulated by the Financial Sector
               Conduct Authority (FSCA)
             </p>
-            <p className="mt-4 text-sm font-body font-bold">
-              <span className={isAboutPage ? "text-foam" : "text-navy"}>
-                We facilitate crypto-to-fiat and fiat-to-crypto transactions for
-                our clients, ensuring regulatory compliance and security through
-                our KYC process.
-              </span>
+            <p
+              className={`mt-4 text-sm font-body font-bold ${
+                isAboutPage ? "text-blanc" : "text-navy"
+              }`}
+            >
+              We facilitate crypto-to-fiat and fiat-to-crypto transactions for
+              our clients, ensuring regulatory compliance and security through
+              our KYC process.
             </p>
           </div>
 
@@ -42,7 +44,7 @@ export default function Footer() {
             <img
               src="/LiquidCurrent_Logo_CMYK_PrimaryLogoTeal.png"
               alt="Liquid Current"
-              className="h-[250px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
+              className="h-[46px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
             />
           </div>
 
@@ -50,34 +52,49 @@ export default function Footer() {
           <div className="flex flex-col justify-center">
             <h3
               className={`text-xl font-semibold font-heading font-bold ${
-                isAboutPage ? "text-foam" : "text-teal"
+                isAboutPage ? "text-blanc" : "text-teal"
               }`}
             >
               Quick Links
             </h3>
             <ul className="mt-4 space-y-2 font-bold">
               <li>
-                <Link to="/" className="hover:text-teal">
+                <Link
+                  to="/"
+                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-teal">
+                <Link
+                  to="/about"
+                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/kyc" className="hover:text-teal">
+                <Link
+                  to="/kyc"
+                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                >
                   KYC Process
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="hover:text-teal">
+                <Link
+                  to="/terms"
+                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                >
                   Terms & Conditions
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="hover:text-teal">
+                <Link
+                  to="/privacy"
+                  className={`${isAboutPage ? "text-blanc" : "text-navy"} hover:text-teal`}
+                >
                   Privacy Policy
                 </Link>
               </li>
