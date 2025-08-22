@@ -13,7 +13,6 @@ export default function Hero() {
   useEffect(() => {
     const checkKyc = async () => {
       if (!user) return;
-
       try {
         const submission = await checkExistingSubmission(user.id);
         setHasSubmittedKyc(!!submission);
@@ -42,14 +41,14 @@ export default function Hero() {
     <div className="relative overflow-hidden bg-gradient-to-br from-navy via-teal to-navy dark:from-navy dark:via-teal dark:to-navy text-blanc">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
-          src="/beautiful.jpg" 
-          alt="Background" 
+        <img
+          src="/beautiful.jpg"
+          alt="Background"
           className="w-full h-full object-cover"
         />
       </div>
-      
-      {/* Animated background elements */}
+
+      {/* Gradient overlays */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-foam/10 via-teal/10 to-foam/10 animate-pulse"></div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-foam/5 rounded-full blur-3xl animate-pulse"></div>
@@ -60,62 +59,47 @@ export default function Hero() {
         ></div>
       </div>
 
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        ></div>
-      </div>
-      
+      {/* Content */}
       <div className="relative container mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="max-w-4xl">
           <div className="space-y-8">
             <div className="space-y-6">
-            {/* Logo + OTC Desk */}
-            <div className="flex flex-col items-start">
-              {/* Light mode: Navy logo */}
-              <img
-                src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png"
-                alt="Liquid Current OTC Desk"
-                className="h-40 w-auto mb-4 -ml-10 dark:hidden"
-              />
-              {/* Dark mode: White logo */}
-              <img
-                src="/LiquidCurrent_Logo_CMYK_SecondaryLogoWhite.png"
-                alt="Liquid Current OTC Desk"
-                className="h-40 w-auto mb-4 -ml-10 hidden dark:block"
-              />
-            
-              {/* OTC Desk sub-heading */}
-              <span className="inline-block bg-white text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
-                OTC Desk
-              </span>
-            </div>
+              {/* Logo + OTC Desk */}
+              <div className="flex flex-col items-start">
+                {/* Light mode: Navy logo */}
+                <img
+                  src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png"
+                  alt="Liquid Current OTC Desk"
+                  className="h-40 w-auto mb-4 -ml-10 dark:hidden"
+                />
+                {/* Dark mode: White logo */}
+                <img
+                  src="/LiquidCurrent_Logo_CMYK_SecondaryLogoWhite.png"
+                  alt="Liquid Current OTC Desk"
+                  className="h-40 w-auto mb-4 -ml-10 hidden dark:block"
+                />
 
-              {/* Description */}
+                {/* OTC Desk */}
+                <span className="inline-block bg-white text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
+                  OTC Desk
+                </span>
+              </div>
+
+              {/* Tagline */}
               <p className="mt-6 text-xl text-navy max-w-3xl leading-relaxed font-body">
                 Trade cryptocurrency for fiat or fiat for crypto through our FSCA regulated OTC desk.
                 Complete your KYC once and trade with confidence in a secure, professional environment.
               </p>
             </div>
 
-            {/* CTA buttons */}
+            {/* Call-to-action buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
                 onClick={handleCTAClick}
                 className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 font-body"
               >
-                {!user
-                  ? '🚀 Get Started'
-                  : !hasSubmittedKyc
-                  ? '📋 Start KYC Process'
-                  : kycStatus === 'approved'
-                  ? '💼 Go to Trading Dashboard'
-                  : '📊 View Status'}
+                Start KYC Process
               </Button>
               <Button
                 size="lg"
@@ -123,7 +107,7 @@ export default function Hero() {
                 className="border-2 border-navy bg-foam text-navy hover:bg-foam/80 hover:text-navy hover:border-navy font-semibold transition-all duration-300 transform hover:scale-105 font-body"
                 asChild
               >
-                <Link to="/about">📞 Contact Us</Link>
+                <Link to="/about">Contact Us</Link>
               </Button>
             </div>
           </div>
