@@ -29,11 +29,12 @@ export default function Hero() {
     <div className="relative overflow-hidden bg-gradient-to-br from-navy via-teal to-navy dark:from-navy dark:via-teal dark:to-navy text-blanc">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src="/beautiful.jpg"
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
+      <img
+        src="/beautiful.jpg"
+        alt="Background"
+        className="w-full h-full object-cover"
+        style={{ objectPosition: "center 30%", transform: "scale(1.2)" }}
+      />
       </div>
 
       {/* Gradient overlays */}
