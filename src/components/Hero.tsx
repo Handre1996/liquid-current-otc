@@ -48,8 +48,6 @@ export default function Hero() {
           alt="Background" 
           className="w-full h-full object-cover"
         />
-        {/* Dark overlay to maintain readability */}
-        <div className="absolute inset-0 bg-navy/60"></div>
       </div>
       
       {/* Animated background elements */}
