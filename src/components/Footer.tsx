@@ -42,7 +42,7 @@ export default function Footer() {
             <img
               src="/LiquidCurrent_Logo_CMYK_PrimaryLogoTeal.png"
               alt="Liquid Current"
-              className="h-[250px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
+              className="h-[46px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
             />
           </div>
 
@@ -69,6 +69,16 @@ export default function Footer() {
               <li>
                 <Link to="/kyc" className="hover:text-teal">
                   KYC Process
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="hover:text-teal">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="hover:text-teal">
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
