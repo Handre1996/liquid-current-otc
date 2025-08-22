@@ -32,7 +32,11 @@ export default function Hero() {
           src="/beautiful.jpg"
           alt="Background"
           className="w-full h-full object-cover"
-          style={{ objectPosition: "center 50%", transform: "scale(1.4)" }}
+          style={{
+            objectPosition: "40% 50%",     // shift the focal point left (default is 50% 50%)
+            transform: "scale(1.4)",      // zoom in
+            transformOrigin: "left center" // anchor zooming from the left instead of center
+          }}
         />
       </div>
 
