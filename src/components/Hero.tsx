@@ -76,11 +76,10 @@ export default function Hero() {
 
               {/* Tagline */}
               <p className="mt-6 text-xl text-navy max-w-3xl leading-relaxed font-body">
-                Trade cryptocurrency for fiat or fiat for crypto through
-                our FSCA regulated OTC desk. Complete your KYC 
-                once and trade with confidence.
+                Trade cryptocurrency for fiat or fiat for crypto through<br />
+                our FSCA regulated OTC desk. Complete your <br />
+                KYC once and trade with confidence.
               </p>
-            </div>
 
             {/* Call-to-action buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
