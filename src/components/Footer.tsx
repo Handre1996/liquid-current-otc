@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Left section */}
           <div>
             <h3 className={`text-xl font-logo font-bold ${isAboutPage ? 'text-foam' : 'text-navy dark:text-navy'}`}>
-              Liquid Current OTC Desk
+              
             </h3>
             <p className="mt-2 font-body font-bold text-teal">
               <span className="text-teal">FSP Number 53702</span> – 
