@@ -31,7 +31,7 @@ export default function Hero() {
         <img
           src="/beautiful.jpg"
           alt="Background"
-          className="w-full h-full object-cover sm:scale-100 sm:[object-position:80%_30%] scale-67 [object-position:center]"
+          className="w-full h-full object-cover sm:scale-67 sm:[object-position:80%_30%] scale-67 [object-position:center]"
           style={{ transformOrigin: "left center" }}
         />
       </div>
