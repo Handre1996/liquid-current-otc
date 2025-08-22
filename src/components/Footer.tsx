@@ -10,48 +10,42 @@ export default function Footer() {
       className={`${isAboutPage ? 'bg-navy dark:bg-navy' : 'bg-blanc dark:bg-blanc'} 
                   ${isAboutPage ? 'text-foam' : 'text-navy dark:text-navy'}`}
     >
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left section */}
-          <div>
-            <h3 className={`text-xl font-logo font-bold ${isAboutPage ? 'text-foam' : 'text-navy dark:text-navy'}`}>
-            </h3>
-            <p className="mt-2 font-body font-bold text-teal">
-              <span className="text-teal">FSP Number 53702</span> – 
-              <span className="text-teal"> Regulated by the Financial Sector Conduct Authority (FSCA)</span>
-            </p>
-            <p className="mt-4 text-sm font-body font-bold">
-              <span className="text-navy">We facilitate crypto-to-fiat and fiat-to-crypto transactions</span><br />
-              <span className="text-navy">Ensuring regulatory compliance</span><br />
-              <span className="text-navy">Security through our KYC process</span>
-            </p>
-          </div>
-          
-              {/* Center Logo */}
-              <div className="flex flex-col items-center justify-center">
-                <div className="mb-4">
-                  <img 
-                  src="/LiquidCurrent_Logo_CMYK_PrimaryLogoTeal.png" 
-                  alt="Liquid Current" 
-                  className="h-[250px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
-                />
-            </div>
-          </div>
-          
-          {/* Quick Links */}
-          <div>
-            <h3 className={`text-xl font-semibold font-heading font-bold ${isAboutPage ? 'text-foam' : 'text-teal dark:text-navy'}`}>
-              Quick Links
-            </h3>
-            <ul className="mt-4 space-y-2 font-bold">
-              <li><Link to="/" className="text-navy hover:text-navy">Home</Link></li>
-              <li><Link to="/kyc" className="text-navy hover:text-navy">KYC Process</Link></li>
-              <li><Link to="/about" className="text-navy hover:text-navy">About Us</Link></li>
-              <li><Link to="/terms" className="text-navy hover:text-navy">Terms & Conditions</Link></li>
-              <li><Link to="/privacy" className="text-navy hover:text-navy">Privacy Policy</Link></li>
-            </ul>
-          </div>
-        </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+  {/* Left section */}
+  <div className="flex flex-col justify-center">
+    <p className="mt-2 font-body font-bold text-teal">
+      <span className="text-teal">FSP Number 53702</span> – 
+      <span className="text-teal"> Regulated by the Financial Sector Conduct Authority (FSCA)</span>
+    </p>
+    <p className="mt-4 text-sm font-body font-bold">
+      <span className="text-navy">We facilitate crypto-to-fiat and fiat-to-crypto transactions</span><br />
+      <span className="text-navy">Ensuring regulatory compliance</span><br />
+      <span className="text-navy">Security through our KYC process</span>
+    </p>
+  </div>
+
+  {/* Center Logo */}
+  <div className="flex flex-col items-center justify-center">
+    <img 
+      src="/LiquidCurrent_Logo_CMYK_PrimaryLogoTeal.png" 
+      alt="Liquid Current" 
+      className="h-[42px] w-auto opacity-90 hover:opacity-100 transition-opacity duration-200"
+    />
+  </div>
+
+  {/* Quick Links */}
+  <div className="flex flex-col justify-center">
+    <h3 className="text-xl font-semibold font-heading font-bold text-teal">Quick Links</h3>
+    <ul className="mt-4 space-y-2 font-bold">
+      <li><Link to="/" className="text-navy hover:text-navy">Home</Link></li>
+      <li><Link to="/kyc" className="text-navy hover:text-navy">KYC Process</Link></li>
+      <li><Link to="/about" className="text-navy hover:text-navy">About Us</Link></li>
+      <li><Link to="/terms" className="text-navy hover:text-navy">Terms & Conditions</Link></li>
+      <li><Link to="/privacy" className="text-navy hover:text-navy">Privacy Policy</Link></li>
+    </ul>
+  </div>
+</div>
+
         
         {/* Bottom section */}
         <div className="mt-8 pt-8 border-t border-brand-700 dark:border-brand-800 bg-foam rounded-lg p-6">
