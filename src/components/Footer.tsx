@@ -41,13 +41,13 @@ export default function Footer() {
                 <img 
                   src="/LiquidCurrent_Logo_CMYK_PrimaryLogoNavy.png" 
                   alt="Liquid Current" 
-                  className="h-36 w-auto opacity-80 hover:opacity-100 transition-opacity duration-200"
+                  className="h-38 w-auto opacity-80 hover:opacity-100 transition-opacity duration-200"
                 />
               )}
             </div>
             <p className="text-sm font-body font-bold text-center">
               <span className="text-navy"></span><br />
-              <span className="text-teal"></span>
+              <span className="text-navy"></span>
             </p>
           </div>
           
