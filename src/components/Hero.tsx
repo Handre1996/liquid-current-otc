@@ -34,7 +34,6 @@ export default function Hero() {
     } else if (kycStatus === 'approved') {
       navigate('/dashboard');
     } else {
-      // For pending or rejected KYC, just stay on the home page
       navigate('/');
     }
   };
@@ -75,35 +74,28 @@ export default function Hero() {
         <div className="max-w-4xl">
           <div className="space-y-8">
             <div className="space-y-6">
-              <div className="flex justify-center lg:justify-start">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 backdrop-blur-sm">
-                  <span className="text-sm font-medium text-blue-200">
-                    🏆 FSCA Regulated • FSP 53702
-                  </span>
-                </div>
-              </div>
-      
+              
+              {/* Logo and heading */}
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                <div className="flex flex-col items-center lg:items-start">
+                <div className="flex flex-col items-start">
                   {/* Light mode: Navy logo */}
                   <img
                     src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png"
                     alt="Liquid Current OTC Desk"
                     className="h-40 w-auto mb-4 lg:-ml-5 dark:hidden"
                   />
-              
                   {/* Dark mode: White logo */}
                   <img
                     src="/LiquidCurrent_Logo_CMYK_SecondaryLogoWhite.png"
                     alt="Liquid Current OTC Desk"
                     className="h-40 w-auto mb-4 lg:-ml-5 hidden dark:block"
                   />
-              
-                  <span className="block bg-white text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
-                    OTC Desk
-                  </span>
                 </div>
               </h1>
+    
+              <span className="block bg-white text-navy font-heading text-2xl sm:text-3xl lg:text-4xl px-4 py-2 rounded-lg">
+                OTC Desk
+              </span>
 
               <p className="mt-6 text-xl text-navy max-w-3xl leading-relaxed font-body">
                 Trade cryptocurrency for fiat or fiat for crypto through our FSCA regulated OTC desk.
@@ -111,6 +103,7 @@ export default function Hero() {
               </p>
             </div>
 
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
