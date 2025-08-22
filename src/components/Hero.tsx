@@ -100,7 +100,7 @@ export default function Hero() {
               </div>
 
               {/* Disclaimer under buttons */}
-              <p className="mt-4 text-sm text-navy font-body">
+              <p className="mt-4 text-xs text-navy font-body">
                 Regulated by the Financial Sector Conduct Authority (FSCA) under FSP Number 53702
               </p>
             </div>
