@@ -71,18 +71,6 @@ export default function Hero() {
         ></div>
       </div>
 
-      <div className="relative container mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="max-w-4xl">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <div className="flex justify-center lg:justify-start">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 backdrop-blur-sm">
-                  <span className="text-sm font-medium text-blue-200">
-                    🏆 FSCA Regulated • FSP 53702
-                  </span>
-                </div>
-              </div>
-
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                 <div className="flex flex-col items-center lg:items-start">
                   <img
