@@ -53,7 +53,7 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h3 className={`text-lg font-semibold font-heading font-bold ${isAboutPage ? 'text-foam' : 'text-teal dark:text-navy'}`}>
+            <h3 className={`text-xlg font-semibold font-heading font-bold ${isAboutPage ? 'text-foam' : 'text-teal dark:text-navy'}`}>
               Quick Links
             </h3>
             <ul className="mt-4 space-y-2 font-bold">
