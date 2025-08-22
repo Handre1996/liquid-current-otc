@@ -76,8 +76,8 @@ export default function Hero() {
               {/* Tagline */}
               <p className="mt-6 text-xl text-navy max-w-3xl leading-relaxed font-body">
                 Trade cryptocurrency for fiat or fiat for crypto through<br />
-                our FSCA regulated OTC desk. Complete your <br />
-                KYC once and trade with confidence.
+                our FSCA regulated OTC desk. Complete your KYC<br />
+                once and trade with confidence.
               </p>
 
               {/* Call-to-action buttons */}
