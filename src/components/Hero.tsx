@@ -87,7 +87,7 @@ export default function Hero() {
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                 <div className="flex flex-col items-center lg:items-start">
                   <img
-                    src="/public/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.jpg"
+                    src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.jpg"
                     alt="Liquid Current OTC Desk"
                     className="h-40 w-auto mb-4 filter brightness-0 invert lg:-ml-5"
                   />
