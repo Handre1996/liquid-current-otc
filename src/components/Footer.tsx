@@ -46,8 +46,8 @@ export default function Footer() {
               )}
             </div>
             <p className="text-sm font-body font-bold text-center">
-              <span className="text-navy">Bridging Traditional Finance</span><br />
-              <span className="text-teal">with Digital Assets</span>
+              <span className="text-navy"></span><br />
+              <span className="text-teal"></span>
             </p>
           </div>
           
