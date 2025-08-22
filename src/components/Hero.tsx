@@ -80,7 +80,7 @@ export default function Hero() {
               <img
                 src="/LiquidCurrent_Logo_CMYK_SecondaryLogoNavy.png"
                 alt="Liquid Current OTC Desk"
-                className="h-42 w-auto mb-4 -ml-10 dark:hidden"
+                className="h-40 w-auto mb-4 -ml-10 dark:hidden"
               />
               {/* Dark mode: White logo */}
               <img
