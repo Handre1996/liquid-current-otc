@@ -51,44 +51,39 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-2 font-bold">
               <li>
-                <Link
-                  to="/"
-                  className={`${linkColor} ${linkHoverColor}`}
-                >
+                <Link to="/" className={`${linkColor} ${linkHoverColor}`}>
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/about"
-                  className={`${linkColor} ${linkHoverColor}`}
-                >
+                <Link to="/about" className={`${linkColor} ${linkHoverColor}`}>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/kyc"
-                  className={`${linkColor} ${linkHoverColor}`}
-                >
+                <Link to="/kyc" className={`${linkColor} ${linkHoverColor}`}>
                   KYC Process
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/terms"
-                  className={`${linkColor} ${linkHoverColor}`}
-                >
+                <Link to="/terms" className={`${linkColor} ${linkHoverColor}`}>
                   Terms & Conditions
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/privacy"
-                  className={`${linkColor} ${linkHoverColor}`}
-                >
+                <Link to="/privacy" className={`${linkColor} ${linkHoverColor}`}>
                   Privacy Policy
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="/Liquid%20Current%20FSP%20Licence%20copy.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${linkColor} ${linkHoverColor}`}
+                >
+                  License Document
+                </a>
               </li>
             </ul>
           </div>
