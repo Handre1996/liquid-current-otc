@@ -76,6 +76,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/contact" className={`${linkColor} ${linkHoverColor}`}>
+                  Contact Us
+                </Link>
+              </li>
+              <li>
                 <a
                   href="/Liquid%20Current%20FSP%20Licence%20copy.pdf"
                   target="_blank"
