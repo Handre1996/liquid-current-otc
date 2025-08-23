@@ -82,7 +82,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className={`${linkColor} ${linkHoverColor}`}
                 >
-                  License Document
+                  FSP License
                 </a>
               </li>
             </ul>
