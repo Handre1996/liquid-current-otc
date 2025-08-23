@@ -19,6 +19,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import AuthRouter from "./components/AuthRouter";
 import WhatsAppChat from "./components/WhatsAppChat";
+import Contact from "@/pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
                 <Route path="/terms" element={<TermsAndConditions />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="*" element={<NotFound />} />
+                <Route path="/contact" element={<Contact />} />
               </Routes>
             </AuthRouter>
             <WhatsAppChat />
