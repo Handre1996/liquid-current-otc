@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,6 +21,17 @@ export default function Contact() {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
+      {/* Back Button */}
+      <div className="mb-6">
+        <Button
+          variant="outline"
+          className="border-2 border-navy text-navy hover:bg-navy hover:text-blanc font-semibold"
+          onClick={() => navigate("/")}
+        >
+          ← Back to Home
+        </Button>
+      </div>
+
       <h1 className="text-3xl font-bold text-navy mb-6">Contact Us</h1>
 
       {/* Contact Form */}
@@ -45,8 +58,18 @@ export default function Contact() {
       {/* Trade Team */}
       <div className="bg-foam shadow-lg rounded-lg p-6 mb-8">
         <h2 className="text-2xl font-bold text-navy mb-4">Trade Team</h2>
-        <p className="text-navy font-semibold">📞 Jaryd: <span className="font-normal">+27 83 607 7670</span></p>
-        <p className="text-navy font-semibold">📞 Christelle: <span className="font-normal">+27 74 904 3765</span></p>
+        <p className="text-navy font-semibold">
+          📞 Jaryd:{" "}
+          <a href="tel:+27836077670" className="text-teal hover:underline">
+            +27 83 607 7670
+          </a>
+        </p>
+        <p className="text-navy font-semibold">
+          📞 Christelle:{" "}
+          <a href="tel:+27749043765" className="text-teal hover:underline">
+            +27 74 904 3765
+          </a>
+        </p>
       </div>
 
       {/* Complaints */}
