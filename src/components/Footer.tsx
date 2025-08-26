@@ -42,58 +42,60 @@ export default function Footer() {
             />
           </div>
 
-          {/* Quick Links */}
-          <div className="flex flex-col justify-center">
-            <h3
-              className={`text-xl font-semibold font-heading font-bold ${headingColor}`}
-            >
-              Quick Links
-            </h3>
-            <ul className="mt-4 space-y-2 font-bold">
-              <li>
-                <Link to="/" className={`${linkColor} ${linkHoverColor}`}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className={`${linkColor} ${linkHoverColor}`}>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/kyc" className={`${linkColor} ${linkHoverColor}`}>
-                  KYC Process
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms" className={`${linkColor} ${linkHoverColor}`}>
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy" className={`${linkColor} ${linkHoverColor}`}>
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className={`${linkColor} ${linkHoverColor}`}>
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="/Liquid%20Current%20FSP%20Licence%20copy.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${linkColor} ${linkHoverColor}`}
-                >
-                  FSP License
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+{/* Quick Links */}
+<div className="flex flex-col justify-center">
+  <h3 className={`text-xl font-semibold font-heading font-bold ${headingColor}`}>
+    Quick Links
+  </h3>
+  <ul className="mt-4 space-y-2 font-bold">
+    <li>
+      <Link to="/" className={`${linkColor} ${linkHoverColor}`}>
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link to="/about" className={`${linkColor} ${linkHoverColor}`}>
+        About Us
+      </Link>
+    </li>
+    <li>
+      <Link to="/kyc" className={`${linkColor} ${linkHoverColor}`}>
+        KYC Process
+      </Link>
+    </li>
+    <li>
+      <Link to="/terms" className={`${linkColor} ${linkHoverColor}`}>
+        Terms & Conditions
+      </Link>
+    </li>
+    <li>
+      <Link to="/privacy" className={`${linkColor} ${linkHoverColor}`}>
+        Privacy Policy
+      </Link>
+    </li>
+    <li>
+      <a
+        href="/Liquid Current FSP Licence copy.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${linkColor} ${linkHoverColor}`}
+      >
+        FSCA Licence
+      </a>
+    </li>
+    <li>
+      <a
+        href="/PAIA MANUAL & POLICY.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${linkColor} ${linkHoverColor}`}
+      >
+        PAIA Manual
+      </a>
+    </li>
+  </ul>
+</div>
+
 
       {/* Bottom Bar */}
       <div className="w-full bg-foam border-t border-gray-200">
