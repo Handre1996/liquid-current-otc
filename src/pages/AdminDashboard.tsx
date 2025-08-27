@@ -129,18 +129,25 @@ const AdminDashboard = () => {
   }, [user, loading, isAdmin, navigate]);
 
   const fetchUsers = async () => {
-    if (!session?.access_token) {
-      toast.error('Authentication required');
-      return;
-    }
-
-    setIsLoadingUsers(true);
     try {
+      // Get the latest session to ensure we have a valid token
+      const { data: { session: currentSession }, error: sessionError } = await supabase.auth.getSession();
+      
+      if (sessionError) {
+        throw new Error('Failed to get session');
+      }
+      
+      if (!currentSession?.access_token) {
+        throw new Error('No valid session found');
+      }
+
+      setIsLoadingUsers(true);
+      
       const response = await fetch(
         `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/list-users`,
         {
           headers: {
-            Authorization: `Bearer ${session.access_token}`,
+            Authorization: `Bearer ${currentSession.access_token}`,
           },
         }
       );
@@ -154,7 +161,7 @@ const AdminDashboard = () => {
       setUsers(data.users || []);
     } catch (error: any) {
       console.error('Error fetching users:', error);
-      toast.error(error.message || 'Failed to fetch users');
+      toast.error('Authentication required');
       setUsers([]);
     } finally {
       setIsLoadingUsers(false);
@@ -179,18 +186,26 @@ const AdminDashboard = () => {
   };
 
   const handleDeleteUser = async () => {
-    if (!selectedUser || !session?.access_token) return;
+    if (!selectedUser) return;
     
-    setIsDeleting(true);
-    const deleteToast = toast.loading('Deleting user and associated data...');
-
     try {
+      // Get the latest session to ensure we have a valid token
+      const { data: { session: currentSession }, error: sessionError } = await supabase.auth.getSession();
+      
+      if (sessionError || !currentSession?.access_token) {
+        toast.error('Authentication required');
+        return;
+      }
+
+      setIsDeleting(true);
+      const deleteToast = toast.loading('Deleting user and associated data...');
+      
       const response = await fetch(
         `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/delete-user?id=${selectedUser.id}`,
         {
           method: 'DELETE',
           headers: {
-            Authorization: `Bearer ${session.access_token}`,
+            Authorization: `Bearer ${currentSession.access_token}`,
           },
         }
       );
