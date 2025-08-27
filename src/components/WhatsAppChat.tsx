@@ -17,7 +17,7 @@ interface WhatsAppChatProps {
 }
 
 const WhatsAppChat = ({ 
-  supportNumber = "+971 58 573 0141", // Updated WhatsApp number
+  supportNumber = "+27 83 607 7670", // Updated WhatsApp number
   businessHours = {
     start: "08:00",
     end: "17:00", 
