@@ -59,6 +59,16 @@ export default function Footer() {
       </Link>
     </li>
     <li>
+      <a
+        href="/Liquid Current_Company Profile.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${linkColor} ${linkHoverColor}`}
+      >
+        Company Profile
+      </a>
+    </li>
+    <li>
       <Link to="/kyc" className={`${linkColor} ${linkHoverColor}`}>
         KYC Process
       </Link>
