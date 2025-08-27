@@ -89,7 +89,11 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
     ownerName: '',
     ownerSurname: '',
     ownerIdNumber: '',
-    ownerIdType: 'nationalId' as 'nationalId' | 'passport'
+    ownerIdType: 'nationalId' as 'nationalId' | 'passport',
+    ownerAddress: '',
+    ownerCity: '',
+    ownerPostalCode: '',
+    ownerCountry: ''
   });
   const [walletTypeClassification, setWalletTypeClassification] = useState<'hosted' | 'unhosted' | ''>('');
   const [walletTypeUnderstood, setWalletTypeUnderstood] = useState(false);
@@ -135,7 +139,11 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
       ownerName: '',
       ownerSurname: '',
       ownerIdNumber: '',
-      ownerIdType: 'nationalId'
+      ownerIdType: 'nationalId',
+      ownerAddress: '',
+      ownerCity: '',
+      ownerPostalCode: '',
+      ownerCountry: ''
     });
     setWalletTypeClassification('');
     setWalletTypeUnderstood(false);
