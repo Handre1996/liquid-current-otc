@@ -637,16 +637,16 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
 
                         {/* Company Details Form */}
                         {isWalletOwner === 'company' && (
-                          <Card className="border-purple-200 bg-purple-50">
+                          <Card className="border-foam/50 dark:border-teal/30 bg-gradient-to-r from-foam/20 to-ivory/50 dark:from-teal/20 dark:to-navy/30">
                             <CardHeader>
-                              <CardTitle className="text-base text-purple-800">Company Details & Beneficial Owner</CardTitle>
-                              <CardDescription className="text-purple-700">
+                              <CardTitle className="text-base text-navy dark:text-foam font-heading">Company Details & Beneficial Owner</CardTitle>
+                              <CardDescription className="text-teal dark:text-foam/80 font-body">
                                 Please provide the company details and beneficial owner information
                               </CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-4">
                               <div className="space-y-4">
-                                <h4 className="font-medium text-purple-800">Company Information</h4>
+                                <h4 className="font-medium text-navy dark:text-foam font-heading">Company Information</h4>
                                 <div className="space-y-2">
                                   <Label htmlFor="company-name">Company Name</Label>
                                   <Input
@@ -676,7 +676,7 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                                 </div>
                                 
                                 <div className="space-y-4">
-                                  <h4 className="font-medium text-purple-800">Company Address</h4>
+                                  <h4 className="font-medium text-navy dark:text-foam font-heading">Company Address</h4>
                                   <div className="space-y-2">
                                     <Label htmlFor="company-address">Street Address</Label>
                                     <Input
@@ -738,9 +738,9 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                               <Separator />
                               
                               <div className="space-y-4">
-                                <h4 className="font-medium text-purple-800">Beneficial Owner Details</h4>
+                                <h4 className="font-medium text-navy dark:text-foam font-heading">Beneficial Owner Details</h4>
                                 <div className="space-y-2">
-                                  <p className="text-sm text-purple-700 mb-2">
+                                  <p className="text-sm text-teal dark:text-foam/80 font-body mb-2">
                                     Provide details of the person who ultimately owns or controls the company
                                   </p>
                                 </div>
@@ -811,10 +811,10 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                                 </div>
                               </div>
                               
-                              <div className="bg-purple-100 border border-purple-200 rounded-lg p-3">
+                              <div className="bg-gradient-to-r from-foam/30 to-ivory/50 dark:from-teal/20 dark:to-navy/30 border border-foam/50 dark:border-teal/30 rounded-lg p-3">
                                 <div className="flex items-start gap-2">
-                                  <AlertTriangle className="h-4 w-4 text-purple-600 mt-0.5" />
-                                  <div className="text-sm text-purple-800">
+                                  <AlertTriangle className="h-4 w-4 text-navy dark:text-foam mt-0.5" />
+                                  <div className="text-sm text-navy dark:text-foam font-body">
                                     <p className="font-medium mb-1">Important Notice</p>
                                     <p>
                                       By providing these details, you confirm that you are authorized to conduct transactions on behalf of the company 
