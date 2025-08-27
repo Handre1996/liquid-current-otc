@@ -108,7 +108,25 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
     
     setLoading(true);
     try {
-      const rate = await priceService.getExchangeRate(fromCurrency, toCurrency);
+      // For currency pairs, we need to check both directions and use the correct one
+      let rate = await priceService.getExchangeRate(fromCurrency, toCurrency);
+      
+      // If we don't find the rate in the requested direction, try the reverse direction
+      if (!rate) {
+        const reverseRate = await priceService.getExchangeRate(toCurrency, fromCurrency);
+        if (reverseRate) {
+          // Create inverted rate object
+          rate = {
+            ...reverseRate,
+            from_currency: fromCurrency,
+            to_currency: toCurrency,
+            base_rate: 1 / reverseRate.base_rate,
+            final_buy_rate: 1 / reverseRate.final_sell_rate,
+            final_sell_rate: 1 / reverseRate.final_buy_rate,
+          };
+        }
+      }
+      
       setExchangeRate(rate);
     } catch (error) {
       console.error('Error loading exchange rate:', error);
