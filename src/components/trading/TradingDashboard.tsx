@@ -769,14 +769,14 @@ const TradingDashboard = () => {
 
         {/* Sidebar */}
         <div className={cn(
-          "fixed inset-y-0 left-0 z-30 w-80 bg-gradient-to-b from-blanc to-foam/30 dark:from-navy to-teal/20 border-r border-navy/20 dark:border-foam/20 shadow-xl transform transition-transform duration-300 ease-in-out lg:translate-x-0 top-16",
+          "fixed inset-y-0 left-0 z-30 w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm transform transition-transform duration-300 ease-in-out lg:translate-x-0 top-16",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}>
           {/* Sidebar Header */}
-          <div className="p-6 border-b border-navy/20 dark:border-foam/20 bg-gradient-to-r from-navy to-teal">
+          <div className="p-6 border-b border-navy/20 dark:border-foam/20 bg-gradient-to-r from-navy/90 to-teal/90 backdrop-blur-sm">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-blanc/20 backdrop-blur-sm rounded-lg">
+                <div className="p-2 bg-blanc/30 backdrop-blur-sm rounded-lg">
                   <TrendingUp className="h-6 w-6 text-blanc" />
                 </div>
                 <div>
@@ -859,9 +859,9 @@ const TradingDashboard = () => {
           </nav>
 
           {/* User Info Footer */}
-          <div className="p-4 border-t border-navy/20 dark:border-foam/20 bg-gradient-to-r from-foam/20 to-ivory/30 dark:from-teal/20 dark:to-navy/30">
+          <div className="p-4 border-t border-navy/20 dark:border-foam/20 bg-gradient-to-r from-foam/30 to-ivory/50 dark:from-teal/30 dark:to-navy/50 backdrop-blur-sm">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-r from-navy to-teal rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-navy/80 to-teal/80 rounded-lg backdrop-blur-sm">
                 <TrendingUp className="h-4 w-4 text-blanc" />
               </div>
               <div className="flex-1 min-w-0">
@@ -885,13 +885,13 @@ const TradingDashboard = () => {
         {/* Main Content */}
         <div className="flex-1 lg:ml-80 flex flex-col min-h-screen">
             {/* Header Section */}
-            <div className="bg-gradient-to-r from-blanc to-foam/50 dark:from-navy to-teal/30 border-b border-navy/20 dark:border-foam/20 p-6 lg:p-8">
+            <div className="bg-gradient-to-r from-blanc/80 to-foam/60 dark:from-navy/80 to-teal/50 border-b border-navy/20 dark:border-foam/20 p-6 lg:p-8 backdrop-blur-sm">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center space-y-4 lg:space-y-0">
                 <div className="lg:ml-0 ml-16"> {/* Add margin for mobile menu button */}
                   <h1 className="text-2xl lg:text-3xl font-heading font-bold text-navy dark:text-foam flex items-center gap-2">
                     Trading Dashboard
                     {isSuperUser && (
-                      <Badge variant="default" className="bg-gradient-to-r from-yellowAccent to-greenAccent text-navy font-body">
+                      <Badge variant="default" className="bg-gradient-to-r from-yellowAccent/80 to-greenAccent/80 text-navy backdrop-blur-sm font-body">
                         <Crown className="h-3 w-3 mr-1" />
                         SuperUser
                       </Badge>
@@ -920,7 +920,7 @@ const TradingDashboard = () => {
                   <Button
                     onClick={openWhatsAppSupport}
                     variant="outline"
-                    className="flex items-center gap-2 text-greenAccent border-greenAccent/30 bg-greenAccent/10 hover:bg-greenAccent/20 font-body"
+                    className="flex items-center gap-2 text-greenAccent border-greenAccent/30 bg-greenAccent/20 hover:bg-greenAccent/30 backdrop-blur-sm font-body"
                   >
                     <MessageCircle className="h-4 w-4" />
                     WhatsApp Support
@@ -930,7 +930,7 @@ const TradingDashboard = () => {
 
               {/* Quick Stats */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-                <Card className="bg-gradient-to-r from-foam/50 to-ivory/70 dark:from-teal/30 dark:to-navy/50 border-navy/20 dark:border-foam/20 shadow-md">
+                <Card className="bg-gradient-to-r from-blanc/60 to-foam/40 dark:from-navy/60 dark:to-teal/40 border-navy/20 dark:border-foam/20 shadow-md backdrop-blur-sm">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-heading font-medium text-navy dark:text-foam">Active Quotes</CardTitle>
                     <Clock className="h-4 w-4 text-navy dark:text-foam" />
@@ -944,7 +944,7 @@ const TradingDashboard = () => {
                 </Card>
 
                 {isSuperUser && (
-                  <Card className="bg-gradient-to-r from-yellowAccent/30 to-greenAccent/30 border-yellowAccent/30 shadow-md">
+                  <Card className="bg-gradient-to-r from-yellowAccent/40 to-greenAccent/40 border-yellowAccent/30 shadow-md backdrop-blur-sm">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                       <CardTitle className="text-sm font-heading font-medium text-navy">Admin Quotes</CardTitle>
                       <Star className="h-4 w-4 text-yellowAccent" />
@@ -958,7 +958,7 @@ const TradingDashboard = () => {
                   </Card>
                 )}
 
-                <Card className="bg-gradient-to-r from-greenAccent/30 to-teal/30 border-greenAccent/30 shadow-md">
+                <Card className="bg-gradient-to-r from-greenAccent/40 to-teal/40 border-greenAccent/30 shadow-md backdrop-blur-sm">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-heading font-medium text-navy dark:text-foam">Total Orders</CardTitle>
                     <TrendingUp className="h-4 w-4 text-greenAccent" />
@@ -971,7 +971,7 @@ const TradingDashboard = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gradient-to-r from-teal/30 to-navy/30 border-teal/30 shadow-md">
+                <Card className="bg-gradient-to-r from-teal/40 to-navy/60 border-teal/30 shadow-md backdrop-blur-sm">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-heading font-medium text-blanc">Completed Trades</CardTitle>
                     <TrendingDown className="h-4 w-4 text-blanc" />

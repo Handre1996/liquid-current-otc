@@ -54,7 +54,7 @@ const TradingDashboardPage = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col trading-dashboard-bg">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-ivory to-foam dark:from-navy dark:to-teal">
       <Header />
       <div className="flex-1">
         <TradingDashboard />
