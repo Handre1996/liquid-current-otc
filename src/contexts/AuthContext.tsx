@@ -1,12 +1,17 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { Session, User } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
+import { checkExistingSubmission } from '@/utils/kycUtils';
 import { toast } from 'sonner';
 
 type AuthContextType = {
   session: Session | null;
   user: User | null;
   loading: boolean;
+  kycStatus: string | null;
+  hasSubmittedKyc: boolean;
+  kycLoading: boolean;
+  refreshKycStatus: () => Promise<void>;
   signUp: (email: string, password: string, options?: { data?: { first_name?: string; surname?: string } }) => Promise<{ error: any }>;
   signIn: (email: string, password: string) => Promise<{ error: any }>;
   signOut: () => Promise<void>;
@@ -19,7 +24,30 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [session, setSession] = useState<Session | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [kycStatus, setKycStatus] = useState<string | null>(null);
+  const [hasSubmittedKyc, setHasSubmittedKyc] = useState(false);
+  const [kycLoading, setKycLoading] = useState(false);
 
+  const loadKycStatus = async (userId: string) => {
+    setKycLoading(true);
+    try {
+      const submission = await checkExistingSubmission(userId);
+      setHasSubmittedKyc(!!submission);
+      setKycStatus(submission?.status || null);
+    } catch (error) {
+      console.error("Error checking KYC status:", error);
+      setHasSubmittedKyc(false);
+      setKycStatus(null);
+    } finally {
+      setKycLoading(false);
+    }
+  };
+
+  const refreshKycStatus = async () => {
+    if (user) {
+      await loadKycStatus(user.id);
+    }
+  };
   useEffect(() => {
     const initAuth = async () => {
       try {
@@ -32,6 +60,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         if (initialSession?.user) {
           try {
             await syncUserToDatabase(initialSession.user);
+            await loadKycStatus(initialSession.user.id);
           } catch (error) {
             console.error('Error syncing user to database on init:', error);
           }
@@ -54,12 +83,16 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           if (event === 'SIGNED_IN' && session?.user) {
             try {
               await syncUserToDatabase(session.user);
+              await loadKycStatus(session.user.id);
               toast.success('Signed in successfully');
             } catch (error) {
               console.error('Error syncing user to database:', error);
               toast.success('Signed in successfully');
             }
           } else if (event === 'SIGNED_OUT') {
+            // Clear KYC status on sign out
+            setKycStatus(null);
+            setHasSubmittedKyc(false);
             // Check if this was due to an invalid session
             if (session === null && (user !== null || session !== null)) {
               toast.error('Your session has expired. Please log in again.');
@@ -218,6 +251,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     session,
     user,
     loading,
+    kycStatus,
+    hasSubmittedKyc,
+    kycLoading,
+    refreshKycStatus,
     signUp,
     signIn,
     signOut,

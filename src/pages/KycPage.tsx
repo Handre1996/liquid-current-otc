@@ -7,7 +7,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
 
 const KycPage = () => {
-  const { user, loading } = useAuth();
+  const { user, loading, kycStatus, hasSubmittedKyc, kycLoading } = useAuth();
   const navigate = useNavigate();
   const [isRedirecting, setIsRedirecting] = useState(false);
 
@@ -21,18 +21,25 @@ const KycPage = () => {
         navigate('/login', { 
           state: { from: '/kyc' } // Store the intended destination
         });
+      } else if (hasSubmittedKyc && !kycLoading) {
+        // If user has already submitted KYC, redirect to home
+        console.log("User already has KYC submission, redirecting to home");
+        toast.info("You have already submitted your KYC documents");
+        navigate('/', { replace: true });
       } else {
         console.log("KYC page accessed by authenticated user:", user.id);
       }
     }
-  }, [user, loading, navigate]);
+  }, [user, loading, hasSubmittedKyc, kycLoading, navigate]);
 
-  if (loading || isRedirecting) {
+  if (loading || kycLoading || isRedirecting) {
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
         <div className="flex-1 flex items-center justify-center">
-          <div className="animate-pulse text-lg">Loading...</div>
+          <div className="animate-pulse text-lg">
+            {kycLoading ? 'Checking KYC status...' : 'Loading...'}
+          </div>
         </div>
         <Footer />
       </div>
@@ -43,7 +50,7 @@ const KycPage = () => {
     <div className="min-h-screen flex flex-col kyc-page-bg">
       <Header />
       <div className="flex-1">
-        {user && <KycForm />}
+        {user && !hasSubmittedKyc && <KycForm />}
       </div>
       <Footer />
     </div>

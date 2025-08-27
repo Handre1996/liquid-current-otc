@@ -14,9 +14,8 @@ import { supabase } from '@/integrations/supabase/client';
 
 export default function KycForm() {
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user, refreshKycStatus } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [checkingStatus, setCheckingStatus] = useState(true);
   
   const [formData, setFormData] = useState({
     firstName: '',
@@ -40,28 +39,6 @@ export default function KycForm() {
     proofOfAddress: null,
     selfie: null
   });
-
-  useEffect(() => {
-    const checkKycStatus = async () => {
-      if (!user) return;
-      
-      setCheckingStatus(true);
-      try {
-        const submission = await checkExistingSubmission(user.id);
-        
-        if (submission) {
-          toast.info("You have already submitted your KYC documents");
-          navigate('/', { replace: true });
-        }
-      } catch (error) {
-        console.error("Error checking KYC status:", error);
-      } finally {
-        setCheckingStatus(false);
-      }
-    };
-    
-    checkKycStatus();
-  }, [user, navigate]);
 
   useEffect(() => {
     if (user?.email) {
@@ -220,6 +197,9 @@ export default function KycForm() {
         description: "We will review your documents and notify you once verified."
       });
       
+      // Refresh KYC status in context
+      await refreshKycStatus();
+      
       navigate('/', { replace: true });
     } catch (error: any) {
       console.error('Error submitting form:', error);
@@ -229,18 +209,6 @@ export default function KycForm() {
       setIsSubmitting(false);
     }
   };
-
-  if (checkingStatus) {
-    return (
-      <div className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="animate-pulse text-lg">Checking KYC status...</div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="py-12">

@@ -6,35 +6,17 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import KycProcess from '@/components/KycProcess';
 import Footer from '@/components/Footer';
-import { checkExistingSubmission } from '@/utils/kycUtils';
-import { useEffect, useState } from 'react';
 
 const Index = () => {
-  const { user } = useAuth();
+  const { user, kycStatus, hasSubmittedKyc, kycLoading } = useAuth();
   const navigate = useNavigate();
-  const [hasSubmittedKyc, setHasSubmittedKyc] = useState(false);
-  const [kycStatus, setKycStatus] = useState<string | null>(null);
   
+  // Automatically redirect to trading dashboard if KYC is approved
   useEffect(() => {
-    const checkKyc = async () => {
-      if (!user) return;
-      
-      try {
-        const submission = await checkExistingSubmission(user.id);
-        setHasSubmittedKyc(!!submission);
-        setKycStatus(submission?.status || null);
-        
-        // Automatically redirect to trading dashboard if KYC is approved
-        if (submission?.status === 'approved') {
-          navigate('/dashboard');
-        }
-      } catch (error) {
-        console.error("Error checking KYC status:", error);
-      }
-    };
-    
-    checkKyc();
-  }, [user, navigate]);
+    if (kycStatus === 'approved' && !kycLoading) {
+      navigate('/dashboard');
+    }
+  }, [kycStatus, kycLoading, navigate]);
   
   const handleKycClick = () => {
     if (!user) {

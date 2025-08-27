@@ -5,15 +5,12 @@ import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { cn } from '@/lib/utils';
 import { X, Menu } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
-import { checkExistingSubmission } from '@/utils/kycUtils';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user, signOut } = useAuth();
+  const { user, signOut, kycStatus, hasSubmittedKyc } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [hasSubmittedKyc, setHasSubmittedKyc] = useState(false);
-  const [kycStatus, setKycStatus] = useState<string | null>(null);
   
   const isAdmin = user?.email?.endsWith('@liquidcurrent.com');
   
@@ -22,27 +19,6 @@ const Header = () => {
     setIsOpen(false);
   }, [location.pathname]);
   
-  useEffect(() => {
-    const checkKyc = async () => {
-      if (!user) return;
-      
-      try {
-        const submission = await checkExistingSubmission(user.id);
-        setHasSubmittedKyc(!!submission);
-        setKycStatus(submission?.status || null);
-      } catch (error) {
-        console.error("Error checking KYC status:", error);
-      }
-    };
-    
-    if (user) {
-      checkKyc();
-    } else {
-      setHasSubmittedKyc(false);
-      setKycStatus(null);
-    }
-  }, [user]);
-
   const handleSignOut = async () => {
     await signOut();
     navigate('/login');

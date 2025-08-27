@@ -3,55 +3,48 @@ import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import TradingDashboard from '@/components/trading/TradingDashboard';
 import { useAuth } from '@/contexts/AuthContext';
-import { checkExistingSubmission } from '@/utils/kycUtils';
 import { toast } from 'sonner';
 
 const TradingDashboardPage = () => {
-  const { user, loading } = useAuth();
+  const { user, loading, kycStatus, hasSubmittedKyc, kycLoading } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
     const checkAccess = async () => {
-      if (!loading) {
+      if (!loading && !kycLoading) {
         if (!user) {
           toast.error('Please log in to access the trading dashboard');
           navigate('/login', { state: { from: '/dashboard' } });
           return;
         }
 
-        // Check if user has completed KYC
-        try {
-          const submission = await checkExistingSubmission(user.id);
-          if (!submission) {
-            toast.error('Please complete your KYC process before trading');
-            navigate('/kyc');
-            return;
-          }
+        // Check KYC status from context
+        if (!hasSubmittedKyc) {
+          toast.error('Please complete your KYC process before trading');
+          navigate('/kyc');
+          return;
+        }
 
-          if (submission.status !== 'approved') {
-            toast.error('Your KYC is still pending approval. You cannot trade yet.');
-            navigate('/');
-            return;
-          }
-        } catch (error) {
-          console.error('Error checking KYC status:', error);
-          toast.error('Error verifying your account status');
+        if (kycStatus !== 'approved') {
+          toast.error('Your KYC is still pending approval. You cannot trade yet.');
           navigate('/');
+          return;
         }
       }
     };
 
     checkAccess();
-  }, [user, loading, navigate]);
+  }, [user, loading, kycStatus, hasSubmittedKyc, kycLoading, navigate]);
 
-  if (loading) {
+  if (loading || kycLoading) {
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
         <div className="flex-1 flex items-center justify-center">
-          <div className="animate-pulse text-lg">Loading...</div>
+          <div className="animate-pulse text-lg">
+            {kycLoading ? 'Checking KYC status...' : 'Loading...'}
+          </div>
         </div>
-        <Footer />
       </div>
     );
   }
