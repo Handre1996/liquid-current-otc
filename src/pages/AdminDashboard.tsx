@@ -264,38 +264,38 @@ const AdminDashboard = () => {
         return <KycAdmin />;
       case 'users':
         return (
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="p-8 bg-gradient-to-br from-blue-50 to-indigo-50">
+          <div className="bg-blanc/90 dark:bg-navy/80 rounded-xl shadow-lg border border-navy/20 dark:border-foam/20 overflow-hidden">
+            <div className="p-8 bg-gradient-to-br from-foam/30 to-ivory/50 dark:from-teal/20 dark:to-navy/30">
               <div className="flex justify-between items-center mb-6">
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900">Registered Users</h2>
-                  <p className="text-gray-600 mt-1">Manage and monitor user accounts</p>
+                  <h2 className="text-2xl font-heading font-bold text-navy dark:text-foam">Registered Users</h2>
+                  <p className="font-body text-teal dark:text-foam/80 mt-1">Manage and monitor user accounts</p>
                 </div>
                 <Button
                   variant="outline"
                   onClick={fetchUsers}
                   disabled={isLoadingUsers}
-                  className="flex items-center gap-2 bg-white hover:bg-blue-50"
+                  className="flex items-center gap-2 bg-blanc/90 dark:bg-navy/90 border-navy/20 dark:border-foam/20 text-navy dark:text-foam hover:bg-navy/10 dark:hover:bg-foam/10 font-body"
                 >
                   <Activity className="h-4 w-4" />
                   {isLoadingUsers ? "Refreshing..." : "Refresh"}
                 </Button>
               </div>
-              <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
+              <div className="border border-navy/20 dark:border-foam/20 rounded-lg overflow-hidden bg-blanc/90 dark:bg-navy/80 shadow-sm">
                 <Table>
                   <TableHeader>
-                    <TableRow className="bg-gradient-to-r from-blue-50 to-indigo-50">
-                      <TableHead className="font-semibold">Name</TableHead>
-                      <TableHead className="font-semibold">Email</TableHead>
-                      <TableHead className="font-semibold">Created At</TableHead>
-                      <TableHead className="font-semibold">Last Sign In</TableHead>
-                      <TableHead className="text-right font-semibold">Actions</TableHead>
+                    <TableRow className="bg-gradient-to-r from-foam/20 to-ivory/30 dark:from-teal/20 dark:to-navy/30 border-b border-navy/20 dark:border-foam/20">
+                      <TableHead className="font-heading font-semibold text-navy dark:text-foam">Name</TableHead>
+                      <TableHead className="font-heading font-semibold text-navy dark:text-foam">Email</TableHead>
+                      <TableHead className="font-heading font-semibold text-navy dark:text-foam">Created At</TableHead>
+                      <TableHead className="font-heading font-semibold text-navy dark:text-foam">Last Sign In</TableHead>
+                      <TableHead className="text-right font-heading font-semibold text-navy dark:text-foam">Actions</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {isLoadingUsers ? (
                       <TableRow>
-                        <TableCell colSpan={5} className="text-center py-8">
+                        <TableCell colSpan={5} className="text-center py-8 font-body text-navy dark:text-foam">
                           <div className="flex items-center justify-center gap-2">
                             <Activity className="h-4 w-4 animate-spin" />
                             Loading users...
@@ -304,19 +304,19 @@ const AdminDashboard = () => {
                       </TableRow>
                     ) : users.length === 0 ? (
                       <TableRow>
-                        <TableCell colSpan={5} className="text-center py-8 text-gray-500">
+                        <TableCell colSpan={5} className="text-center py-8 font-body text-navy/50 dark:text-foam/50">
                           No users found
                         </TableCell>
                       </TableRow>
                     ) : (
                       users.map((user) => (
-                        <TableRow key={user.id} className="hover:bg-blue-50">
-                          <TableCell className="font-medium">{getUserFullName(user)}</TableCell>
-                          <TableCell>{user.email}</TableCell>
-                          <TableCell>
+                        <TableRow key={user.id} className="hover:bg-navy/5 dark:hover:bg-foam/5 border-b border-navy/10 dark:border-foam/10">
+                          <TableCell className="font-heading font-medium text-navy dark:text-foam">{getUserFullName(user)}</TableCell>
+                          <TableCell className="font-body text-navy dark:text-foam">{user.email}</TableCell>
+                          <TableCell className="font-body text-navy dark:text-foam">
                             {new Date(user.created_at).toLocaleDateString()}
                           </TableCell>
-                          <TableCell>
+                          <TableCell className="font-body text-navy dark:text-foam">
                             {user.last_sign_in_at 
                               ? new Date(user.last_sign_in_at).toLocaleDateString()
                               : 'Never'
@@ -331,6 +331,7 @@ const AdminDashboard = () => {
                                 setShowDeleteDialog(true);
                               }}
                               disabled={user.email.endsWith('@liquidcurrent.com')}
+                              className="font-body"
                             >
                               Delete
                             </Button>
@@ -365,20 +366,20 @@ const AdminDashboard = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col admin-content-bg">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-ivory to-foam dark:from-navy dark:to-teal">
       <Header />
       {isAdmin && (
         <div className="flex-1 flex">
           {/* Left Sidebar */}
-          <div className="w-80 admin-sidebar border-r border-gray-200 shadow-sm">
-            <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-blue-600 to-indigo-600">
+          <div className="w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 dark:to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm">
+            <div className="p-6 border-b border-navy/20 dark:border-foam/20 bg-gradient-to-r from-navy to-teal">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-white/20 backdrop-blur-sm rounded-lg">
-                  <Settings className="h-6 w-6 text-white" />
+                <div className="p-2 bg-blanc/20 backdrop-blur-sm rounded-lg">
+                  <Settings className="h-6 w-6 text-blanc" />
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold text-white">Admin Portal</h1>
-                  <p className="text-sm text-blue-100">System Management</p>
+                  <h1 className="text-xl font-heading font-bold text-blanc">Admin Portal</h1>
+                  <p className="text-sm font-body text-foam">System Management</p>
                 </div>
               </div>
             </div>
@@ -393,17 +394,17 @@ const AdminDashboard = () => {
                     key={item.id}
                     onClick={() => handleTabChange(item.id)}
                     className={cn(
-                      "w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-200 group",
+                      "w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-200 group font-body",
                       isActive
-                        ? "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border border-blue-200 shadow-sm"
-                        : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                        ? "bg-gradient-to-r from-navy to-teal text-blanc border border-navy/30 shadow-sm"
+                        : "text-navy dark:text-foam hover:bg-navy/10 dark:hover:bg-foam/10 hover:text-navy dark:hover:text-blanc"
                     )}
                   >
                     <div className={cn(
-                      "p-2 rounded-lg",
+                      "p-2 rounded-lg transition-all duration-200",
                       isActive 
-                        ? "bg-gradient-to-r from-blue-500 to-indigo-500 text-white" 
-                        : "bg-gray-100 text-gray-500 group-hover:bg-gray-200 group-hover:text-gray-700"
+                        ? "bg-blanc/20 text-blanc" 
+                        : "bg-navy/10 dark:bg-foam/10 text-navy dark:text-foam group-hover:bg-navy/20 dark:group-hover:bg-foam/20"
                     )}>
                       <Icon className="h-4 w-4" />
                     </div>
@@ -412,27 +413,27 @@ const AdminDashboard = () => {
                         <span className="font-medium truncate">{item.label}</span>
                         {item.badge && (
                           <span className={cn(
-                            "px-2 py-0.5 text-xs font-medium rounded-full",
+                            "px-2 py-0.5 text-xs font-medium rounded-full font-body",
                             isActive 
-                              ? "bg-blue-100 text-blue-700" 
-                              : "bg-gray-100 text-gray-600"
+                              ? "bg-blanc/20 text-blanc" 
+                              : "bg-navy/10 dark:bg-foam/10 text-navy dark:text-foam"
                           )}>
                             {item.badge}
                           </span>
                         )}
                       </div>
                       <p className={cn(
-                        "text-xs truncate mt-0.5",
-                        isActive ? "text-blue-600" : "text-gray-500"
+                        "text-xs truncate mt-0.5 font-body",
+                        isActive ? "text-foam" : "text-navy/70 dark:text-foam/70"
                       )}>
                         {item.description}
                       </p>
                     </div>
                     <ChevronRight className={cn(
-                      "h-4 w-4 transition-all duration-200",
+                      "h-4 w-4 transition-all duration-200 font-body",
                       isActive 
-                        ? "text-blue-600 rotate-90" 
-                        : "text-gray-400 group-hover:text-gray-600"
+                        ? "text-blanc rotate-90" 
+                        : "text-navy/40 dark:text-foam/40 group-hover:text-navy/60 dark:group-hover:text-foam/60"
                     )} />
                   </button>
                 );
@@ -440,16 +441,16 @@ const AdminDashboard = () => {
             </nav>
 
             {/* Admin Info Footer */}
-            <div className="absolute bottom-0 left-0 right-0 w-80 p-4 border-t border-gray-200 bg-gradient-to-r from-yellow-50 to-amber-50">
+            <div className="absolute bottom-0 left-0 right-0 w-80 p-4 border-t border-navy/20 dark:border-foam/20 bg-gradient-to-r from-foam/20 to-ivory/30 dark:from-teal/20 dark:to-navy/30">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-r from-yellow-400 to-amber-400 rounded-lg">
-                  <Crown className="h-4 w-4 text-white" />
+                <div className="p-2 bg-gradient-to-r from-navy to-teal rounded-lg">
+                  <Crown className="h-4 w-4 text-blanc" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-900 truncate">
+                  <p className="text-sm font-heading font-medium text-navy dark:text-foam truncate">
                     {user?.email?.split('@')[0]}
                   </p>
-                  <p className="text-xs text-gray-500">Administrator</p>
+                  <p className="text-xs font-body text-navy/70 dark:text-foam/70">Administrator</p>
                 </div>
               </div>
             </div>
@@ -466,10 +467,10 @@ const AdminDashboard = () => {
       <Footer />
 
       <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
-        <DialogContent className="bg-gradient-to-br from-white to-gray-50">
+        <DialogContent className="bg-gradient-to-br from-blanc to-foam/30 dark:from-navy to-teal/30 border border-navy/20 dark:border-foam/20">
           <DialogHeader>
-            <DialogTitle>Delete User</DialogTitle>
-            <DialogDescription>
+            <DialogTitle className="font-heading text-navy dark:text-foam">Delete User</DialogTitle>
+            <DialogDescription className="font-body text-teal dark:text-foam/80">
               Are you sure you want to delete this user? This action will:
               <ul className="list-disc list-inside mt-2">
                 <li>Delete the user account</li>
@@ -485,6 +486,7 @@ const AdminDashboard = () => {
               variant="outline"
               onClick={() => setShowDeleteDialog(false)}
               disabled={isDeleting}
+              className="font-body"
             >
               Cancel
             </Button>
@@ -492,7 +494,7 @@ const AdminDashboard = () => {
               variant="destructive"
               onClick={handleDeleteUser}
               disabled={isDeleting}
-              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700"
+              className="bg-gradient-to-r from-redAccent to-red-600 hover:from-redAccent/90 hover:to-red-700 font-body"
             >
               {isDeleting ? "Deleting..." : "Delete User"}
             </Button>
