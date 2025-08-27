@@ -96,7 +96,12 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
     ownerCountry: ''
   });
   const [companyOwnerDetails, setCompanyOwnerDetails] = useState({
-    companyRegNumber: '',
+    companyName: '',
+    companyCipcNumber: '',
+    companyAddress: '',
+    companyCity: '',
+    companyPostalCode: '',
+    companyCountry: '',
     beneficialOwnerName: '',
     beneficialOwnerSurname: '',
     beneficialOwnerIdType: 'nationalId' as 'nationalId' | 'passport',
@@ -153,7 +158,12 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
       ownerCountry: ''
     });
     setCompanyOwnerDetails({
-      companyRegNumber: '',
+      companyName: '',
+      companyCipcNumber: '',
+      companyAddress: '',
+      companyCity: '',
+      companyPostalCode: '',
+      companyCountry: '',
       beneficialOwnerName: '',
       beneficialOwnerSurname: '',
       beneficialOwnerIdType: 'nationalId',
