@@ -570,11 +570,11 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
           <div className="text-xs text-navy/50 dark:text-foam/50 bg-gradient-to-r from-ivory/50 to-foam/30 dark:from-navy/50 dark:to-teal/20 border border-navy/20 dark:border-foam/20 rounded p-3 shadow-sm font-body">
             <p className="font-medium mb-2 font-heading">Trading Information:</p>
             <ul className="space-y-1">
-              <li>• Quotes are valid for 15 minutes from generation</li>
-              <li>• Admin fee: 0.5% of transaction amount</li>
+              <li>• Quotes are valid for the day of generation (If your trade continues to the following day, you will be re quoted according to the rates)</li>
+              <li>• Admin fee: R50 for all trades under $1000</li>
               <li>• Withdrawal fees: R50 (ZAR), N$50 (NAD) - Not applicable for crypto-to-crypto trades</li>
-              <li>• Exchange rates are updated every 5 minutes</li>
-              <li>• Minimum trade amount: R1,000 equivalent</li>
+              <li>• Exchange rates are updated every4/6 hours</li>
+              <li>• Minimum trade amount: R250 equivalent</li>
               <li>• All transactions are subject to KYC verification</li>
               <li>• Crypto-to-crypto trades have lower fees (no withdrawal fees)</li>
               <li>• <strong>Network Selection:</strong> Ensure your wallet supports the selected blockchain network</li>
