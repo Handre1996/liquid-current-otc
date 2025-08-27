@@ -387,7 +387,7 @@ const AdminDashboard = () => {
 
           {/* Left Sidebar */}
           <div className={cn(
-            "fixed inset-y-0 left-0 z-30 w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 dark:to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm flex flex-col transform transition-transform duration-300 ease-in-out lg:translate-x-0 top-16",
+            "fixed left-0 top-16 bottom-0 z-30 w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 dark:to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm flex flex-col transform transition-transform duration-300 ease-in-out lg:translate-x-0 overflow-hidden",
             sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
           )}>
             <div className="p-6 border-b border-navy/20 dark:border-foam/20 bg-gradient-to-r from-navy to-teal">
@@ -412,7 +412,8 @@ const AdminDashboard = () => {
               </div>
             </div>
             
-            <nav className="p-4 space-y-2 flex-1 overflow-y-auto pb-32">
+            <div className="flex-1 flex flex-col min-h-0">
+              <nav className="p-4 space-y-2 flex-1 overflow-y-auto overscroll-contain">
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeTab === item.id;
@@ -466,19 +467,20 @@ const AdminDashboard = () => {
                   </button>
                 );
               })}
-            </nav>
+              </nav>
 
-            {/* Admin Info Footer */}
-            <div className="mt-auto p-4 border-t border-navy/20 dark:border-foam/20 bg-gradient-to-r from-foam/20 to-ivory/30 dark:from-teal/20 dark:to-navy/30">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-r from-navy to-teal rounded-lg">
-                  <Crown className="h-4 w-4 text-blanc" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-heading font-medium text-navy dark:text-foam truncate">
-                    {user?.email?.split('@')[0]}
-                  </p>
-                  <p className="text-xs font-body text-navy/70 dark:text-foam/70">Administrator</p>
+              {/* Admin Info Footer */}
+              <div className="flex-shrink-0 p-4 border-t border-navy/20 dark:border-foam/20 bg-gradient-to-r from-foam/20 to-ivory/30 dark:from-teal/20 dark:to-navy/30">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-gradient-to-r from-navy to-teal rounded-lg">
+                    <Crown className="h-4 w-4 text-blanc" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-heading font-medium text-navy dark:text-foam truncate">
+                      {user?.email?.split('@')[0]}
+                    </p>
+                    <p className="text-xs font-body text-navy/70 dark:text-foam/70">Administrator</p>
+                  </div>
                 </div>
               </div>
             </div>

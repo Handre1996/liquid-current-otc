@@ -770,8 +770,8 @@ const TradingDashboard = () => {
 
         {/* Sidebar */}
         <div className={cn(
-          "fixed inset-y-0 left-0 z-30 w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm transform transition-transform duration-300 ease-in-out lg:translate-x-0 top-16",
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          "fixed left-0 top-16 bottom-0 z-30 w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm transform transition-transform duration-300 ease-in-out lg:translate-x-0 overflow-hidden flex flex-col",
+          sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}>
           {/* Sidebar Header */}
           <div className="p-6 border-b border-navy/20 dark:border-foam/20 bg-gradient-to-r from-navy/90 to-teal/90 backdrop-blur-sm">
@@ -803,73 +803,75 @@ const TradingDashboard = () => {
           </div>
           
           {/* Navigation */}
-          <nav className="p-4 space-y-2 flex-1 overflow-y-auto pb-32">
-            {sidebarItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = activeTab === item.id;
-              
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleTabChange(item.id)}
-                  className={cn(
-                    "w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-200 group font-body",
-                    isActive
-                      ? "bg-gradient-to-r from-navy to-teal text-blanc border border-navy/30 shadow-sm"
-                      : "text-navy dark:text-foam hover:bg-navy/10 dark:hover:bg-foam/10 hover:text-navy dark:hover:text-blanc"
-                  )}
-                >
-                  <div className={cn(
-                    "p-2 rounded-lg",
-                    isActive 
-                      ? "bg-blanc/20 text-blanc" 
-                      : "bg-navy/10 dark:bg-foam/10 text-navy dark:text-foam group-hover:bg-navy/20 dark:group-hover:bg-foam/20"
-                  )}>
-                    <Icon className="h-4 w-4" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium truncate">{item.label}</span>
-                      {item.badge && (
-                        <span className={cn(
-                          "px-2 py-0.5 text-xs font-medium rounded-full",
-                          isActive 
-                            ? "bg-blanc/20 text-blanc" 
-                            : "bg-navy/10 dark:bg-foam/10 text-navy dark:text-foam"
-                        )}>
-                          {item.badge}
-                        </span>
-                      )}
-                    </div>
-                    <p className={cn(
-                      "text-xs truncate mt-0.5",
-                      isActive ? "text-foam" : "text-navy/70 dark:text-foam/70"
+          <div className="flex-1 flex flex-col min-h-0">
+            <nav className="p-4 space-y-2 flex-1 overflow-y-auto overscroll-contain">
+              {sidebarItems.map((item) => {
+                const Icon = item.icon;
+                const isActive = activeTab === item.id;
+                
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleTabChange(item.id)}
+                    className={cn(
+                      "w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-200 group font-body",
+                      isActive
+                        ? "bg-gradient-to-r from-navy to-teal text-blanc border border-navy/30 shadow-sm"
+                        : "text-navy dark:text-foam hover:bg-navy/10 dark:hover:bg-foam/10 hover:text-navy dark:hover:text-blanc"
+                    )}
+                  >
+                    <div className={cn(
+                      "p-2 rounded-lg",
+                      isActive 
+                        ? "bg-blanc/20 text-blanc" 
+                        : "bg-navy/10 dark:bg-foam/10 text-navy dark:text-foam group-hover:bg-navy/20 dark:group-hover:bg-foam/20"
                     )}>
-                      {item.description}
-                    </p>
-                  </div>
-                  <ChevronRight className={cn(
-                    "h-4 w-4 transition-all duration-200",
-                    isActive 
-                      ? "text-blanc rotate-90" 
-                      : "text-navy/40 dark:text-foam/40 group-hover:text-navy/60 dark:group-hover:text-foam/60"
-                  )} />
-                </button>
-              );
-            })}
-          </nav>
+                      <Icon className="h-4 w-4" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium truncate">{item.label}</span>
+                        {item.badge && (
+                          <span className={cn(
+                            "px-2 py-0.5 text-xs font-medium rounded-full",
+                            isActive 
+                              ? "bg-blanc/20 text-blanc" 
+                              : "bg-navy/10 dark:bg-foam/10 text-navy dark:text-foam"
+                          )}>
+                            {item.badge}
+                          </span>
+                        )}
+                      </div>
+                      <p className={cn(
+                        "text-xs truncate mt-0.5",
+                        isActive ? "text-foam" : "text-navy/70 dark:text-foam/70"
+                      )}>
+                        {item.description}
+                      </p>
+                    </div>
+                    <ChevronRight className={cn(
+                      "h-4 w-4 transition-all duration-200",
+                      isActive 
+                        ? "text-blanc rotate-90" 
+                        : "text-navy/40 dark:text-foam/40 group-hover:text-navy/60 dark:group-hover:text-foam/60"
+                    )} />
+                  </button>
+                );
+              })}
+            </nav>
 
-          {/* User Info Footer */}
-          <div className="p-4 border-t border-navy/20 dark:border-foam/20 bg-gradient-to-r from-foam/30 to-ivory/50 dark:from-teal/30 dark:to-navy/50 backdrop-blur-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-r from-navy/80 to-teal/80 rounded-lg backdrop-blur-sm">
-                <TrendingUp className="h-4 w-4 text-blanc" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-heading font-medium text-navy dark:text-foam truncate">
-                  {user?.email?.split('@')[0]}
-                </p>
-                <p className="text-xs font-body text-navy/70 dark:text-foam/70">Trader</p>
+            {/* User Info Footer */}
+            <div className="flex-shrink-0 p-4 border-t border-navy/20 dark:border-foam/20 bg-gradient-to-r from-foam/30 to-ivory/50 dark:from-teal/30 dark:to-navy/50 backdrop-blur-sm">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-gradient-to-r from-navy/80 to-teal/80 rounded-lg backdrop-blur-sm">
+                  <TrendingUp className="h-4 w-4 text-blanc" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-heading font-medium text-navy dark:text-foam truncate">
+                    {user?.email?.split('@')[0]}
+                  </p>
+                  <p className="text-xs font-body text-navy/70 dark:text-foam/70">Trader</p>
+                </div>
               </div>
             </div>
           </div>
