@@ -603,7 +603,7 @@ const TradingDashboard = () => {
                       <Button
                         size="sm"
                         onClick={() => handleAcceptAdminQuote(quote.id)}
-                        className="w-full sm:w-auto bg-gradient-to-r from-yellowAccent to-greenAccent hover:from-yellowAccent/90 hover:to-greenAccent/90 text-navy dark:text-blanc font-body"
+                        className="w-full sm:w-auto bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-body"
                       >
                         Accept Admin Quote
                       </Button>
