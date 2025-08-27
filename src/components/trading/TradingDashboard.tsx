@@ -391,6 +391,7 @@ const TradingDashboard = () => {
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
     setSidebarOpen(false); // Close mobile sidebar when selecting item
+    setSidebarOpen(false); // Close mobile sidebar when selecting item
   };
 
   const renderContent = () => {
@@ -802,7 +803,7 @@ const TradingDashboard = () => {
           </div>
           
           {/* Navigation */}
-          <nav className="p-4 space-y-2 flex-1 overflow-y-auto">
+          <nav className="p-4 space-y-2 flex-1 overflow-y-auto pb-32">
             {sidebarItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
@@ -877,7 +878,7 @@ const TradingDashboard = () => {
         {/* Overlay for mobile */}
         {sidebarOpen && (
           <div 
-            className="fixed inset-0 bg-navy/50 backdrop-blur-sm z-20 lg:hidden"
+            className="fixed inset-0 bg-navy/50 backdrop-blur-sm z-20 lg:hidden top-16"
             onClick={() => setSidebarOpen(false)}
           />
         )}
@@ -887,7 +888,7 @@ const TradingDashboard = () => {
             {/* Header Section */}
             <div className="bg-gradient-to-r from-blanc/80 to-foam/60 dark:from-navy/80 to-teal/50 border-b border-navy/20 dark:border-foam/20 p-6 lg:p-8 backdrop-blur-sm">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center space-y-4 lg:space-y-0">
-                <div className="lg:ml-0 ml-16"> {/* Add margin for mobile menu button */}
+                <div className="lg:ml-0 ml-12"> {/* Add margin for mobile menu button */}
                   <h1 className="text-2xl lg:text-3xl font-heading font-bold text-navy dark:text-foam flex items-center gap-2">
                     Trading Dashboard
                     {isSuperUser && (

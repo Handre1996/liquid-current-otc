@@ -75,6 +75,8 @@ const AdminDashboard = () => {
   const [isLoadingUsers, setIsLoadingUsers] = useState(false);
   const [activeTab, setActiveTab] = useState('trading');
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const sidebarItems: SidebarItem[] = [
     {
       id: 'trading',
@@ -246,6 +248,7 @@ const AdminDashboard = () => {
 
   const handleTabChange = (value: string) => {
     setActiveTab(value);
+    setSidebarOpen(false); // Close mobile sidebar when selecting item
   };
 
   const renderContent = () => {
@@ -370,21 +373,46 @@ const AdminDashboard = () => {
       <Header />
       {isAdmin && (
         <div className="flex-1 flex">
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden fixed top-20 left-4 z-40">
+            <Button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              variant="outline"
+              size="icon"
+              className="bg-blanc/90 dark:bg-navy/90 border-navy/20 dark:border-foam/20 shadow-lg"
+            >
+              <Settings className="h-4 w-4" />
+            </Button>
+          </div>
+
           {/* Left Sidebar */}
-          <div className="w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 dark:to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm flex flex-col">
+          <div className={cn(
+            "fixed inset-y-0 left-0 z-30 w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 dark:to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm flex flex-col transform transition-transform duration-300 ease-in-out lg:translate-x-0 top-16",
+            sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+          )}>
             <div className="p-6 border-b border-navy/20 dark:border-foam/20 bg-gradient-to-r from-navy to-teal">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-blanc/20 backdrop-blur-sm rounded-lg">
-                  <Settings className="h-6 w-6 text-blanc" />
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-blanc/20 backdrop-blur-sm rounded-lg">
+                    <Settings className="h-6 w-6 text-blanc" />
+                  </div>
+                  <div>
+                    <h1 className="text-xl font-heading font-bold text-blanc">Admin Portal</h1>
+                    <p className="text-sm font-body text-foam">System Management</p>
+                  </div>
                 </div>
-                <div>
-                  <h1 className="text-xl font-heading font-bold text-blanc">Admin Portal</h1>
-                  <p className="text-sm font-body text-foam">System Management</p>
-                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setSidebarOpen(false)}
+                  className="lg:hidden text-blanc hover:bg-blanc/20"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
               </div>
             </div>
             
-            <nav className="p-4 space-y-2 flex-1 overflow-y-auto pb-20">
+            <nav className="p-4 space-y-2 flex-1 overflow-y-auto pb-32">
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeTab === item.id;
@@ -456,9 +484,17 @@ const AdminDashboard = () => {
             </div>
           </div>
 
+          {/* Overlay for mobile */}
+          {sidebarOpen && (
+            <div 
+              className="fixed inset-0 bg-navy/50 backdrop-blur-sm z-20 lg:hidden top-16"
+              onClick={() => setSidebarOpen(false)}
+            />
+          )}
+
           {/* Main Content Area */}
-          <div className="flex-1 overflow-auto">
-            <div className="p-8">
+          <div className="flex-1 overflow-auto lg:ml-0">
+            <div className="p-6 lg:p-8 lg:ml-80">
               {renderContent()}
             </div>
           </div>
