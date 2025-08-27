@@ -509,75 +509,76 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                             </CardContent>
                           </Card>
                         )}
-                    </div>
+                      </div>
 
-                    <Separator />
+                      <Separator />
 
-                    {/* Wallet Type Classification */}
-                    <div className="space-y-4">
-                      <Label className="text-sm font-medium">Please select either option, is your wallet:</Label>
-                      <RadioGroup 
-                        value={walletTypeClassification} 
-                        onValueChange={(value) => setWalletTypeClassification(value as 'hosted' | 'unhosted')}
-                      >
-                        <div className="space-y-3">
-                          <div className="flex items-start space-x-3 p-3 border rounded-lg">
-                            <RadioGroupItem value="hosted" id="hosted-classification" className="mt-1" />
-                            <div className="space-y-1">
-                              <Label htmlFor="hosted-classification" className="font-medium">Hosted</Label>
-                              <p className="text-sm text-gray-600">
-                                A wallet where a third party (exchange or service provider) controls the private keys. 
-                                Examples: Binance, Coinbase, Luno, Kraken.
-                              </p>
+                      {/* Wallet Type Classification */}
+                      <div className="space-y-4">
+                        <Label className="text-sm font-medium">Please select either option, is your wallet:</Label>
+                        <RadioGroup 
+                          value={walletTypeClassification} 
+                          onValueChange={(value) => setWalletTypeClassification(value as 'hosted' | 'unhosted')}
+                        >
+                          <div className="space-y-3">
+                            <div className="flex items-start space-x-3 p-3 border rounded-lg">
+                              <RadioGroupItem value="hosted" id="hosted-classification" className="mt-1" />
+                              <div className="space-y-1">
+                                <Label htmlFor="hosted-classification" className="font-medium">Hosted</Label>
+                                <p className="text-sm text-gray-600">
+                                  A wallet where a third party (exchange or service provider) controls the private keys. 
+                                  Examples: Binance, Coinbase, Luno, Kraken.
+                                </p>
+                              </div>
+                            </div>
+                            <div className="flex items-start space-x-3 p-3 border rounded-lg">
+                              <RadioGroupItem value="unhosted" id="unhosted-classification" className="mt-1" />
+                              <div className="space-y-1">
+                                <Label htmlFor="unhosted-classification" className="font-medium">Unhosted</Label>
+                                <p className="text-sm text-gray-600">
+                                  A wallet where you control the private keys and have full control. 
+                                  Examples: MetaMask, Ledger, Trust Wallet, hardware wallets.
+                                </p>
+                              </div>
                             </div>
                           </div>
-                          <div className="flex items-start space-x-3 p-3 border rounded-lg">
-                            <RadioGroupItem value="unhosted" id="unhosted-classification" className="mt-1" />
-                            <div className="space-y-1">
-                              <Label htmlFor="unhosted-classification" className="font-medium">Unhosted</Label>
-                              <p className="text-sm text-gray-600">
-                                A wallet where you control the private keys and have full control. 
-                                Examples: MetaMask, Ledger, Trust Wallet, hardware wallets.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </RadioGroup>
-                    </div>
+                        </RadioGroup>
+                      </div>
 
-                    {/* Understanding Confirmation */}
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <Checkbox
-                          id="wallet-type-understood"
-                          checked={walletTypeUnderstood}
-                          onCheckedChange={setWalletTypeUnderstood}
-                        />
-                        <div className="space-y-1">
-                          <Label htmlFor="wallet-type-understood" className="text-sm font-medium">
-                            Understanding Confirmation
-                          </Label>
-                          <p className="text-sm text-gray-600">
-                            I understand the difference between hosted and unhosted wallets and have correctly classified my wallet type above.
-                          </p>
+                      {/* Understanding Confirmation */}
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-3">
+                          <Checkbox
+                            id="wallet-type-understood"
+                            checked={walletTypeUnderstood}
+                            onCheckedChange={setWalletTypeUnderstood}
+                          />
+                          <div className="space-y-1">
+                            <Label htmlFor="wallet-type-understood" className="text-sm font-medium">
+                              Understanding Confirmation
+                            </Label>
+                            <p className="text-sm text-gray-600">
+                              I understand the difference between hosted and unhosted wallets and have correctly classified my wallet type above.
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Information Box */}
-                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <div className="flex items-start gap-2">
-                        <Info className="h-5 w-5 text-blue-600 mt-0.5" />
-                        <div className="space-y-2">
-                          <p className="text-sm font-medium text-blue-800">
-                            What is a hosted wallet?
-                          </p>
-                          <p className="text-sm text-blue-700">
-                            A hosted wallet (also known as a custodial wallet) is one where a third party (such as a cryptocurrency exchange or financial service provider) controls the wallet and holds the private keys on behalf of the user. Common examples include wallets on platforms like Binance, Coinbase, or Luno.
-                          </p>
-                          <p className="text-sm text-blue-700">
-                            In contrast, an unhosted wallet is one where the user holds their own private keys and has full control, such as wallets created using MetaMask, Ledger, or Trust Wallet.
-                          </p>
+                      {/* Information Box */}
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <div className="flex items-start gap-2">
+                          <Info className="h-5 w-5 text-blue-600 mt-0.5" />
+                          <div className="space-y-2">
+                            <p className="text-sm font-medium text-blue-800">
+                              What is a hosted wallet?
+                            </p>
+                            <p className="text-sm text-blue-700">
+                              A hosted wallet (also known as a custodial wallet) is one where a third party (such as a cryptocurrency exchange or financial service provider) controls the wallet and holds the private keys on behalf of the user. Common examples include wallets on platforms like Binance, Coinbase, or Luno.
+                            </p>
+                            <p className="text-sm text-blue-700">
+                              In contrast, an unhosted wallet is one where the user holds their own private keys and has full control, such as wallets created using MetaMask, Ledger, or Trust Wallet.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
