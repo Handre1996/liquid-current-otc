@@ -153,12 +153,13 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
       ownerPostalCode: '',
       ownerCountry: ''
     });
-    setCompanyOwnerDetails({
-      companyRegNumber: '',
+    setCompanyDetails({
+      companyName: '',
+      registrationNumber: '',
       beneficialOwnerName: '',
       beneficialOwnerSurname: '',
-      beneficialOwnerIdType: 'nationalId',
-      beneficialOwnerIdNumber: ''
+      beneficialOwnerIdNumber: '',
+      beneficialOwnerIdType: 'nationalId'
     });
     setWalletTypeClassification('');
     setWalletTypeUnderstood(false);
@@ -184,10 +185,10 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                               actualOwnerDetails.ownerIdNumber
                             ) || (
                               isWalletOwner === 'company' &&
-                              companyOwnerDetails.companyRegNumber &&
-                              companyOwnerDetails.beneficialOwnerName &&
-                              companyOwnerDetails.beneficialOwnerSurname &&
-                              companyOwnerDetails.beneficialOwnerIdNumber
+                              companyDetails.registrationNumber &&
+                              companyDetails.beneficialOwnerName &&
+                              companyDetails.beneficialOwnerSurname &&
+                              companyDetails.beneficialOwnerIdNumber
                             )) &&
                             walletTypeClassification !== '' && 
                             walletTypeUnderstood &&
@@ -415,20 +416,17 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                         <RadioGroup 
                           value={isWalletOwner} 
                           onValueChange={(value) => {
-                            setIsWalletOwner(value as 'yes' | 'no' | 'company');
+                            setIsWalletOwner(value as 'yes' | 'no');
                             if (value === 'yes') {
                               setActualOwnerDetails({
                                 ownerName: '',
                                 ownerSurname: '',
                                 ownerIdNumber: '',
-                                ownerIdType: 'nationalId'
-                              });
-                              setCompanyOwnerDetails({
-                                companyRegNumber: '',
-                                beneficialOwnerName: '',
-                                beneficialOwnerSurname: '',
-                                beneficialOwnerIdType: 'nationalId',
-                                beneficialOwnerIdNumber: ''
+                                ownerIdType: 'nationalId',
+                                ownerAddress: '',
+                                ownerCity: '',
+                                ownerPostalCode: '',
+                                ownerCountry: ''
                               });
                             }
                           }}
@@ -449,15 +447,6 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                                 <Label htmlFor="owner-no" className="font-medium">No, this wallet belongs to someone else</Label>
                                 <p className="text-sm text-gray-600">
                                   This wallet belongs to another person and I have authorization to use it for this transaction.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="flex items-start space-x-3 p-3 border rounded-lg">
-                              <RadioGroupItem value="company" id="owner-company" className="mt-1" />
-                              <div className="space-y-1">
-                                <Label htmlFor="owner-company" className="font-medium">This wallet is owned by a company</Label>
-                                <p className="text-sm text-gray-600">
-                                  This wallet belongs to a company and I am authorized to conduct transactions on behalf of the company.
                                 </p>
                               </div>
                             </div>
@@ -609,117 +598,6 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                                     <p>
                                       By providing these details, you confirm that you have proper authorization from the wallet owner 
                                       to conduct transactions on their behalf and that all provided information is accurate.
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </CardContent>
-                          </Card>
-                        )}
-                        
-                        {/* Company Details Form */}
-                        {isWalletOwner === 'company' && (
-                          <Card className="border-purple-200 bg-purple-50">
-                            <CardHeader>
-                              <CardTitle className="text-base text-purple-800">Company & Beneficial Owner Details</CardTitle>
-                              <CardDescription className="text-purple-700">
-                                Please provide the company registration details and beneficial owner information
-                              </CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                              <div className="space-y-2">
-                                <Label htmlFor="company-reg-number">Company Registration Number</Label>
-                                <Input
-                                  id="company-reg-number"
-                                  value={companyOwnerDetails.companyRegNumber}
-                                  onChange={(e) => setCompanyOwnerDetails(prev => ({ 
-                                    ...prev, 
-                                    companyRegNumber: e.target.value 
-                                  }))}
-                                  placeholder="Enter company registration number"
-                                  required={isWalletOwner === 'company'}
-                                />
-                              </div>
-                              
-                              <Separator />
-                              
-                              <div className="space-y-4">
-                                <h4 className="font-medium text-purple-800">Beneficial Owner Details</h4>
-                                <div className="grid grid-cols-2 gap-4">
-                                  <div className="space-y-2">
-                                    <Label htmlFor="beneficial-owner-name">Beneficial Owner's First Name</Label>
-                                    <Input
-                                      id="beneficial-owner-name"
-                                      value={companyOwnerDetails.beneficialOwnerName}
-                                      onChange={(e) => setCompanyOwnerDetails(prev => ({ 
-                                        ...prev, 
-                                        beneficialOwnerName: e.target.value 
-                                      }))}
-                                      placeholder="Enter first name"
-                                      required={isWalletOwner === 'company'}
-                                    />
-                                  </div>
-                                  <div className="space-y-2">
-                                    <Label htmlFor="beneficial-owner-surname">Beneficial Owner's Surname</Label>
-                                    <Input
-                                      id="beneficial-owner-surname"
-                                      value={companyOwnerDetails.beneficialOwnerSurname}
-                                      onChange={(e) => setCompanyOwnerDetails(prev => ({ 
-                                        ...prev, 
-                                        beneficialOwnerSurname: e.target.value 
-                                      }))}
-                                      placeholder="Enter surname"
-                                      required={isWalletOwner === 'company'}
-                                    />
-                                  </div>
-                                </div>
-                                
-                                <div className="space-y-2">
-                                  <Label>Beneficial Owner's ID Document Type</Label>
-                                  <RadioGroup 
-                                    value={companyOwnerDetails.beneficialOwnerIdType} 
-                                    onValueChange={(value) => setCompanyOwnerDetails(prev => ({ 
-                                      ...prev, 
-                                      beneficialOwnerIdType: value as 'nationalId' | 'passport',
-                                      beneficialOwnerIdNumber: '' // Reset ID number when type changes
-                                    }))}
-                                  >
-                                    <div className="flex items-center space-x-2">
-                                      <RadioGroupItem value="nationalId" id="beneficial-owner-nationalId" />
-                                      <Label htmlFor="beneficial-owner-nationalId">National ID</Label>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                      <RadioGroupItem value="passport" id="beneficial-owner-passport" />
-                                      <Label htmlFor="beneficial-owner-passport">Passport</Label>
-                                    </div>
-                                  </RadioGroup>
-                                </div>
-                                
-                                <div className="space-y-2">
-                                  <Label htmlFor="beneficial-owner-id-number">
-                                    {companyOwnerDetails.beneficialOwnerIdType === 'passport' ? 'Passport Number' : 'National ID Number'}
-                                  </Label>
-                                  <Input
-                                    id="beneficial-owner-id-number"
-                                    value={companyOwnerDetails.beneficialOwnerIdNumber}
-                                    onChange={(e) => setCompanyOwnerDetails(prev => ({ 
-                                      ...prev, 
-                                      beneficialOwnerIdNumber: e.target.value 
-                                    }))}
-                                    placeholder={`Enter ${companyOwnerDetails.beneficialOwnerIdType === 'passport' ? 'passport number' : 'national ID number'}`}
-                                    required={isWalletOwner === 'company'}
-                                  />
-                                </div>
-                              </div>
-                              
-                              <div className="bg-purple-100 border border-purple-200 rounded-lg p-3">
-                                <div className="flex items-start gap-2">
-                                  <AlertTriangle className="h-4 w-4 text-purple-600 mt-0.5" />
-                                  <div className="text-sm text-purple-800">
-                                    <p className="font-medium mb-1">Company Authorization Notice</p>
-                                    <p>
-                                      By providing these details, you confirm that you are an authorized representative of the company 
-                                      and have proper authorization to conduct transactions on behalf of the company and its beneficial owners.
                                     </p>
                                   </div>
                                 </div>
