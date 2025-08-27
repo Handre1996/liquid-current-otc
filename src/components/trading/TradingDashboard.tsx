@@ -752,7 +752,7 @@ const TradingDashboard = () => {
   const isSuperUser = userProfile?.is_super_user || false;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-ivory to-foam dark:from-navy dark:to-teal">
+    <div className="bg-gradient-to-br from-ivory to-foam dark:from-navy dark:to-teal">
       <div className="flex">
         {/* Mobile Menu Button */}
         <div className="lg:hidden fixed top-20 left-4 z-40">
@@ -882,8 +882,7 @@ const TradingDashboard = () => {
         )}
 
         {/* Main Content */}
-        <div className="flex-1 lg:ml-80">
-          <div className="min-h-screen">
+        <div className="flex-1 lg:ml-80 flex flex-col min-h-screen">
             {/* Header Section */}
             <div className="bg-gradient-to-r from-blanc to-foam/50 dark:from-navy to-teal/30 border-b border-navy/20 dark:border-foam/20 p-6 lg:p-8">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center space-y-4 lg:space-y-0">
@@ -989,7 +988,7 @@ const TradingDashboard = () => {
             </div>
 
             {/* Main Content Area */}
-            <div className="p-6 lg:p-8 overflow-y-auto">
+            <div className="p-6 lg:p-8 flex-1 overflow-y-auto">
               <div className="max-w-7xl">
                 {/* Debug info for currencies */}
                 {currencies.length === 0 && (
@@ -1003,7 +1002,6 @@ const TradingDashboard = () => {
                 {renderContent()}
               </div>
             </div>
-          </div>
         </div>
       </div>
 
