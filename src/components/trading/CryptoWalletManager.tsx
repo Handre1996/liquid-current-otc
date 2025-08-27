@@ -502,6 +502,67 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                                 />
                               </div>
                               
+                              <Separator />
+                              
+                              <div className="space-y-4">
+                                <h4 className="font-medium text-orange-800">Owner's Physical Address</h4>
+                                <div className="space-y-2">
+                                  <Label htmlFor="owner-address">Street Address</Label>
+                                  <Input
+                                    id="owner-address"
+                                    value={actualOwnerDetails.ownerAddress}
+                                    onChange={(e) => setActualOwnerDetails(prev => ({ 
+                                      ...prev, 
+                                      ownerAddress: e.target.value 
+                                    }))}
+                                    placeholder="Enter street address"
+                                    required={isWalletOwner === 'no'}
+                                  />
+                                </div>
+                                
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                  <div className="space-y-2">
+                                    <Label htmlFor="owner-city">City</Label>
+                                    <Input
+                                      id="owner-city"
+                                      value={actualOwnerDetails.ownerCity}
+                                      onChange={(e) => setActualOwnerDetails(prev => ({ 
+                                        ...prev, 
+                                        ownerCity: e.target.value 
+                                      }))}
+                                      placeholder="City"
+                                      required={isWalletOwner === 'no'}
+                                    />
+                                  </div>
+                                  <div className="space-y-2">
+                                    <Label htmlFor="owner-postal-code">Postal Code</Label>
+                                    <Input
+                                      id="owner-postal-code"
+                                      value={actualOwnerDetails.ownerPostalCode}
+                                      onChange={(e) => setActualOwnerDetails(prev => ({ 
+                                        ...prev, 
+                                        ownerPostalCode: e.target.value 
+                                      }))}
+                                      placeholder="Postal Code"
+                                      required={isWalletOwner === 'no'}
+                                    />
+                                  </div>
+                                  <div className="space-y-2">
+                                    <Label htmlFor="owner-country">Country</Label>
+                                    <Input
+                                      id="owner-country"
+                                      value={actualOwnerDetails.ownerCountry}
+                                      onChange={(e) => setActualOwnerDetails(prev => ({ 
+                                        ...prev, 
+                                        ownerCountry: e.target.value 
+                                      }))}
+                                      placeholder="Country"
+                                      required={isWalletOwner === 'no'}
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              
                               <div className="bg-orange-100 border border-orange-200 rounded-lg p-3">
                                 <div className="flex items-start gap-2">
                                   <AlertTriangle className="h-4 w-4 text-orange-600 mt-0.5" />

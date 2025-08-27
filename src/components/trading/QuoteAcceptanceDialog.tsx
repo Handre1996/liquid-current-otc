@@ -70,6 +70,16 @@ const QuoteAcceptanceDialog = ({ quote, isOpen, onClose, onAccept }: QuoteAccept
       account_type: 'savings',
       currency: 'ZAR'
     });
+    setActualOwnerDetails({
+      ownerName: '',
+      ownerSurname: '',
+      ownerIdNumber: '',
+      ownerIdType: 'nationalId',
+      ownerAddress: '',
+      ownerCity: '',
+      ownerPostalCode: '',
+      ownerCountry: ''
+    });
   };
 
   const loadUserAccounts = async () => {
