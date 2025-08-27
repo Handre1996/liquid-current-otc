@@ -770,7 +770,7 @@ const TradingDashboard = () => {
 
         {/* Sidebar */}
         <div className={cn(
-          "fixed left-0 top-16 bottom-0 z-30 w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm transform transition-transform duration-300 ease-in-out lg:translate-x-0 overflow-hidden flex flex-col",
+          "fixed left-0 top-16 bottom-0 z-30 w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm transform transition-transform duration-300 ease-in-out lg:translate-x-0 overflow-hidden",
           sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}>
           {/* Sidebar Header */}

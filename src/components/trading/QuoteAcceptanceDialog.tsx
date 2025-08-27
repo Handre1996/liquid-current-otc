@@ -442,21 +442,33 @@ const QuoteAcceptanceDialog = ({ quote, isOpen, onClose, onAccept }: QuoteAccept
               <CardContent className="space-y-6">
                 {/* Wallet Ownership Confirmation */}
                 <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <Checkbox
-                      id="wallet-ownership"
-                      checked={walletOwnershipConfirmed}
-                      onCheckedChange={setWalletOwnershipConfirmed}
-                    />
-                    <div className="space-y-1">
-                      <Label htmlFor="wallet-ownership" className="text-sm font-medium">
-                        Wallet Ownership Confirmation
-                      </Label>
-                      <p className="text-sm text-gray-600">
-                        I confirm that I am the owner of the cryptocurrency wallet being used for this transaction. 
-                        If I am not the owner, I have provided the necessary details and authorization from the actual owner.
-                      </p>
-                    </div>
+                  <div className="space-y-4">
+                    <Label className="text-sm font-medium">Wallet Ownership</Label>
+                    <RadioGroup 
+                      value={walletOwnershipConfirmed ? 'yes' : ''} 
+                      onValueChange={(value) => setWalletOwnershipConfirmed(value === 'yes')}
+                    >
+                      <div className="space-y-3">
+                        <div className="flex items-start space-x-3 p-3 border rounded-lg">
+                          <RadioGroupItem value="yes" id="owner-confirm-yes" className="mt-1" />
+                          <div className="space-y-1">
+                            <Label htmlFor="owner-confirm-yes" className="font-medium">Yes, I own this wallet</Label>
+                            <p className="text-sm text-gray-600">
+                              I confirm that I am the owner of the cryptocurrency wallet being used for this transaction and have full control over it.
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-start space-x-3 p-3 border rounded-lg">
+                          <RadioGroupItem value="no" id="owner-confirm-no" className="mt-1" />
+                          <div className="space-y-1">
+                            <Label htmlFor="owner-confirm-no" className="font-medium">No, this wallet belongs to someone else</Label>
+                            <p className="text-sm text-gray-600">
+                              This wallet belongs to another person and I have proper authorization to use it for this transaction.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </RadioGroup>
                   </div>
                 </div>
 
