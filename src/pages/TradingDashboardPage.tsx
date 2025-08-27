@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import TradingDashboard from '@/components/trading/TradingDashboard';
 import { useAuth } from '@/contexts/AuthContext';
 import { checkExistingSubmission } from '@/utils/kycUtils';
@@ -67,7 +66,6 @@ const TradingDashboardPage = () => {
       <div className="flex-1">
         <TradingDashboard />
       </div>
-      <Footer />
     </div>
   );
 };

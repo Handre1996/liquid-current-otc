@@ -8,6 +8,7 @@ import { priceService } from '@/services/priceService';
 import { OTCQuote, OTCOrder, Currency, AdminQuote, UserProfile } from '@/types/trading';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
+import Footer from '@/components/Footer';
 import QuoteGenerator from './QuoteGenerator';
 import OrderHistory from './OrderHistory';
 import BankAccountManager from './BankAccountManager';
@@ -1002,6 +1003,9 @@ const TradingDashboard = () => {
                 {renderContent()}
               </div>
             </div>
+            
+            {/* Footer */}
+            <Footer />
         </div>
       </div>
 
