@@ -103,7 +103,6 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
     beneficialOwnerIdNumber: '',
     beneficialOwnerIdType: 'nationalId' as 'nationalId' | 'passport'
   });
-  });
   const [walletTypeClassification, setWalletTypeClassification] = useState<'hosted' | 'unhosted' | ''>('');
   const [walletTypeUnderstood, setWalletTypeUnderstood] = useState(false);
 
