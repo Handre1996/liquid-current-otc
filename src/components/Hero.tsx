@@ -92,7 +92,7 @@ export default function Hero() {
                   className="border-2 border-navy bg-foam text-navy hover:bg-foam/80 hover:text-navy hover:border-navy font-semibold transition-all duration-300 transform hover:scale-105 font-body"
                   asChild
                 >
-                  <Link to="/about">Contact Us</Link>
+                  <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
 
