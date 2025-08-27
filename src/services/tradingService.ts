@@ -1,7 +1,7 @@
 import { supabase } from '@/integrations/supabase/client';
 import { OTCQuote, OTCOrder, BankAccount, CryptoWallet } from '@/types/trading';
 import { priceService } from './priceService';
-import { notificationService } from './notificationService';
+import { notifyAdminNewQuote } from './adminNotificationService';
 
 export class TradingService {
   async generateQuote(
@@ -90,9 +90,9 @@ export class TradingService {
         .eq('id', userId)
         .single();
 
-      // Send notification to admin about new quote
+      // Send email notification to admin about new quote
       if (userData?.email) {
-        await notificationService.notifyAdminAboutNewQuote(data, userData.email);
+        await notifyAdminNewQuote(data, userData.email);
       }
 
       return data;

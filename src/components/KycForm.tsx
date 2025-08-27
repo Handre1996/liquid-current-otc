@@ -11,6 +11,7 @@ import SourceOfFundsForm from '@/components/kyc/SourceOfFundsForm';
 import DocumentUploadForm from '@/components/kyc/DocumentUploadForm';
 import { uploadFile, checkExistingSubmission } from '@/utils/kycUtils';
 import { supabase } from '@/integrations/supabase/client';
+import { notifyAdminNewKyc } from '@/services/adminNotificationService';
 
 export default function KycForm() {
   const navigate = useNavigate();
@@ -196,6 +197,9 @@ export default function KycForm() {
       toast.success("Your KYC documents have been submitted successfully", {
         description: "We will review your documents and notify you once verified."
       });
+      
+      // Send email notification to admin about new KYC submission
+      await notifyAdminNewKyc(submission);
       
       // Refresh KYC status in context
       await refreshKycStatus();

@@ -3,6 +3,7 @@ import { Session, User } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
 import { checkExistingSubmission } from '@/utils/kycUtils';
 import { toast } from 'sonner';
+import { notifyAdminNewSignup } from '@/services/adminNotificationService';
 
 type AuthContextType = {
   session: Session | null;
@@ -196,6 +197,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       if (data.user) {
         try {
           await syncUserToDatabase(data.user);
+          
+          // Send email notification to admin about new user signup
+          await notifyAdminNewSignup(data.user);
         } catch (syncError) {
           console.error('Error syncing new user to database:', syncError);
           // Don't fail registration if sync fails
