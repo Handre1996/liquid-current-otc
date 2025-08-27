@@ -437,7 +437,12 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                                 ownerCountry: ''
                               });
                               setCompanyOwnerDetails({
-                                companyRegNumber: '',
+                                companyName: '',
+                                companyCipcNumber: '',
+                                companyAddress: '',
+                                companyCity: '',
+                                companyPostalCode: '',
+                                companyCountry: '',
                                 beneficialOwnerName: '',
                                 beneficialOwnerSurname: '',
                                 beneficialOwnerIdType: 'nationalId',
