@@ -8,7 +8,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
-import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { Eye, EyeOff } from 'lucide-react';
 
 export default function Register() {
@@ -20,8 +19,6 @@ export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-  const captchaRef = useRef<HCaptcha>(null);
   const navigate = useNavigate();
   const { signUp } = useAuth();
 
@@ -63,10 +60,6 @@ export default function Register() {
       return;
     }
 
-    if (!captchaToken) {
-      toast.error("Please complete the CAPTCHA");
-      return;
-    }
 
     setIsLoading(true);
 
@@ -83,24 +76,9 @@ export default function Register() {
       }
     } finally {
       setIsLoading(false);
-      captchaRef.current?.resetCaptcha();
-      setCaptchaToken(null);
     }
   };
 
-  const onCaptchaVerify = (token: string) => {
-    setCaptchaToken(token);
-  };
-
-  const onCaptchaError = (err: Error) => {
-    console.error("CAPTCHA error:", err);
-    toast.error("CAPTCHA verification failed");
-  };
-
-  const onCaptchaExpire = () => {
-    setCaptchaToken(null);
-    toast.error("CAPTCHA expired, please verify again");
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -201,16 +179,7 @@ export default function Register() {
                       </button>
                     </div>
                   </div>
-                  <div className="flex justify-center my-4">
-                    <HCaptcha
-                      ref={captchaRef}
-                      sitekey="10000000-ffff-ffff-ffff-000000000001"
-                      onVerify={onCaptchaVerify}
-                      onError={onCaptchaError}
-                      onExpire={onCaptchaExpire}
-                    />
-                  </div>
-                  <Button type="submit" className="w-full" disabled={isLoading || !captchaToken}>
+                  <Button type="submit" className="w-full" disabled={isLoading}>
                     {isLoading ? "Creating account..." : "Create Account"}
                   </Button>
                   <div className="text-center text-sm">
