@@ -35,7 +35,11 @@ import {
   DollarSign,
   Percent,
   Save,
-  AlertTriangle
+  AlertTriangle,
+  ChevronLeft,
+  ChevronRight,
+  ChevronsLeft,
+  ChevronsRight
 } from 'lucide-react';
 
 const PricingAdjustmentPanel =  () => {
@@ -46,6 +50,9 @@ const PricingAdjustmentPanel =  () => {
   const [updating, setUpdating] = useState(false);
   const [selectedRate, setSelectedRate] = useState<ExchangeRate | null>(null);
   const [showAdjustDialog, setShowAdjustDialog] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(20);
+  const [searchTerm, setSearchTerm] = useState('');
 
   // Fee settings state
   const [feeSettings, setFeeSettings] = useState({
@@ -70,6 +77,11 @@ const PricingAdjustmentPanel =  () => {
       loadPricingData();
     }
   }, [isAdmin]);
+
+  // Reset to first page when search term changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm]);
 
   const loadPricingData = async () => {
     setLoading(true);
@@ -224,6 +236,23 @@ const PricingAdjustmentPanel =  () => {
   const formatCurrency = (amount: number, currency: string) => {
     return `${amount.toFixed(8)} ${currency}`;
   };
+
+  // Filter and paginate exchange rates
+  const filteredRates = exchangeRates.filter(rate =>
+    rate.from_currency.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    rate.to_currency.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    `${rate.from_currency}-${rate.to_currency}`.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const totalPages = Math.ceil(filteredRates.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentRates = filteredRates.slice(startIndex, endIndex);
+
+  const goToFirstPage = () => setCurrentPage(1);
+  const goToLastPage = () => setCurrentPage(totalPages);
+  const goToPrevPage = () => setCurrentPage(prev => Math.max(prev - 1, 1));
+  const goToNextPage = () => setCurrentPage(prev => Math.min(prev + 1, totalPages));
 
   if (!isAdmin) {
     return (
@@ -392,13 +421,65 @@ const PricingAdjustmentPanel =  () => {
 
           {/* Exchange Rates Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <Percent className="h-5 w-5" />
-              Exchange Rate Adjustments
-            </h3>
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-semibold flex items-center gap-2">
+                <Percent className="h-5 w-5" />
+                Exchange Rate Adjustments
+              </h3>
+              <div className="flex items-center gap-4">
+                <Input
+                  placeholder="Search currency pairs..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-64"
+                />
+              </div>
+            </div>
             <p className="text-sm text-gray-600 mb-4">
               These are the current exchange rates that customers see. You can adjust individual rates or refresh all from market data.
             </p>
+
+            {/* Exchange Rates Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">Total Exchange Rates</CardTitle>
+                  <Percent className="h-4 w-4 text-muted-foreground" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold">{exchangeRates.length}</div>
+                  <p className="text-xs text-muted-foreground">
+                    All currency pairs
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">Filtered Results</CardTitle>
+                  <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold text-blue-600">{filteredRates.length}</div>
+                  <p className="text-xs text-muted-foreground">
+                    {searchTerm ? 'Matching search' : 'All rates'}
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">Current Page</CardTitle>
+                  <TrendingDown className="h-4 w-4 text-muted-foreground" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold text-green-600">{currentPage} of {totalPages}</div>
+                  <p className="text-xs text-muted-foreground">
+                    Showing {currentRates.length} rates
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
 
             <div className="overflow-x-auto">
               <Table>
@@ -415,7 +496,7 @@ const PricingAdjustmentPanel =  () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {exchangeRates.slice(0, 20).map((rate) => (
+                  {currentRates.map((rate) => (
                     <TableRow key={rate.id}>
                       <TableCell className="font-medium">
                         {rate.from_currency} → {rate.to_currency}
@@ -462,10 +543,67 @@ const PricingAdjustmentPanel =  () => {
               </Table>
             </div>
 
-            {exchangeRates.length > 20 && (
-              <p className="text-sm text-gray-500 mt-2">
-                Showing first 20 of {exchangeRates.length} exchange rates
-              </p>
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-between mt-6">
+                <div className="text-sm text-gray-600">
+                  Showing {startIndex + 1}-{Math.min(endIndex, filteredRates.length)} of {filteredRates.length} exchange rates
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={goToFirstPage}
+                    disabled={currentPage === 1}
+                  >
+                    <ChevronsLeft className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={goToPrevPage}
+                    disabled={currentPage === 1}
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                  </Button>
+                  
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-gray-600">Page</span>
+                    <Input
+                      type="number"
+                      min={1}
+                      max={totalPages}
+                      value={currentPage}
+                      onChange={(e) => {
+                        const page = parseInt(e.target.value);
+                        if (page >= 1 && page <= totalPages) {
+                          setCurrentPage(page);
+                        }
+                      }}
+                      className="w-16 text-center"
+                    />
+                    <span className="text-sm text-gray-600">of {totalPages}</span>
+                  </div>
+                  
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={goToNextPage}
+                    disabled={currentPage === totalPages}
+                  >
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={goToLastPage}
+                    disabled={currentPage === totalPages}
+                  >
+                    <ChevronsRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
             )}
           </div>
         </CardContent>
