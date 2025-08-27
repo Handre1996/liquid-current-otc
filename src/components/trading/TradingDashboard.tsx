@@ -434,7 +434,7 @@ const TradingDashboard = () => {
                     <div className="mt-4">
                       <Button 
                         onClick={openWhatsAppSupport}
-                        className="bg-gradient-to-r from-greenAccent to-teal hover:from-greenAccent/90 hover:to-teal/90 text-blanc font-body flex items-center gap-2"
+                        className="bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-body flex items-center gap-2"
                       >
                         <MessageCircle className="h-4 w-4" />
                         Contact Admin via WhatsApp
@@ -923,7 +923,7 @@ const TradingDashboard = () => {
                   <Button
                     onClick={openWhatsAppSupport}
                     variant="outline"
-                    className="flex items-center gap-2 text-greenAccent border-greenAccent/30 bg-greenAccent/20 hover:bg-greenAccent/30 backdrop-blur-sm font-body"
+                    className="flex items-center gap-2 text-navy dark:text-foam border-navy/30 dark:border-foam/30 bg-navy/20 dark:bg-foam/20 hover:bg-navy/30 dark:hover:bg-foam/30 backdrop-blur-sm font-body"
                   >
                     <MessageCircle className="h-4 w-4" />
                     WhatsApp Support
@@ -961,14 +961,14 @@ const TradingDashboard = () => {
                   </Card>
                 )}
 
-                <Card className="bg-gradient-to-r from-greenAccent/40 to-teal/40 border-greenAccent/30 shadow-md backdrop-blur-sm">
+                <Card className="bg-gradient-to-r from-teal/40 to-navy/40 border-teal/30 shadow-md backdrop-blur-sm">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-heading font-medium text-navy dark:text-foam">Total Orders</CardTitle>
-                    <TrendingUp className="h-4 w-4 text-greenAccent" />
+                    <CardTitle className="text-sm font-heading font-medium text-blanc">Total Orders</CardTitle>
+                    <TrendingUp className="h-4 w-4 text-blanc" />
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-heading font-bold text-navy dark:text-foam">{orders.length}</div>
-                    <p className="text-xs font-body text-navy/70 dark:text-foam/70">
+                    <div className="text-2xl font-heading font-bold text-blanc">{orders.length}</div>
+                    <p className="text-xs font-body text-blanc/70">
                       All-time trading orders
                     </p>
                   </CardContent>
