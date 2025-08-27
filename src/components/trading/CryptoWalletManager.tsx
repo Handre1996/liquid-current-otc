@@ -634,6 +634,198 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                             </CardContent>
                           </Card>
                         )}
+
+                        {/* Company Details Form */}
+                        {isWalletOwner === 'company' && (
+                          <Card className="border-purple-200 bg-purple-50">
+                            <CardHeader>
+                              <CardTitle className="text-base text-purple-800">Company Details & Beneficial Owner</CardTitle>
+                              <CardDescription className="text-purple-700">
+                                Please provide the company details and beneficial owner information
+                              </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                              <div className="space-y-4">
+                                <h4 className="font-medium text-purple-800">Company Information</h4>
+                                <div className="space-y-2">
+                                  <Label htmlFor="company-name">Company Name</Label>
+                                  <Input
+                                    id="company-name"
+                                    value={companyOwnerDetails.companyName}
+                                    onChange={(e) => setCompanyOwnerDetails(prev => ({ 
+                                      ...prev, 
+                                      companyName: e.target.value 
+                                    }))}
+                                    placeholder="Enter company name"
+                                    required={isWalletOwner === 'company'}
+                                  />
+                                </div>
+                                
+                                <div className="space-y-2">
+                                  <Label htmlFor="company-cipc-number">Company CIPC Registration Number</Label>
+                                  <Input
+                                    id="company-cipc-number"
+                                    value={companyOwnerDetails.companyCipcNumber}
+                                    onChange={(e) => setCompanyOwnerDetails(prev => ({ 
+                                      ...prev, 
+                                      companyCipcNumber: e.target.value 
+                                    }))}
+                                    placeholder="Enter CIPC registration number"
+                                    required={isWalletOwner === 'company'}
+                                  />
+                                </div>
+                                
+                                <div className="space-y-4">
+                                  <h4 className="font-medium text-purple-800">Company Address</h4>
+                                  <div className="space-y-2">
+                                    <Label htmlFor="company-address">Street Address</Label>
+                                    <Input
+                                      id="company-address"
+                                      value={companyOwnerDetails.companyAddress}
+                                      onChange={(e) => setCompanyOwnerDetails(prev => ({ 
+                                        ...prev, 
+                                        companyAddress: e.target.value 
+                                      }))}
+                                      placeholder="Enter company street address"
+                                      required={isWalletOwner === 'company'}
+                                    />
+                                  </div>
+                                  
+                                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <div className="space-y-2">
+                                      <Label htmlFor="company-city">City</Label>
+                                      <Input
+                                        id="company-city"
+                                        value={companyOwnerDetails.companyCity}
+                                        onChange={(e) => setCompanyOwnerDetails(prev => ({ 
+                                          ...prev, 
+                                          companyCity: e.target.value 
+                                        }))}
+                                        placeholder="City"
+                                        required={isWalletOwner === 'company'}
+                                      />
+                                    </div>
+                                    <div className="space-y-2">
+                                      <Label htmlFor="company-postal-code">Postal Code</Label>
+                                      <Input
+                                        id="company-postal-code"
+                                        value={companyOwnerDetails.companyPostalCode}
+                                        onChange={(e) => setCompanyOwnerDetails(prev => ({ 
+                                          ...prev, 
+                                          companyPostalCode: e.target.value 
+                                        }))}
+                                        placeholder="Postal Code"
+                                        required={isWalletOwner === 'company'}
+                                      />
+                                    </div>
+                                    <div className="space-y-2">
+                                      <Label htmlFor="company-country">Country</Label>
+                                      <Input
+                                        id="company-country"
+                                        value={companyOwnerDetails.companyCountry}
+                                        onChange={(e) => setCompanyOwnerDetails(prev => ({ 
+                                          ...prev, 
+                                          companyCountry: e.target.value 
+                                        }))}
+                                        placeholder="Country"
+                                        required={isWalletOwner === 'company'}
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <Separator />
+                              
+                              <div className="space-y-4">
+                                <h4 className="font-medium text-purple-800">Beneficial Owner Details</h4>
+                                <div className="space-y-2">
+                                  <p className="text-sm text-purple-700 mb-2">
+                                    Provide details of the person who ultimately owns or controls the company
+                                  </p>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                  <div className="space-y-2">
+                                    <Label htmlFor="beneficial-owner-name">Beneficial Owner's First Name</Label>
+                                    <Input
+                                      id="beneficial-owner-name"
+                                      value={companyOwnerDetails.beneficialOwnerName}
+                                      onChange={(e) => setCompanyOwnerDetails(prev => ({ 
+                                        ...prev, 
+                                        beneficialOwnerName: e.target.value 
+                                      }))}
+                                      placeholder="Enter first name"
+                                      required={isWalletOwner === 'company'}
+                                    />
+                                  </div>
+                                  <div className="space-y-2">
+                                    <Label htmlFor="beneficial-owner-surname">Beneficial Owner's Surname</Label>
+                                    <Input
+                                      id="beneficial-owner-surname"
+                                      value={companyOwnerDetails.beneficialOwnerSurname}
+                                      onChange={(e) => setCompanyOwnerDetails(prev => ({ 
+                                        ...prev, 
+                                        beneficialOwnerSurname: e.target.value 
+                                      }))}
+                                      placeholder="Enter surname"
+                                      required={isWalletOwner === 'company'}
+                                    />
+                                  </div>
+                                </div>
+                                
+                                <div className="space-y-2">
+                                  <Label>Beneficial Owner's ID Document Type</Label>
+                                  <RadioGroup 
+                                    value={companyOwnerDetails.beneficialOwnerIdType} 
+                                    onValueChange={(value) => setCompanyOwnerDetails(prev => ({ 
+                                      ...prev, 
+                                      beneficialOwnerIdType: value as 'nationalId' | 'passport',
+                                      beneficialOwnerIdNumber: '' // Reset ID number when type changes
+                                    }))}
+                                  >
+                                    <div className="flex items-center space-x-2">
+                                      <RadioGroupItem value="nationalId" id="beneficial-owner-nationalId" />
+                                      <Label htmlFor="beneficial-owner-nationalId">National ID</Label>
+                                    </div>
+                                    <div className="flex items-center space-x-2">
+                                      <RadioGroupItem value="passport" id="beneficial-owner-passport" />
+                                      <Label htmlFor="beneficial-owner-passport">Passport</Label>
+                                    </div>
+                                  </RadioGroup>
+                                </div>
+                                
+                                <div className="space-y-2">
+                                  <Label htmlFor="beneficial-owner-id-number">
+                                    {companyOwnerDetails.beneficialOwnerIdType === 'passport' ? 'Passport Number' : 'National ID Number'}
+                                  </Label>
+                                  <Input
+                                    id="beneficial-owner-id-number"
+                                    value={companyOwnerDetails.beneficialOwnerIdNumber}
+                                    onChange={(e) => setCompanyOwnerDetails(prev => ({ 
+                                      ...prev, 
+                                      beneficialOwnerIdNumber: e.target.value 
+                                    }))}
+                                    placeholder={`Enter ${companyOwnerDetails.beneficialOwnerIdType === 'passport' ? 'passport number' : 'national ID number'}`}
+                                    required={isWalletOwner === 'company'}
+                                  />
+                                </div>
+                              </div>
+                              
+                              <div className="bg-purple-100 border border-purple-200 rounded-lg p-3">
+                                <div className="flex items-start gap-2">
+                                  <AlertTriangle className="h-4 w-4 text-purple-600 mt-0.5" />
+                                  <div className="text-sm text-purple-800">
+                                    <p className="font-medium mb-1">Important Notice</p>
+                                    <p>
+                                      By providing these details, you confirm that you are authorized to conduct transactions on behalf of the company 
+                                      and that all provided information is accurate and up to date.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        )}
                       </div>
 
                       <Separator />
