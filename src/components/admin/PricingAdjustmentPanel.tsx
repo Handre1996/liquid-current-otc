@@ -175,11 +175,11 @@ const PricingAdjustmentPanel =  () => {
     try {
       const buyAdjustment = parseFloat(rateAdjustment.buy_markup_adjustment) / 100;
       const sellAdjustment = parseFloat(rateAdjustment.sell_markup_adjustment) / 100;
-      const baseAdjustment = parseFloat(rateAdjustment.base_rate_adjustment) / 100;
+      const baseAdjustment = parseFloat(rateAdjustment.base_rate_adjustment);
 
       const newBuyMarkup = selectedRate.buy_markup + buyAdjustment;
       const newSellMarkup = selectedRate.sell_markup + sellAdjustment;
-      const newBaseRate = selectedRate.base_rate * (1 + baseAdjustment);
+      const newBaseRate = selectedRate.base_rate + baseAdjustment;
 
       const newFinalBuyRate = newBaseRate * (1 + newBuyMarkup);
       const newFinalSellRate = newBaseRate * (1 - newSellMarkup);
@@ -639,11 +639,11 @@ const PricingAdjustmentPanel =  () => {
 
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="base_rate_adjustment">Base Rate Adjustment (%)</Label>
+                  <Label htmlFor="base_rate_adjustment">Base Rate Adjustment (Rate Units)</Label>
                   <Input
                     id="base_rate_adjustment"
                     type="number"
-                    step="0.1"
+                    step="0.00000001"
                     value={rateAdjustment.base_rate_adjustment}
                     onChange={(e) => setRateAdjustment(prev => ({
                       ...prev,
@@ -652,12 +652,12 @@ const PricingAdjustmentPanel =  () => {
                     placeholder="0"
                   />
                   <p className="text-xs text-gray-500">
-                    Positive values increase the base rate, negative values decrease it
+                    Add/subtract rate units directly to base rate (e.g., 0.50 adds 0.50 to the rate)
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="buy_markup_adjustment">Buy Markup Adjustment (%)</Label>
+                  <Label htmlFor="buy_markup_adjustment">Buy Markup Adjustment (Percentage Points)</Label>
                   <Input
                     id="buy_markup_adjustment"
                     type="number"
@@ -670,12 +670,12 @@ const PricingAdjustmentPanel =  () => {
                     placeholder="0"
                   />
                   <p className="text-xs text-gray-500">
-                    Additional markup on buy orders (added to current markup)
+                    Add/subtract percentage points to buy markup (e.g., 0.5 adds 0.5% to markup)
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="sell_markup_adjustment">Sell Markup Adjustment (%)</Label>
+                  <Label htmlFor="sell_markup_adjustment">Sell Markup Adjustment (Percentage Points)</Label>
                   <Input
                     id="sell_markup_adjustment"
                     type="number"
@@ -688,7 +688,7 @@ const PricingAdjustmentPanel =  () => {
                     placeholder="0"
                   />
                   <p className="text-xs text-gray-500">
-                    Additional markup on sell orders (added to current markup)
+                    Add/subtract percentage points to sell markup (e.g., 0.5 adds 0.5% to markup)
                   </p>
                 </div>
               </div>
@@ -701,13 +701,13 @@ const PricingAdjustmentPanel =  () => {
                   <h4 className="font-semibold mb-2 text-blue-800">Preview New Rates</h4>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p><strong>New Base Rate:</strong> {(selectedRate.base_rate * (1 + parseFloat(rateAdjustment.base_rate_adjustment || '0') / 100)).toFixed(8)}</p>
+                      <p><strong>New Base Rate:</strong> {(selectedRate.base_rate + parseFloat(rateAdjustment.base_rate_adjustment || '0')).toFixed(8)}</p>
                       <p><strong>New Buy Markup:</strong> {formatPercentage(selectedRate.buy_markup + parseFloat(rateAdjustment.buy_markup_adjustment || '0') / 100)}</p>
                       <p><strong>New Sell Markup:</strong> {formatPercentage(selectedRate.sell_markup + parseFloat(rateAdjustment.sell_markup_adjustment || '0') / 100)}</p>
                     </div>
                     <div>
-                      <p><strong>New Customer Buy Rate:</strong> {(selectedRate.base_rate * (1 + parseFloat(rateAdjustment.base_rate_adjustment || '0') / 100) * (1 + selectedRate.buy_markup + parseFloat(rateAdjustment.buy_markup_adjustment || '0') / 100)).toFixed(8)}</p>
-                      <p><strong>New Customer Sell Rate:</strong> {(selectedRate.base_rate * (1 + parseFloat(rateAdjustment.base_rate_adjustment || '0') / 100) * (1 - selectedRate.sell_markup - parseFloat(rateAdjustment.sell_markup_adjustment || '0') / 100)).toFixed(8)}</p>
+                      <p><strong>New Customer Buy Rate:</strong> {((selectedRate.base_rate + parseFloat(rateAdjustment.base_rate_adjustment || '0')) * (1 + selectedRate.buy_markup + parseFloat(rateAdjustment.buy_markup_adjustment || '0') / 100)).toFixed(8)}</p>
+                      <p><strong>New Customer Sell Rate:</strong> {((selectedRate.base_rate + parseFloat(rateAdjustment.base_rate_adjustment || '0')) * (1 - selectedRate.sell_markup - parseFloat(rateAdjustment.sell_markup_adjustment || '0') / 100)).toFixed(8)}</p>
                     </div>
                   </div>
                 </div>
