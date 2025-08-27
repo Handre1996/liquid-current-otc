@@ -371,7 +371,7 @@ const AdminDashboard = () => {
       {isAdmin && (
         <div className="flex-1 flex">
           {/* Left Sidebar */}
-          <div className="w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 dark:to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm">
+          <div className="w-80 bg-gradient-to-b from-blanc/80 to-foam/50 dark:from-navy/80 dark:to-teal/50 border-r border-navy/20 dark:border-foam/20 shadow-xl backdrop-blur-sm flex flex-col">
             <div className="p-6 border-b border-navy/20 dark:border-foam/20 bg-gradient-to-r from-navy to-teal">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-blanc/20 backdrop-blur-sm rounded-lg">
@@ -384,7 +384,7 @@ const AdminDashboard = () => {
               </div>
             </div>
             
-            <nav className="p-4 space-y-2">
+            <nav className="p-4 space-y-2 flex-1 overflow-y-auto pb-20">
               {sidebarItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeTab === item.id;
@@ -441,7 +441,7 @@ const AdminDashboard = () => {
             </nav>
 
             {/* Admin Info Footer */}
-            <div className="absolute bottom-0 left-0 right-0 w-80 p-4 border-t border-navy/20 dark:border-foam/20 bg-gradient-to-r from-foam/20 to-ivory/30 dark:from-teal/20 dark:to-navy/30">
+            <div className="mt-auto p-4 border-t border-navy/20 dark:border-foam/20 bg-gradient-to-r from-foam/20 to-ivory/30 dark:from-teal/20 dark:to-navy/30">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-gradient-to-r from-navy to-teal rounded-lg">
                   <Crown className="h-4 w-4 text-blanc" />
