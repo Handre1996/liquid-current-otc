@@ -103,6 +103,13 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
     beneficialOwnerIdNumber: '',
     beneficialOwnerIdType: 'nationalId' as 'nationalId' | 'passport'
   });
+  const [companyOwnerDetails, setCompanyOwnerDetails] = useState({
+    companyRegNumber: '',
+    beneficialOwnerName: '',
+    beneficialOwnerSurname: '',
+    beneficialOwnerIdType: 'nationalId' as 'nationalId' | 'passport',
+    beneficialOwnerIdNumber: ''
+  });
   const [walletTypeClassification, setWalletTypeClassification] = useState<'hosted' | 'unhosted' | ''>('');
   const [walletTypeUnderstood, setWalletTypeUnderstood] = useState(false);
 
@@ -153,13 +160,12 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
       ownerPostalCode: '',
       ownerCountry: ''
     });
-    setCompanyDetails({
-      companyName: '',
-      registrationNumber: '',
+    setCompanyOwnerDetails({
+      companyRegNumber: '',
       beneficialOwnerName: '',
       beneficialOwnerSurname: '',
-      beneficialOwnerIdNumber: '',
-      beneficialOwnerIdType: 'nationalId'
+      beneficialOwnerIdType: 'nationalId',
+      beneficialOwnerIdNumber: ''
     });
     setWalletTypeClassification('');
     setWalletTypeUnderstood(false);
@@ -185,10 +191,10 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                               actualOwnerDetails.ownerIdNumber
                             ) || (
                               isWalletOwner === 'company' &&
-                              companyDetails.registrationNumber &&
-                              companyDetails.beneficialOwnerName &&
-                              companyDetails.beneficialOwnerSurname &&
-                              companyDetails.beneficialOwnerIdNumber
+                              companyOwnerDetails.companyRegNumber &&
+                              companyOwnerDetails.beneficialOwnerName &&
+                              companyOwnerDetails.beneficialOwnerSurname &&
+                              companyOwnerDetails.beneficialOwnerIdNumber
                             )) &&
                             walletTypeClassification !== '' && 
                             walletTypeUnderstood &&
@@ -416,7 +422,7 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                         <RadioGroup 
                           value={isWalletOwner} 
                           onValueChange={(value) => {
-                            setIsWalletOwner(value as 'yes' | 'no');
+                            setIsWalletOwner(value as 'yes' | 'no' | 'company');
                             if (value === 'yes') {
                               setActualOwnerDetails({
                                 ownerName: '',
@@ -427,6 +433,13 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                                 ownerCity: '',
                                 ownerPostalCode: '',
                                 ownerCountry: ''
+                              });
+                              setCompanyOwnerDetails({
+                                companyRegNumber: '',
+                                beneficialOwnerName: '',
+                                beneficialOwnerSurname: '',
+                                beneficialOwnerIdType: 'nationalId',
+                                beneficialOwnerIdNumber: ''
                               });
                             }
                           }}
@@ -447,6 +460,15 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                                 <Label htmlFor="owner-no" className="font-medium">No, this wallet belongs to someone else</Label>
                                 <p className="text-sm text-gray-600">
                                   This wallet belongs to another person and I have authorization to use it for this transaction.
+                                </p>
+                              </div>
+                            </div>
+                            <div className="flex items-start space-x-3 p-3 border rounded-lg">
+                              <RadioGroupItem value="company" id="owner-company" className="mt-1" />
+                              <div className="space-y-1">
+                                <Label htmlFor="owner-company" className="font-medium">This wallet is owned by a company</Label>
+                                <p className="text-sm text-gray-600">
+                                  This wallet belongs to a company and I am authorized to conduct transactions on behalf of the company.
                                 </p>
                               </div>
                             </div>
