@@ -41,7 +41,8 @@ import {
   BarChart3,
   Activity,
   ChevronRight,
-  Crown
+  Crown,
+  X
 } from 'lucide-react';
 
 interface User {
