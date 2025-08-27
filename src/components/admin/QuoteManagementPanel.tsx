@@ -147,19 +147,34 @@ const QuoteManagementPanel = ({ currencies }: QuoteManagementPanelProps) => {
 
     setProcessing(true);
     try {
+      // First, verify the quote still exists and is in pending status
+      const { data: currentQuote, error: verifyError } = await supabase
+        .from('otc_quotes')
+        .select('*')
+        .eq('id', selectedQuote.id)
+        .single();
+
+      if (verifyError || !currentQuote) {
+        throw new Error('Quote no longer exists or has been modified');
+      }
+
+      if (currentQuote.status !== 'pending') {
+        throw new Error('Quote is no longer pending and cannot be processed');
+      }
+
       if (processAction === 'approve') {
         // Create an order from the quote
         const orderData = {
-          user_id: selectedQuote.user_id,
-          quote_id: selectedQuote.id,
-          order_type: selectedQuote.quote_type,
-          from_currency: selectedQuote.from_currency,
-          to_currency: selectedQuote.to_currency,
-          from_amount: selectedQuote.from_amount,
-          to_amount: selectedQuote.to_amount,
-          exchange_rate: selectedQuote.exchange_rate,
-          total_fee: selectedQuote.total_fee,
-          net_amount: selectedQuote.net_amount,
+          user_id: currentQuote.user_id,
+          quote_id: currentQuote.id,
+          order_type: currentQuote.quote_type,
+          from_currency: currentQuote.from_currency,
+          to_currency: currentQuote.to_currency,
+          from_amount: currentQuote.from_amount,
+          to_amount: currentQuote.to_amount,
+          exchange_rate: currentQuote.exchange_rate,
+          total_fee: currentQuote.total_fee,
+          net_amount: currentQuote.net_amount,
           transaction_id: transactionId,
           status: 'completed',
           admin_notes: adminNotes
@@ -175,20 +190,20 @@ const QuoteManagementPanel = ({ currencies }: QuoteManagementPanelProps) => {
         const { error: quoteError } = await supabase
           .from('otc_quotes')
           .update({ status: 'accepted' })
-          .eq('id', selectedQuote.id);
+          .eq('id', currentQuote.id);
 
         if (quoteError) throw quoteError;
 
         toast.success(`Quote approved and processed with Transaction ID: ${transactionId}`);
       } else {
-        // Reject the quote
+        // Reject the quote using current quote data
         const { error } = await supabase
           .from('otc_quotes')
           .update({ 
             status: 'cancelled',
             updated_at: new Date().toISOString()
           })
-          .eq('id', selectedQuote.id);
+          .eq('id', currentQuote.id);
 
         if (error) throw error;
 
