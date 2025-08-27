@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import KycAdmin from '@/components/KycAdmin';
 import TradingAdminPanel from '@/components/admin/TradingAdminPanel';
+import QuoteManagementPanel from '@/components/admin/QuoteManagementPanel';
 import WalletBankApprovalPanel from '@/components/admin/WalletBankApprovalPanel';
 import CompliancePanel from '@/components/admin/CompliancePanel';
 import TradingLimitsManager from '@/components/admin/TradingLimitsManager';
@@ -81,6 +82,12 @@ const AdminDashboard = () => {
       icon: TrendingUp,
       description: 'Manage pricing, rates & SuperUsers',
       badge: 'Core'
+    },
+    {
+      id: 'quotes',
+      label: 'Quote Management',
+      icon: Activity,
+      description: 'Process user quotes & assign TXIDs'
     },
     {
       id: 'limits',
@@ -245,6 +252,8 @@ const AdminDashboard = () => {
     switch (activeTab) {
       case 'trading':
         return <TradingAdminPanel />;
+      case 'quotes':
+        return <QuoteManagementPanel currencies={currencies} />;
       case 'limits':
         return <TradingLimitsManager currencies={currencies} />;
       case 'compliance':
