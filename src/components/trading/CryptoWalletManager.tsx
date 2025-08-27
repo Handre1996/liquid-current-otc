@@ -84,6 +84,13 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
 
   // Verification state
   const [walletOwnershipConfirmed, setWalletOwnershipConfirmed] = useState(false);
+  const [isWalletOwner, setIsWalletOwner] = useState<'yes' | 'no' | ''>('');
+  const [actualOwnerDetails, setActualOwnerDetails] = useState({
+    ownerName: '',
+    ownerSurname: '',
+    ownerIdNumber: '',
+    ownerIdType: 'nationalId' as 'nationalId' | 'passport'
+  });
   const [walletTypeClassification, setWalletTypeClassification] = useState<'hosted' | 'unhosted' | ''>('');
   const [walletTypeUnderstood, setWalletTypeUnderstood] = useState(false);
 
@@ -123,6 +130,13 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
       exchange_name: ''
     });
     setWalletOwnershipConfirmed(false);
+    setIsWalletOwner('');
+    setActualOwnerDetails({
+      ownerName: '',
+      ownerSurname: '',
+      ownerIdNumber: '',
+      ownerIdType: 'nationalId'
+    });
     setWalletTypeClassification('');
     setWalletTypeUnderstood(false);
   };
@@ -139,7 +153,12 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
   const canAddWallet = () => {
     const basicFieldsValid = newWallet.currency && 
                             newWallet.wallet_address && 
-                            walletOwnershipConfirmed && 
+                            isWalletOwner !== '' &&
+                            (isWalletOwner === 'yes' || (
+                              actualOwnerDetails.ownerName &&
+                              actualOwnerDetails.ownerSurname &&
+                              actualOwnerDetails.ownerIdNumber
+                            )) &&
                             walletTypeClassification !== '' && 
                             walletTypeUnderstood &&
                             (newWallet.wallet_type !== 'exchange' || newWallet.exchange_name);
@@ -361,22 +380,135 @@ const CryptoWalletManager = ({ currencies }: CryptoWalletManagerProps) => {
                   <CardContent className="space-y-6">
                     {/* Wallet Ownership Confirmation */}
                     <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <Checkbox
-                          id="wallet-ownership"
-                          checked={walletOwnershipConfirmed}
-                          onCheckedChange={setWalletOwnershipConfirmed}
-                        />
-                        <div className="space-y-1">
-                          <Label htmlFor="wallet-ownership" className="text-sm font-medium">
-                            Wallet Ownership Confirmation
-                          </Label>
-                          <p className="text-sm text-gray-600">
-                            I confirm that I am the owner of this cryptocurrency wallet. 
-                            If I am not the owner, I have provided the necessary details and authorization from the actual owner.
-                          </p>
-                        </div>
-                      </div>
+                      <div className="space-y-4">
+                        <Label className="text-sm font-medium">Wallet Ownership</Label>
+                        <RadioGroup 
+                          value={isWalletOwner} 
+                          onValueChange={(value) => {
+                            setIsWalletOwner(value as 'yes' | 'no');
+                            if (value === 'yes') {
+                              setActualOwnerDetails({
+                                ownerName: '',
+                                ownerSurname: '',
+                                ownerIdNumber: '',
+                                ownerIdType: 'nationalId'
+                              });
+                            }
+                          }}
+                        >
+                          <div className="space-y-3">
+                            <div className="flex items-start space-x-3 p-3 border rounded-lg">
+                              <RadioGroupItem value="yes" id="owner-yes" className="mt-1" />
+                              <div className="space-y-1">
+                                <Label htmlFor="owner-yes" className="font-medium">Yes, this is my wallet</Label>
+                                <p className="text-sm text-gray-600">
+                                  I confirm that I am the owner of this cryptocurrency wallet and have full control over it.
+                                </p>
+                              </div>
+                            </div>
+                            <div className="flex items-start space-x-3 p-3 border rounded-lg">
+                              <RadioGroupItem value="no" id="owner-no" className="mt-1" />
+                              <div className="space-y-1">
+                                <Label htmlFor="owner-no" className="font-medium">No, this wallet belongs to someone else</Label>
+                                <p className="text-sm text-gray-600">
+                                  This wallet belongs to another person and I have authorization to use it for this transaction.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </RadioGroup>
+                        
+                        {/* Owner Details Form */}
+                        {isWalletOwner === 'no' && (
+                          <Card className="border-orange-200 bg-orange-50">
+                            <CardHeader>
+                              <CardTitle className="text-base text-orange-800">Actual Wallet Owner Details</CardTitle>
+                              <CardDescription className="text-orange-700">
+                                Please provide the details of the person who owns this wallet
+                              </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                              <div className="grid grid-cols-2 gap-4">
+                                <div className="space-y-2">
+                                  <Label htmlFor="owner-name">Owner's First Name</Label>
+                                  <Input
+                                    id="owner-name"
+                                    value={actualOwnerDetails.ownerName}
+                                    onChange={(e) => setActualOwnerDetails(prev => ({ 
+                                      ...prev, 
+                                      ownerName: e.target.value 
+                                    }))}
+                                    placeholder="Enter first name"
+                                    required={isWalletOwner === 'no'}
+                                  />
+                                </div>
+                                <div className="space-y-2">
+                                  <Label htmlFor="owner-surname">Owner's Surname</Label>
+                                  <Input
+                                    id="owner-surname"
+                                    value={actualOwnerDetails.ownerSurname}
+                                    onChange={(e) => setActualOwnerDetails(prev => ({ 
+                                      ...prev, 
+                                      ownerSurname: e.target.value 
+                                    }))}
+                                    placeholder="Enter surname"
+                                    required={isWalletOwner === 'no'}
+                                  />
+                                </div>
+                              </div>
+                              
+                              <div className="space-y-2">
+                                <Label>Owner's ID Document Type</Label>
+                                <RadioGroup 
+                                  value={actualOwnerDetails.ownerIdType} 
+                                  onValueChange={(value) => setActualOwnerDetails(prev => ({ 
+                                    ...prev, 
+                                    ownerIdType: value as 'nationalId' | 'passport',
+                                    ownerIdNumber: '' // Reset ID number when type changes
+                                  }))}
+                                >
+                                  <div className="flex items-center space-x-2">
+                                    <RadioGroupItem value="nationalId" id="owner-nationalId" />
+                                    <Label htmlFor="owner-nationalId">National ID</Label>
+                                  </div>
+                                  <div className="flex items-center space-x-2">
+                                    <RadioGroupItem value="passport" id="owner-passport" />
+                                    <Label htmlFor="owner-passport">Passport</Label>
+                                  </div>
+                                </RadioGroup>
+                              </div>
+                              
+                              <div className="space-y-2">
+                                <Label htmlFor="owner-id-number">
+                                  {actualOwnerDetails.ownerIdType === 'passport' ? 'Passport Number' : 'National ID Number'}
+                                </Label>
+                                <Input
+                                  id="owner-id-number"
+                                  value={actualOwnerDetails.ownerIdNumber}
+                                  onChange={(e) => setActualOwnerDetails(prev => ({ 
+                                    ...prev, 
+                                    ownerIdNumber: e.target.value 
+                                  }))}
+                                  placeholder={`Enter ${actualOwnerDetails.ownerIdType === 'passport' ? 'passport number' : 'national ID number'}`}
+                                  required={isWalletOwner === 'no'}
+                                />
+                              </div>
+                              
+                              <div className="bg-orange-100 border border-orange-200 rounded-lg p-3">
+                                <div className="flex items-start gap-2">
+                                  <AlertTriangle className="h-4 w-4 text-orange-600 mt-0.5" />
+                                  <div className="text-sm text-orange-800">
+                                    <p className="font-medium mb-1">Important Notice</p>
+                                    <p>
+                                      By providing these details, you confirm that you have proper authorization from the wallet owner 
+                                      to conduct transactions on their behalf and that all provided information is accurate.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        )}
                     </div>
 
                     <Separator />
