@@ -44,18 +44,30 @@ export const checkExistingSubmission = async (userId: string) => {
   }
 
   try {
-    const { data: submission, error } = await supabase
+    const { data: submissions, error } = await supabase
       .from('kyc_submissions')
       .select('id, status')
       .eq('user_id', userId)
-      .maybeSingle();
+      .order('created_at', { ascending: false });
     
     if (error) {
       console.error("Error checking KYC submission:", error.message);
       return null;
     }
     
-    return submission;
+    // If no submissions found, return null
+    if (!submissions || submissions.length === 0) {
+      return null;
+    }
+    
+    // First, check if there's an approved submission
+    const approvedSubmission = submissions.find(sub => sub.status === 'approved');
+    if (approvedSubmission) {
+      return approvedSubmission;
+    }
+    
+    // If no approved submission, return the most recent one
+    return submissions[0];
   } catch (error: any) {
     console.error("Error checking existing submission:", error.message);
     return null;
