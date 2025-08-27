@@ -504,7 +504,7 @@ const QuoteGenerator = ({ currencies, onQuoteGenerated }: QuoteGeneratorProps) =
                   <span className="text-lg font-bold text-greenAccent font-heading">Net Amount:</span>
                   <span className="text-lg font-bold text-greenAccent font-mono">
                     {estimate.netAmount.toFixed(currencies.find(c => c.code === toCurrency)?.decimals || 2)} {toCurrency}
-                  </span>
+            <div className="bg-gradient-to-r from-yellowAccent/20 to-navy/20 border border-yellowAccent/30 rounded-lg p-4 shadow-sm">
                 </div>
                 <p className="text-xs text-greenAccent/80 mt-1 font-body">Amount you will receive</p>
                 {shouldShowChainSelection() && selectedChain && (

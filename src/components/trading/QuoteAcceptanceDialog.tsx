@@ -580,7 +580,7 @@ const QuoteAcceptanceDialog = ({ quote, isOpen, onClose, onAccept }: QuoteAccept
             <Button
               onClick={handleAcceptQuote}
               disabled={!canAcceptQuote() || loading}
-              className="flex-1 bg-green-600 hover:bg-green-700"
+              className="flex-1 bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc"
             >
               {loading ? 'Processing...' : 'Accept Quote'}
             </Button>

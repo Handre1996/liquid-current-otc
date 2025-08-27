@@ -603,7 +603,7 @@ const TradingDashboard = () => {
                       <Button
                         size="sm"
                         onClick={() => handleAcceptAdminQuote(quote.id)}
-                        className="w-full sm:w-auto bg-gradient-to-r from-navy to-teal hover:from-navy/90 hover:to-teal/90 text-blanc font-body"
+                        className="w-full sm:w-auto bg-gradient-to-r from-yellowAccent to-greenAccent hover:from-yellowAccent/90 hover:to-greenAccent/90 text-navy dark:text-blanc font-body"
                       >
                         Accept Admin Quote
                       </Button>
@@ -713,9 +713,9 @@ const TradingDashboard = () => {
                   </div>
 
                   {/* Next Steps Guide */}
-                  <div className="mt-4 bg-gradient-to-r from-greenAccent/20 to-teal/20 border border-greenAccent/30 rounded p-3 shadow-sm">
-                    <h5 className="font-heading font-medium text-greenAccent text-sm mb-2">Next Steps After Accepting:</h5>
-                    <ol className="text-xs font-body text-greenAccent/80 space-y-1">
+                  <div className="mt-4 bg-gradient-to-r from-navy/20 to-teal/20 border border-navy/30 dark:border-teal/30 rounded p-3 shadow-sm">
+                    <h5 className="font-heading font-medium text-navy dark:text-foam text-sm mb-2">Next Steps After Accepting:</h5>
+                    <ol className="text-xs font-body text-navy/70 dark:text-foam/70 space-y-1">
                       <li>1. Verify your banking details and wallet ownership</li>
                       <li>2. Complete payment as instructed</li>
                       <li>3. Upload proof of payment</li>
