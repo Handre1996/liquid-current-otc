@@ -35,7 +35,6 @@ export default function SourceOfFundsForm({
             <SelectItem value="business">Business Income</SelectItem>
             <SelectItem value="investment">Investment Income</SelectItem>
             <SelectItem value="savings">Savings</SelectItem>
-            <SelectItem value="gift">Gift/Inheritance</SelectItem>
             <SelectItem value="loan">Loan Proceeds</SelectItem>
             <SelectItem value="crypto">Sale of Crypto Assets</SelectItem>
             <SelectItem value="other">Other</SelectItem>
