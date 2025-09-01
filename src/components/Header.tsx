@@ -89,6 +89,17 @@ const Header = () => {
               >
                 About
               </Link>
+              <Link 
+                to="/faq" 
+                className={cn(
+                  "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors",
+                  isActive('/faq') 
+                    ? "border-navy text-navy dark:border-foam dark:text-foam" 
+                    : "border-transparent text-muted-foreground hover:border-border hover:text-foreground"
+                )}
+              >
+                FAQs
+              </Link>
               {user && kycStatus === 'approved' && (
                 <Link 
                   to="/dashboard" 
