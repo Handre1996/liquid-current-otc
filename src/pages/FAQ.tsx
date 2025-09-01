@@ -87,7 +87,7 @@ const FAQ: React.FC = () => {
                   </h2>
                   <div className="space-y-4 text-lg leading-relaxed">
                     <p className="font-body text-blanc font-bold">
-                      KYC stands for <span className="text-teal font-bold">Know Your Client</span>.
+                      KYC stands for <span className="text-blanc font-bold">"Know Your Client"</span>.
                     </p>
                     <p className="font-body text-blanc font-bold">It's the process regulated businesses use to:</p>
                     <ul className="space-y-2 ml-6 font-body list-disc">
