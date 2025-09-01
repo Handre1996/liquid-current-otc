@@ -13,7 +13,7 @@ const FAQ: React.FC = () => {
           {/* Banner Image */}
           <div className="text-center mb-8">
             <img
-              src="/FAQ Tab.png"
+              src="/faq-tab.png"
               alt="Frequently Asked Questions"
               className="mx-auto max-w-full h-auto"
               loading="lazy"
@@ -25,35 +25,31 @@ const FAQ: React.FC = () => {
           <Card className="mb-12 bg-ivory border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
             <CardContent className="p-0">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                {/* Text Content Section - Takes 2/3 of the card */}
+                {/* Text Content Section */}
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-ivory">
-                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">
-                    What is an OTC desk?
-                  </h2>
-
+                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">What is an OTC desk?</h2>
                   <div className="space-y-4 text-lg leading-relaxed">
                     <p className="font-body text-navy font-bold">
-                      An <span className="text-teal font-bold">OTC (Over-the-Counter) desk</span> is a service that lets you trade cryptocurrencies directly, rather than through a public exchange. In simple terms, we make it easy to:
+                      An <span className="text-teal font-bold">OTC (Over-the-Counter) desk</span> lets you trade cryptocurrencies directly,
+                      rather than on a public exchange. In simple terms, we make it easy to:
                     </p>
-
                     <ul className="space-y-2 ml-6 font-body list-disc text-navy">
-                      <li className="font-bold">Convert Rands to cryptocurrency and cryptocurrency back to Rands</li>
+                      <li className="font-bold">Convert Rands to cryptocurrency and back to Rands</li>
                       <li className="font-bold">Swap one cryptocurrency for another</li>
                     </ul>
-
                     <p className="font-body text-navy font-bold">
-                      Our role is purely to facilitate these conversions securely and efficiently.
+                      Our role is to facilitate these conversions securely and efficiently.
                     </p>
-
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-6">
                       <p className="font-body text-navy font-bold">
-                        Please note that we are not an investment company and do not provide financial advice. We simply handle the conversion of your funds.
+                        Please note that we are not an investment company and do not provide financial advice. We simply handle the
+                        conversion of your funds.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Image Section - Takes 1/3 of the card */}
+                {/* Image Section */}
                 <div className="relative lg:col-span-1">
                   <img
                     src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
@@ -72,36 +68,31 @@ const FAQ: React.FC = () => {
           <Card className="mb-12 bg-navy border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
             <CardContent className="p-0">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                {/* Text Content Section - Takes 2/3 of the card */}
+                {/* Text Content Section */}
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
                   <h2 className="text-3xl font-heading font-bold text-teal mb-6">
                     What does KYC mean and why is it important?
                   </h2>
-
                   <div className="space-y-4 text-lg leading-relaxed">
                     <p className="font-body text-blanc font-bold">
                       <span className="text-teal font-bold">KYC</span> stands for <span className="text-teal font-bold">Know Your Client</span>.
                     </p>
-
-                    <p className="font-body text-blanc font-bold">
-                      It's the process that financial institutions and other regulated businesses use to:
-                    </p>
-
+                    <p className="font-body text-blanc font-bold">It’s the process regulated businesses use to:</p>
                     <ul className="space-y-2 ml-6 font-body list-disc">
                       <li className="text-blanc font-bold">
-                        <span className="text-teal font-bold">Verify identity:</span> Making sure customers are who they say they are (using documents like ID, passport, proof of address, etc.).
+                        <span className="text-teal font-bold">Verify identity:</span> Confirm customers are who they say they are (ID, passport, proof of address, etc.).
                       </li>
                       <li className="text-blanc font-bold">
-                        <span className="text-teal font-bold">Understand financial background:</span> Assessing the nature of a client's activities, their source of funds, and the purpose of their relationship with the institution.
+                        <span className="text-teal font-bold">Understand financial background:</span> Assess the nature of a client’s activities, source of funds, and the purpose of the relationship.
                       </li>
                       <li className="text-blanc font-bold">
-                        <span className="text-teal font-bold">Monitor transactions:</span> Ensuring ongoing business aligns with what is expected and legal.
+                        <span className="text-teal font-bold">Monitor transactions:</span> Ensure ongoing activity aligns with expectations and the law.
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                {/* Image Section - Takes 1/3 of the card */}
+                {/* Image Section */}
                 <div className="relative lg:col-span-1">
                   <img
                     src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
@@ -120,39 +111,34 @@ const FAQ: React.FC = () => {
           <Card className="mb-12 bg-blanc border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
             <CardContent className="p-0">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                {/* Text Content Section - Takes 2/3 of the card */}
+                {/* Text Content Section */}
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-blanc">
-                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">Why it's important:</h2>
-
+                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">Why it’s important:</h2>
                   <div className="space-y-6 text-lg leading-relaxed">
                     <div>
                       <h3 className="text-xl font-heading font-bold text-navy mb-2">1. Legal Compliance</h3>
                       <p className="font-body text-navy font-bold">
-                        Regulators require KYC to combat money laundering (AML), terrorist financing (CFT), and fraud. Without it, a financial services provider could face fines, penalties, or even license revocation.
+                        Regulators require KYC to combat money laundering (AML), terrorist financing (CFT), and fraud. Without it, a financial services provider could face fines, penalties, or license revocation.
                       </p>
                     </div>
-
                     <div>
                       <h3 className="text-xl font-heading font-bold text-navy mb-2">2. Risk Management</h3>
                       <p className="font-body text-navy font-bold">
-                        It protects the business from being used (knowingly or unknowingly) for illegal activities. KYC helps identify high-risk clients before onboarding them.
+                        It protects the business from being used (knowingly or unknowingly) for illegal activities. KYC helps identify high-risk clients before onboarding.
                       </p>
                     </div>
-
                     <div>
                       <h3 className="text-xl font-heading font-bold text-navy mb-2">3. Trust & Transparency</h3>
                       <p className="font-body text-navy font-bold">
-                        By verifying customer identities, the provider builds credibility and trust with clients, partners, and regulators.
+                        By verifying identities, providers build credibility and trust with clients, partners, and regulators.
                       </p>
                     </div>
-
                     <div>
                       <h3 className="text-xl font-heading font-bold text-navy mb-2">4. Protecting Customers</h3>
                       <p className="font-body text-navy font-bold">
                         It helps reduce identity theft and financial crime risks, ensuring safer services for legitimate customers.
                       </p>
                     </div>
-
                     <div className="bg-gradient-to-r from-teal/20 to-navy/20 border border-teal/30 rounded-lg p-4 mt-6">
                       <p className="font-body text-navy font-bold">
                         In short: <span className="text-teal font-bold">KYC is a cornerstone of responsible financial services</span> — it keeps the business compliant, safe, and trustworthy.
@@ -161,7 +147,7 @@ const FAQ: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Image Section - Takes 1/3 of the card */}
+                {/* Image Section */}
                 <div className="relative lg:col-span-1">
                   <img
                     src="/young-confident-broker-suit-explaining-female-colleague-online-data.jpg"
