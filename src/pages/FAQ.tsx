@@ -13,7 +13,7 @@ const FAQ: React.FC = () => {
           {/* Banner Image */}
           <div className="text-center mb-8">
             <img
-              src="/faq-tab.png"
+              src="/FAQ Tab.png"
               alt="Frequently Asked Questions"
               className="mx-auto max-w-full h-auto"
               loading="lazy"
