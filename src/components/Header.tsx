@@ -92,6 +92,17 @@ const Header = () => {
               <Link 
                 to="/faq" 
                 className={cn(
+                  "block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition-colors",
+                  isActive('/faq') 
+                    ? "border-brand-500 text-foreground bg-brand-50 dark:bg-brand-950" 
+                    : "border-transparent text-muted-foreground hover:bg-accent hover:border-border hover:text-foreground"
+                )}
+              >
+                FAQs
+              </Link>
+              <Link 
+                to="/faq" 
+                className={cn(
                   "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors",
                   isActive('/faq') 
                     ? "border-navy text-navy dark:border-foam dark:text-foam" 

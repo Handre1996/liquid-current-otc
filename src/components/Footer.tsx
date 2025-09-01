@@ -59,6 +59,11 @@ export default function Footer() {
       </Link>
     </li>
     <li>
+      <Link to="/faq" className={`${linkColor} ${linkHoverColor}`}>
+        FAQs
+      </Link>
+    </li>
+    <li>
       <a
         href="/Liquid Current_Company Profile.pdf"
         target="_blank"
