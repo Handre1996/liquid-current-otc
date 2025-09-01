@@ -68,32 +68,8 @@ const FAQ: React.FC = () => {
           <Card className="mb-12 bg-navy border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
             <CardContent className="p-0">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                {/* Text Content Section */}
-                <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
-                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">
-                    What does KYC mean and why is it important?
-                  </h2>
-                  <div className="space-y-4 text-lg leading-relaxed">
-                    <p className="font-body text-blanc font-bold">
-                      <span className="text-teal font-bold">KYC</span> stands for <span className="text-teal font-bold">Know Your Client</span>.
-                    </p>
-                    <p className="font-body text-blanc font-bold">It’s the process regulated businesses use to:</p>
-                    <ul className="space-y-2 ml-6 font-body list-disc">
-                      <li className="text-blanc font-bold">
-                        <span className="text-teal font-bold">Verify identity:</span> Confirm customers are who they say they are (ID, passport, proof of address, etc.).
-                      </li>
-                      <li className="text-blanc font-bold">
-                        <span className="text-teal font-bold">Understand financial background:</span> Assess the nature of a client’s activities, source of funds, and the purpose of the relationship.
-                      </li>
-                      <li className="text-blanc font-bold">
-                        <span className="text-teal font-bold">Monitor transactions:</span> Ensure ongoing activity aligns with expectations and the law.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
                 {/* Image Section */}
-                <div className="relative lg:col-span-1">
+                <div className="relative lg:col-span-1 order-2 lg:order-1">
                   <img
                     src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
                     alt="Professional using mobile phone and laptop with coffee"
@@ -101,7 +77,31 @@ const FAQ: React.FC = () => {
                     loading="lazy"
                     decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-navy/10 to-transparent" />
+                </div>
+
+                {/* Text Content Section */}
+                <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy order-1 lg:order-2">
+                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">
+                    What does KYC mean and why is it important?
+                  </h2>
+                  <div className="space-y-4 text-lg leading-relaxed">
+                    <p className="font-body text-blanc font-bold">
+                      <span className="text-teal font-bold">KYC</span> stands for <span className="text-teal font-bold">Know Your Client</span>.
+                    </p>
+                    <p className="font-body text-blanc font-bold">It's the process regulated businesses use to:</p>
+                    <ul className="space-y-2 ml-6 font-body list-disc">
+                      <li className="text-blanc font-bold">
+                        <span className="text-teal font-bold">Verify identity:</span> Confirm customers are who they say they are (ID, passport, proof of address, etc.).
+                      </li>
+                      <li className="text-blanc font-bold">
+                        <span className="text-teal font-bold">Understand financial background:</span> Assess the nature of a client's activities, source of funds, and the purpose of the relationship.
+                      </li>
+                      <li className="text-blanc font-bold">
+                        <span className="text-teal font-bold">Monitor transactions:</span> Ensure ongoing activity aligns with expectations and the law.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -113,7 +113,7 @@ const FAQ: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
                 {/* Text Content Section */}
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-blanc">
-                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">Why it’s important:</h2>
+                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">Why it's important:</h2>
                   <div className="space-y-6 text-lg leading-relaxed">
                     <div>
                       <h3 className="text-xl font-heading font-bold text-navy mb-2">1. Legal Compliance</h3>
