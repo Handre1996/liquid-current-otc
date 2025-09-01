@@ -92,13 +92,13 @@ const FAQ: React.FC = () => {
                     <p className="font-body text-blanc font-bold">It's the process regulated businesses use to:</p>
                     <ul className="space-y-2 ml-6 font-body list-disc">
                       <li className="text-blanc font-bold">
-                        <span className="text-teal font-bold">Verify identity:</span> Confirm customers are who they say they are (ID, passport, proof of address, etc.).
+                        <span className="text-blanc font-bold">Verify identity:</span> Confirm customers are who they say they are (ID, passport, proof of address, etc.).
                       </li>
                       <li className="text-blanc font-bold">
-                        <span className="text-teal font-bold">Understand financial background:</span> Assess the nature of a client's activities, source of funds, and the purpose of the relationship.
+                        <span className="text-blanc font-bold">Understand financial background:</span> Assess the nature of a client's activities, source of funds, and the purpose of the relationship.
                       </li>
                       <li className="text-blanc font-bold">
-                        <span className="text-teal font-bold">Monitor transactions:</span> Ensure ongoing activity aligns with expectations and the law.
+                        <span className="text-blanc font-bold">Monitor transactions:</span> Ensure ongoing activity aligns with expectations and the law.
                       </li>
                     </ul>
                   </div>
