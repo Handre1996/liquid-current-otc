@@ -161,6 +161,82 @@ const FAQ: React.FC = () => {
               </div>
             </CardContent>
           </Card>
+
+          {/* Fourth Card - Why do you need my KYC and are my documents safe? */}
+          <Card className="mb-12 bg-teal border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
+            <CardContent className="p-0">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                {/* Image Section */}
+                <div className="relative lg:col-span-1 order-2 lg:order-1">
+                  <img
+                    src="/cyber-security-data-protection-information-safety-encryption.jpg"
+                    alt="Cyber security and data protection"
+                    className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-teal/10 to-transparent" />
+                </div>
+
+                {/* Text Content Section */}
+                <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-teal order-1 lg:order-2">
+                  <h2 className="text-3xl font-heading font-bold text-foam mb-6">
+                    Why do you need my KYC and are my documents safe?
+                  </h2>
+                  <div className="space-y-4 text-lg leading-relaxed">
+                    <p className="font-body text-blanc font-bold">
+                      We are required by law to complete KYC (Know Your Customer) checks. 
+                      This helps us verify your identity, comply with anti-money laundering regulations, and keep our services safe, transparent, and secure for all clients.
+                    </p>
+                    <p className="font-body text-blanc font-bold">
+                      Your documents are kept strictly confidential and stored on a separate, secure company database. We never, share your information with third parties, unless required by law. Protecting your privacy and safeguarding your information is a top priority for us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Fifth Card - What is a wallet KYC? */}
+          <Card className="mb-12 bg-foam border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
+            <CardContent className="p-0">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                {/* Text Content Section */}
+                <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-foam">
+                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">
+                    What is a wallet KYC?
+                  </h2>
+                  <div className="space-y-4 text-lg leading-relaxed">
+                    <p className="font-body text-navy font-bold">
+                      A crypto wallet KYC is the process of verifying the identity of the person who owns a cryptocurrency wallet, as well as confirming the type of wallet being used.
+                    </p>
+                    <p className="font-body text-navy font-bold">
+                      There are two kinds of wallets:
+                    </p>
+                    <ul className="space-y-2 ml-6 font-body list-disc text-navy">
+                      <li className="font-bold">Hosted Wallets - managed by a third-party provider (like an exchange or platform).</li>
+                      <li className="font-bold">Unhosted Wallets - controlled directly by you, where only you hold the private keys.</li>
+                    </ul>
+                    <p className="font-body text-navy font-bold">
+                      KYC helps us confirm that the wallet belongs to you and ensures it is being used safely and legally. This process protects both our clients and our business, while keeping transactions secure, transparent and compliant with regulations.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Image Section */}
+                <div className="relative lg:col-span-1">
+                  <img
+                    src="/expert-secures-high-tech-workplace.jpg"
+                    alt="Expert securing high-tech workplace"
+                    className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-l from-foam/10 to-transparent" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </main>
 
