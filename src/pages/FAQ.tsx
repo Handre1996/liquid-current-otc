@@ -237,6 +237,43 @@ const FAQ: React.FC = () => {
               </div>
             </CardContent>
           </Card>
+
+          {/* Sixth Card - What is the difference between a hosted/unhosted wallet? */}
+          <Card className="mb-12 bg-navy border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
+            <CardContent className="p-0">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                {/* Image Section */}
+                <div className="relative lg:col-span-1 order-2 lg:order-1">
+                  <img
+                    src="/hand-laptop-working-cyber-space-table.jpg"
+                    alt="Hand on laptop working in cyber space"
+                    className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-navy/10 to-transparent" />
+                </div>
+
+                {/* Text Content Section */}
+                <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy order-1 lg:order-2">
+                  <h2 className="text-3xl font-heading font-bold text-foam mb-6">
+                    What is the difference between a hosted/unhosted wallet?
+                  </h2>
+                  <div className="space-y-4 text-lg leading-relaxed">
+                    <p className="font-body text-blanc font-bold">
+                      A hosted wallet (also known as a custodial wallet) is one where a third party (such as a cryptocurrency exchange or financial service provider) controls the wallet and holds the private keys on behalf of the user.
+                    </p>
+                    <p className="font-body text-blanc font-bold">
+                      Commons examples include wallets on platforms like Binance, Coinbase, or Luno.
+                    </p>
+                    <p className="font-body text-blanc font-bold">
+                      In contrast, an unhosted wallet is one where the user holds their own private keys and has full control, such as wallets created use MetaMask, Ledger, or Trust Wallet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </main>
 
