@@ -1,24 +1,26 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 
-const FAQ = () => {
+const FAQ: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-ivory to-foam dark:from-navy dark:to-teal">
       <Header />
-      
+
       <main className="flex-grow container mx-auto px-4 py-10 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Banner Image */}
           <div className="text-center mb-8">
-            <img 
-              src="/FAQ Tab.png" 
+            <img
+              src="/FAQ Tab.png"
               alt="Frequently Asked Questions"
               className="mx-auto max-w-full h-auto"
+              loading="lazy"
+              decoding="async"
             />
           </div>
-          
+
           {/* First Card - What is an OTC desk? */}
           <Card className="mb-12 bg-ivory border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
             <CardContent className="p-0">
@@ -28,43 +30,39 @@ const FAQ = () => {
                   <h2 className="text-3xl font-heading font-bold text-teal mb-6">
                     What is an OTC desk?
                   </h2>
-                  
+
                   <div className="space-y-4 text-lg leading-relaxed">
                     <p className="font-body text-navy font-bold">
-                      An <span className="text-teal font-bold">OTC (Over-the-Counter) desk</span> is a service that allows you to trade cryptocurrencies directly, rather than through a public exchange. In simple terms, we make it easy and convenient to:
+                      An <span className="text-teal font-bold">OTC (Over-the-Counter) desk</span> is a service that lets you trade cryptocurrencies directly, rather than through a public exchange. In simple terms, we make it easy to:
                     </p>
-                    
-                    <ul className="space-y-2 ml-6 font-body">
-                      <li className="flex items-start">
-                        <span className="text-navy font-bold mr-2">-</span>
-                        <span className="text-navy font-bold">Convert <span className="text-teal font-bold">Rands</span> to <span className="text-teal font-bold">cryptocurrency</span> and <span className="text-teal font-bold">cryptocurrency</span> back to <span className="text-teal font-bold">Rands</span></span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-navy font-bold mr-2">-</span>
-                        <span className="text-navy font-bold">Swap one <span className="text-teal font-bold">cryptocurrency</span> for another</span>
-                      </li>
+
+                    <ul className="space-y-2 ml-6 font-body list-disc text-navy">
+                      <li className="font-bold">Convert Rands to cryptocurrency and cryptocurrency back to Rands</li>
+                      <li className="font-bold">Swap one cryptocurrency for another</li>
                     </ul>
-                    
+
                     <p className="font-body text-navy font-bold">
-                      Our role is purely to <span className="text-teal font-bold">facilitate these conversions securely and efficiently</span>.
+                      Our role is purely to facilitate these conversions securely and efficiently.
                     </p>
-                    
-                    <div className="bg-gradient-to-r from-yellowAccent/20 to-redAccent/10 border border-redAccent/30 rounded-lg p-4 mt-6">
+
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-6">
                       <p className="font-body text-navy font-bold">
-                        <span className="text-redAccent font-bold">Please note</span> that we are <span className="text-navy font-bold">not an investment company</span> and do <span className="text-redAccent font-bold">not provide financial advice</span>. We simply handle the <span className="text-teal font-bold">conversion of your funds</span>.
+                        Please note that we are not an investment company and do not provide financial advice. We simply handle the conversion of your funds.
                       </p>
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Image Section - Takes 1/3 of the card */}
                 <div className="relative lg:col-span-1">
-                  <img 
-                    src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg" 
-                    alt="Professional Trading"
+                  <img
+                    src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
+                    alt="Professional trading environment"
                     className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
+                    loading="lazy"
+                    decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent" />
                 </div>
               </div>
             </CardContent>
@@ -79,41 +77,40 @@ const FAQ = () => {
                   <h2 className="text-3xl font-heading font-bold text-teal mb-6">
                     What does KYC mean and why is it important?
                   </h2>
-                  
+
                   <div className="space-y-4 text-lg leading-relaxed">
                     <p className="font-body text-blanc font-bold">
-                      <span className="text-teal font-bold">KYC</span> stands for <span className="text-teal font-bold">"Know Your Client"</span>.
+                      <span className="text-teal font-bold">KYC</span> stands for <span className="text-teal font-bold">Know Your Client</span>.
                     </p>
-                    
+
                     <p className="font-body text-blanc font-bold">
                       It's the process that financial institutions and other regulated businesses use to:
                     </p>
-                    
-                    <ul className="space-y-2 ml-6 font-body">
-                      <li className="flex items-start">
-                        <span className="text-teal font-bold mr-2">-</span>
-                        <span className="text-blanc font-bold"><span className="text-teal font-bold">Verify identity:</span> Making sure customers as who they say they are (using documents like ID, Passport, proof of address, etc.).</span>
+
+                    <ul className="space-y-2 ml-6 font-body list-disc">
+                      <li className="text-blanc font-bold">
+                        <span className="text-teal font-bold">Verify identity:</span> Making sure customers are who they say they are (using documents like ID, passport, proof of address, etc.).
                       </li>
-                      <li className="flex items-start">
-                        <span className="text-teal font-bold mr-2">-</span>
-                        <span className="text-blanc font-bold"><span className="text-teal font-bold">Understand financial background:</span> Assessing the nature of a client's activities, their source of funds, and the purpose to their relationship with the institution.</span>
+                      <li className="text-blanc font-bold">
+                        <span className="text-teal font-bold">Understand financial background:</span> Assessing the nature of a client's activities, their source of funds, and the purpose of their relationship with the institution.
                       </li>
-                      <li className="flex items-start">
-                        <span className="text-teal font-bold mr-2">-</span>
-                        <span className="text-blanc font-bold"><span className="text-teal font-bold">Monitor transactions:</span> Ensuring ongoing business aligns with what is expected and legal.</span>
+                      <li className="text-blanc font-bold">
+                        <span className="text-teal font-bold">Monitor transactions:</span> Ensuring ongoing business aligns with what is expected and legal.
                       </li>
                     </ul>
                   </div>
                 </div>
-                
+
                 {/* Image Section - Takes 1/3 of the card */}
                 <div className="relative lg:col-span-1">
-                  <img 
-                    src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg" 
-                    alt="Professional with phone and coffee"
+                  <img
+                    src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
+                    alt="Professional using mobile phone and laptop with coffee"
                     className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
+                    loading="lazy"
+                    decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent" />
                 </div>
               </div>
             </CardContent>
@@ -125,65 +122,65 @@ const FAQ = () => {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
                 {/* Text Content Section - Takes 2/3 of the card */}
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-blanc">
-                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">
-                    Why it's important:
-                  </h2>
-                  
+                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">Why it's important:</h2>
+
                   <div className="space-y-6 text-lg leading-relaxed">
                     <div>
-                      <h3 className="text-xl font-heading font-bold text-navy mb-2">1. Legal Compliance:</h3>
+                      <h3 className="text-xl font-heading font-bold text-navy mb-2">1. Legal Compliance</h3>
                       <p className="font-body text-navy font-bold">
                         Regulators require KYC to combat money laundering (AML), terrorist financing (CFT), and fraud. Without it, a financial services provider could face fines, penalties, or even license revocation.
                       </p>
                     </div>
-                    
+
                     <div>
-                      <h3 className="text-xl font-heading font-bold text-navy mb-2">2. Risk Management:</h3>
+                      <h3 className="text-xl font-heading font-bold text-navy mb-2">2. Risk Management</h3>
                       <p className="font-body text-navy font-bold">
                         It protects the business from being used (knowingly or unknowingly) for illegal activities. KYC helps identify high-risk clients before onboarding them.
                       </p>
                     </div>
-                    
+
                     <div>
-                      <h3 className="text-xl font-heading font-bold text-navy mb-2">3. Trust & Transparency:</h3>
+                      <h3 className="text-xl font-heading font-bold text-navy mb-2">3. Trust & Transparency</h3>
                       <p className="font-body text-navy font-bold">
                         By verifying customer identities, the provider builds credibility and trust with clients, partners, and regulators.
                       </p>
                     </div>
-                    
+
                     <div>
-                      <h3 className="text-xl font-heading font-bold text-navy mb-2">4. Protecting Customers:</h3>
+                      <h3 className="text-xl font-heading font-bold text-navy mb-2">4. Protecting Customers</h3>
                       <p className="font-body text-navy font-bold">
                         It helps reduce identity theft and financial crime risks, ensuring safer services for legitimate customers.
                       </p>
                     </div>
-                    
+
                     <div className="bg-gradient-to-r from-teal/20 to-navy/20 border border-teal/30 rounded-lg p-4 mt-6">
                       <p className="font-body text-navy font-bold">
-                        In short: <span className="text-teal font-bold">KYC is a cornerstone of responsible financial services</span> - it keeps the business compliant, safe and trustworthy.
+                        In short: <span className="text-teal font-bold">KYC is a cornerstone of responsible financial services</span> — it keeps the business compliant, safe, and trustworthy.
                       </p>
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Image Section - Takes 1/3 of the card */}
                 <div className="relative lg:col-span-1">
-                  <img 
-                    src="/young-confident-broker-suit-explaining-female-colleague-online-data.jpg" 
-                    alt="Professional consultation"
+                  <img
+                    src="/young-confident-broker-suit-explaining-female-colleague-online-data.jpg"
+                    alt="Professional consultation at a desk"
                     className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
+                    loading="lazy"
+                    decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-l from-blanc/10 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-l from-blanc/10 to-transparent" />
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );
 };
 
-export default FAQ;</parameter>
+export default FAQ;
