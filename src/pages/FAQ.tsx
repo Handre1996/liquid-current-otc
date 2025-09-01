@@ -82,7 +82,7 @@ const FAQ: React.FC = () => {
 
                 {/* Text Content Section */}
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy order-1 lg:order-2">
-                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">
+                  <h2 className="text-3xl font-heading font-bold text-foam mb-6">
                     What does KYC mean and why is it important?
                   </h2>
                   <div className="space-y-4 text-lg leading-relaxed">
