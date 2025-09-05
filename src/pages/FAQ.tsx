@@ -103,7 +103,7 @@ const FAQ: React.FC = () => {
           alt="Professional using mobile phone and laptop with coffee"
           className="
             w-full h-full object-cover
-            object-[center_62%]   /* slight lower crop on mobile */
+            object-[center_22%]   /* slight lower crop on mobile */
             lg:object-center
             lg:scale-[1.03]       /* tiny zoom to fill */
             transition-transform duration-200
