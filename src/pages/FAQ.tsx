@@ -61,26 +61,27 @@ const FAQ: React.FC = () => {
                   </div>
 
                 {/* Image Section */}
-<div className="relative lg:col-span-1 overflow-hidden bg-navy/5">
-  {/* Mobile/tablet: fixed aspect so the image can fully fit */}
-  <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:min-h-[500px]">
+<div className="relative lg:col-span-1 overflow-hidden">
+  {/* Give the image area a fixed height per breakpoint so cover can actually fill */}
+  <div className="relative w-full h-[300px] sm:h-[380px] lg:h-[500px]">
     <img
       src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
       alt="Professional trading environment"
       className="
         absolute inset-0 w-full h-full
-        object-contain              /* 🔹 mobile: show full image */
-        lg:object-cover            /* 🔹 desktop: fill & crop nicely */
-        lg:translate-x-[20px] lg:scale-[1.0]
-        transition-transform duration-200
+        object-cover
+        object-[50%_30%]           /* 👈 bias crop upward to keep head visible */
+        scale-[1.10] sm:scale-[1.06] lg:scale-[1.00]  /* 👈 slight zoom on mobile/tablet */
+        lg:translate-x-[20px]      /* optional: keep your desktop nudge */
+        transition-transform duration-300
       "
       loading="lazy"
       decoding="async"
     />
-    {/* Optional overlay */}
-    <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent lg:block" />
+    {/* Optional soft overlay; remove if you don't want it */}
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent" />
   </div>
-  </div>
+</div>
       </div>            
             </CardContent>
           </Card>
