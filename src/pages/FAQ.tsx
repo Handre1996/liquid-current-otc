@@ -139,7 +139,7 @@ const FAQ: React.FC = () => {
     className="
       absolute inset-0 w-full h-full object-cover
       object-[center_22%]          /* mobile: push down 22% */
-      lg:object-[30%_center]       /* desktop: shift crop right (try 60–80%) */
+      lg:object-[10%_center]       /* desktop: shift crop right (try 60–80%) */
       lg:scale-[1.04]              /* slight zoom to fill */
       transition-transform duration-200
     "
