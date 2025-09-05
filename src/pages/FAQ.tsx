@@ -90,20 +90,42 @@ const FAQ: React.FC = () => {
 <Card className="mb-12 bg-navy border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
   <CardContent className="p-0">
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-      {/* TEXT — first on mobile, RIGHT on desktop */}
-      <div className="order-1 lg:order-2 lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
+      {/* TEXT — left on desktop, first on mobile */}
+      <div className="order-1 lg:order-1 lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
         <h2 className="text-3xl font-heading font-bold text-teal mb-6">
           What is a wallet KYC?
         </h2>
+
         <div className="space-y-4 text-lg leading-relaxed">
-          {/* …your text content… */}
+          <p className="font-body text-blanc">
+            A crypto wallet KYC is the process of verifying the identity of the person who owns a
+            cryptocurrency wallet, as well as confirming the type of wallet being used.
+          </p>
+
+          <p className="font-body text-blanc font-bold">There are two kinds of wallets:</p>
+          <ul className="space-y-2 ml-6 font-body list-disc text-blanc">
+            <li>
+              <span className="font-bold">Hosted Wallets</span> — managed by a third-party provider
+              (like an exchange or platform).
+            </li>
+            <li>
+              <span className="font-bold">Unhosted Wallets</span> — controlled directly by you,
+              where only you hold the private keys.
+            </li>
+          </ul>
+
+          <p className="font-body text-blanc">
+            KYC helps confirm that the wallet belongs to you and ensures it is being used safely and
+            legally. This protects both our clients and our business, while keeping transactions
+            secure, transparent, and compliant with regulations.
+          </p>
         </div>
       </div>
 
-      {/* IMAGE — second on mobile, LEFT on desktop */}
+      {/* IMAGE — right on desktop, second on mobile */}
       <div
         className="
-          relative order-2 lg:order-1 lg:col-span-1 overflow-hidden
+          relative order-2 lg:order-2 lg:col-span-1 overflow-hidden
           h-44 sm:h-56 md:h-64
           lg:h-auto lg:min-h-[500px]
         "
@@ -112,21 +134,21 @@ const FAQ: React.FC = () => {
           src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
           alt="Professional using mobile phone and laptop with coffee"
           className="
-            absolute inset-0 w-full h-full object-cover
-            object-[center_22%]     /* mobile: nudge DOWN 22% */
-            lg:object-center        /* desktop: centered crop */
-            lg:scale-[1.03]         /* slight zoom to fill */
+            w-full h-full object-cover
+            object-[center_22%]      /* 🔹 Mobile: move image DOWN by 22% */
+            lg:object-[60%_center]   /* 🔹 Desktop: bias crop to the RIGHT */
+            lg:scale-[1.03]          /* slight zoom on desktop to fill */
             transition-transform duration-200
           "
           loading="lazy"
           decoding="async"
         />
-        {/* Remove/keep overlay as you like; this is fully transparent */}
         <div className="pointer-events-none absolute inset-0 bg-transparent" />
       </div>
     </div>
   </CardContent>
 </Card>
+
 
 
 
