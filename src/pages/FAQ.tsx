@@ -146,7 +146,7 @@ const FAQ: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-heading font-bold text-navy mb-2">4. Protecting Customers</h3>
-                      <p className="font-body text-navy font-bold">
+                      <p className="font-body text-navy">
                         It helps reduce identity theft and financial crime risks, ensuring safer services for legitimate customers.
                       </p>
                     </div>
