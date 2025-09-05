@@ -61,50 +61,54 @@ const FAQ: React.FC = () => {
                   </div>
 
                 {/* Image Section */}
-<div className="relative lg:col-span-1 overflow-hidden">
-  {/* Give the image area a fixed height per breakpoint so cover can actually fill */}
-  <div className="relative w-full h-[300px] sm:h-[380px] lg:h-[500px]">
-    <img
-      src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
-      alt="Professional trading environment"
-      className="
-        absolute inset-0 w-full h-full
-        object-cover
-        object-[50%_15%]           /* 👈 bias crop upward to keep head visible */
-        scale-[1.10] sm:scale-[1.06] lg:scale-[1.00]  /* 👈 slight zoom on mobile/tablet */
-        lg:translate-x-[20px]      /* optional: keep your desktop nudge */
-        transition-transform duration-300
-      "
-      loading="lazy"
-      decoding="async"
-    />
-    {/* Optional soft overlay; remove if you don't want it */}
-    <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent" />
-  </div>
-</div>
-      </div>            
+            <div className="relative lg:col-span-1 overflow-hidden">
+              {/* Give the image area a fixed height per breakpoint so cover can actually fill */}
+              <div className="relative w-full h-[300px] sm:h-[380px] lg:h-[500px]">
+                <img
+                  src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
+                  alt="Professional trading environment"
+                  className="
+                    absolute inset-0 w-full h-full
+                    object-cover
+                    object-[50%_15%]           /* 👈 bias crop upward to keep head visible */
+                    scale-[1.10] sm:scale-[1.06] lg:scale-[1.00]  /* 👈 slight zoom on mobile/tablet */
+                    lg:translate-x-[20px]      /* optional: keep your desktop nudge */
+                    transition-transform duration-300
+                  "
+                  loading="lazy"
+                  decoding="async"
+                />
+                {/* Optional soft overlay; remove if you don't want it */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent" />
+              </div>
+            </div>
+            </div>            
             </CardContent>
           </Card>
 
           {/* Second Card - What does KYC mean? */}
-          <Card className="mb-12 bg-navy border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
-            <CardContent className="p-0">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                {/* Image Section */}
-                <div className="relative lg:col-span-1 overflow-hidden">
-                  <img
-                    src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
-                    alt="Professional using mobile phone and laptop with coffee"
-                    className="
-                      w-full h-full object-cover
-                      object-[0%_center]
-                      min-h-[300px] lg:min-h-[500px]
-                    "
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent to-navy/0" />
-                </div>
+<Card className="mb-12 bg-navy border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
+  <CardContent className="p-0">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+      {/* Text Section — first on mobile, left on desktop */}
+      <div className="order-1 lg:order-1 lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
+        <h2 className="text-3xl font-heading font-bold text-teal mb-6">
+          What is a wallet KYC?
+        </h2>
+        {/* ...your text content... */}
+      </div>
+
+      {/* Image Section — second on mobile, right on desktop */}
+      <div className="relative order-2 lg:order-2 lg:col-span-1 overflow-hidden">
+        <img
+          src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
+          alt="Professional using mobile phone and laptop with coffee"
+          className="absolute inset-0 w-full h-full object-cover object-center min-h-[300px] lg:min-h-[500px]"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent to-navy/0" />
+      </div>
 
                 {/* Text Content Section */}
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy order-1 lg:order-2">
