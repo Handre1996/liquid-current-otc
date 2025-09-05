@@ -84,16 +84,21 @@ const FAQ: React.FC = () => {
             <CardContent className="p-0">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
                 {/* Image Section */}
-                <div className="relative lg:col-span-1 order-2 lg:order-1">
-                  <img
-                    src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
-                    alt="Professional using mobile phone and laptop with coffee"
-                    className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-navy/10 to-transparent" />
-                </div>
+              <div className="relative lg:col-span-1 order-2 lg:order-1 overflow-hidden">
+                <img
+                  src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
+                  alt="Professional using mobile phone and laptop with coffee"
+                  className="
+                    absolute inset-0 w-full h-full object-cover
+                    lg:translate-x-[151px] lg:scale-[1.12]
+                    transition-transform duration-200
+                    min-h-[300px] lg:min-h-[500px]
+                  "
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy/10 to-transparent" />
+              </div>
 
                 {/* Text Content Section */}
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy order-1 lg:order-2">
