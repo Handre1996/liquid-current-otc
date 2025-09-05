@@ -126,29 +126,28 @@ const FAQ: React.FC = () => {
       </div>
 
       {/* IMAGE — second on mobile, LEFT on desktop */}
-      <div
-        className="
-          relative order-2 lg:order-1 lg:col-span-1 overflow-hidden
-          h-40 sm:h-48 md:h-56
-          lg:h-auto lg:min-h-[500px]
-        "
-      >
-        <img
-          src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
-          alt="Professional using mobile phone and laptop with coffee"
-          className="
-            absolute inset-0 w-full h-full object-cover
-            object-[center_22%]      /* mobile: nudge image down 22% */
-            lg:object-[40%_centre]         /* desktop: centered crop */
-            lg:scale-[1.04]           /* slight zoom on desktop to fill */
-            transition-transform duration-200
-          "
-          loading="lazy"
-          decoding="async"
-        />
-        {/* No overlay to avoid any color block; keep this transparent */}
-        <div className="pointer-events-none absolute inset-0 bg-transparent" />
-      </div>
+<div
+  className="
+    relative order-2 lg:order-1 lg:col-span-1 overflow-hidden
+    h-40 sm:h-48 md:h-56
+    lg:h-auto lg:min-h-[500px]
+  "
+>
+  <img
+    src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
+    alt="Professional using mobile phone and laptop with coffee"
+    className="
+      absolute inset-0 w-full h-full object-cover
+      object-[center_22%]          /* mobile: push down 22% */
+      lg:object-[70%_center]       /* desktop: shift crop right (try 60–80%) */
+      lg:scale-[1.04]              /* slight zoom to fill */
+      transition-transform duration-200
+    "
+    loading="lazy"
+    decoding="async"
+  />
+  <div className="pointer-events-none absolute inset-0 bg-transparent" />
+</div>
     </div>
   </CardContent>
 </Card>
