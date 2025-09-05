@@ -97,7 +97,7 @@ const FAQ: React.FC = () => {
                   loading="lazy"
                   decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-navy/10 to-transparent" />
+                <div className=
               </div>
 
                 {/* Text Content Section */}
