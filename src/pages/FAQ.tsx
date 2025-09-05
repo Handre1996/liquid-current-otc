@@ -80,6 +80,8 @@ const FAQ: React.FC = () => {
     {/* Optional overlay */}
     <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent lg:block" />
   </div>
+  </div>
+      </div>            
             </CardContent>
           </Card>
 
