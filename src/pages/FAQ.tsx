@@ -22,32 +22,43 @@ const FAQ: React.FC = () => {
           </div>
 
           {/* First Card - What is an OTC desk? */}
-          <Card className="mb-12 bg-ivory border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
-            <CardContent className="p-0">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                {/* Text Content Section */}
-                <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-ivory">
-                  <h2 className="text-3xl font-heading font-bold text-teal mb-6">What is an OTC desk?</h2>
-                  <div className="space-y-4 text-lg leading-relaxed">
-                    <p className="font-body text-navy font-bol">
-                      An <span className="text-navy text-2xl font-bold">OTC (Over-the-Counter) desk</span> lets you trade cryptocurrencies directly,
-                      rather than on a public exchange. In simple terms, we make it easy to:
-                    </p>
-                    <ul className="space-y-2 ml-6 font-body list-disc text-navy">
-                      <li className="font-bold">Convert Rands to cryptocurrency and back to Rands</li>
-                      <li className="font-bold">Swap one cryptocurrency for another</li>
-                    </ul>
-                    <p className="font-body text-navy font-bold">
-                      Our role is to facilitate these conversions securely and efficiently.
-                    </p>
-                    <div className="bg-red-0 border border-red-0 rounded-lg p-4 mt-6">
-                      <p className="font-body text-navy font-bold">
-                        Please note that we are not an investment company and do not provide financial advice. We simply handle the
-                        conversion of your funds.
+            <Card className="mb-12 bg-ivory border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
+              <CardContent className="p-0">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                  {/* Text Content Section */}
+                  <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-ivory">
+                    <h2 className="text-3xl font-heading font-bold text-teal mb-6">What is an OTC desk?</h2>
+                    <div className="space-y-4 text-lg leading-relaxed">
+                      <p className="font-body text-navy">
+                        An <span className="text-navy text-2xl font-bold">OTC (Over-the-Counter) desk</span> lets you trade cryptocurrencies directly,
+                        rather than on a public exchange. In simple terms, we make it easy to:
                       </p>
+            
+                      <ul className="space-y-2 ml-6 font-body list-disc text-navy">
+                        <li>
+                          <span>Convert </span>
+                          <span className="font-bold">Rands to cryptocurrency</span>
+                          <span> and </span>
+                          <span className="font-bold">cryptocurrency back to Rands</span>
+                        </li>
+                        <li>
+                          <span>Swap </span>
+                          <span className="font-bold">one cryptocurrency for another</span>
+                        </li>
+                      </ul>
+            
+                      <p className="font-body text-navy">
+                        Our role is to facilitate these conversions securely and efficiently.
+                      </p>
+            
+                      <div className="bg-red-0 border border-red-0 rounded-lg p-4 mt-6">
+                        <p className="font-body text-navy">
+                          Please note that we are <span className="font-bold">not an investment company</span> and do not provide financial advice.
+                          We simply handle the conversion of your funds.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
                 {/* Image Section */}
                 <div className="relative lg:col-span-1">
