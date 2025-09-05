@@ -95,47 +95,60 @@ const FAQ: React.FC = () => {
         <h2 className="text-3xl font-heading font-bold text-teal mb-6">
           What is a wallet KYC?
         </h2>
-        {/* ...your text content... */}
+
+        <div className="space-y-4 text-lg leading-relaxed">
+          <p className="font-body text-blanc">
+            A crypto wallet KYC is the process of verifying the identity of the person who owns a
+            cryptocurrency wallet, as well as confirming the type of wallet being used.
+          </p>
+
+          <p className="font-body text-blanc font-bold">There are two kinds of wallets:</p>
+          <ul className="space-y-2 ml-6 font-body list-disc text-blanc">
+            <li>
+              <span className="font-bold">Hosted Wallets</span> — managed by a third-party provider
+              (like an exchange or platform).
+            </li>
+            <li>
+              <span className="font-bold">Unhosted Wallets</span> — controlled directly by you, where
+              only you hold the private keys.
+            </li>
+          </ul>
+
+          <p className="font-body text-blanc">
+            KYC helps confirm that the wallet belongs to you and ensures it is being used safely and
+            legally. This protects both our clients and our business, while keeping transactions
+            secure, transparent, and compliant with regulations.
+          </p>
+        </div>
       </div>
 
       {/* Image Section — second on mobile, right on desktop */}
-      <div className="relative order-2 lg:order-2 lg:col-span-1 overflow-hidden">
+      <div
+        className="
+          relative order-2 lg:order-2 lg:col-span-1 overflow-hidden
+          h-40 sm:h-48 md:h-56           /* ~1/3 height on mobile/tablet */
+          lg:h-auto lg:min-h-[500px]     /* tall on desktop */
+        "
+      >
         <img
           src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
           alt="Professional using mobile phone and laptop with coffee"
-          className="absolute inset-0 w-full h-full object-cover object-center min-h-[300px] lg:min-h-[500px]"
+          className="
+            w-full h-full object-cover
+            object-[center_62%]   /* crop slightly lower on mobile */
+            lg:object-center      /* center on desktop */
+            lg:scale-[1.03]       /* subtle zoom to fill on desktop */
+            transition-transform duration-200
+          "
           loading="lazy"
           decoding="async"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent to-navy/0" />
+        {/* Transparent overlay so the image fills its column with no tint */}
+        <div className="pointer-events-none absolute inset-0 bg-transparent" />
       </div>
-
-                {/* Text Content Section */}
-                <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy order-1 lg:order-2">
-                  <h2 className="text-3xl font-heading font-bold text-foam mb-6">
-                    What does KYC mean and why is it important?
-                  </h2>
-                  <div className="space-y-4 text-lg leading-relaxed">
-                    <p className="font-body text-blanc">
-                      KYC stands for <span className="text-blanc font-bold">"Know Your Client"</span>.
-                    </p>
-                    <p className="font-body text-blanc">It's the process regulated businesses use to:</p>
-                    <ul className="space-y-2 ml-6 font-body list-disc">
-                      <li className="text-blanc">
-                        <span className="text-blanc font-bold">Verify identity:</span> Confirm customers are who they say they are (ID, passport, proof of address, etc.).
-                      </li>
-                      <li className="text-blanc">
-                        <span className="text-blanc font-bold">Understand financial background:</span> Assess the nature of a client's activities, source of funds, and the purpose of the relationship.
-                      </li>
-                      <li className="text-blanc">
-                        <span className="text-blanc font-bold">Monitor transactions:</span> Ensure ongoing activity aligns with expectations and the law.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+    </div>
+  </CardContent>
+</Card>
 
           {/* Third Card - Why it's important */}
           <Card className="mb-12 bg-blanc border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
