@@ -288,13 +288,13 @@ const FAQ: React.FC = () => {
                     What is the difference between a hosted/unhosted wallet?
                   </h2>
                   <div className="space-y-4 text-lg leading-relaxed">
-                    <p className="font-body text-blanc font-bold">
+                    <p className="font-body text-blanc">
                       A hosted wallet (also known as a custodial wallet) is one where a third party (such as a cryptocurrency exchange or financial service provider) controls the wallet and holds the private keys on behalf of the user.
                     </p>
-                    <p className="font-body text-blanc font-bold">
+                    <p className="font-body text-blanc">
                       Commons examples include wallets on platforms like Binance, Coinbase, or Luno.
                     </p>
-                    <p className="font-body text-blanc font-bold">
+                    <p className="font-body text-blanc">
                       In contrast, an unhosted wallet is one where the user holds their own private keys and has full control, such as wallets created use MetaMask, Ledger, or Trust Wallet.
                     </p>
                   </div>
