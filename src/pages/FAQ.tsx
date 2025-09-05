@@ -122,12 +122,12 @@ const FAQ: React.FC = () => {
         </div>
       </div>
 
-      {/* Image Section — second on mobile, right on desktop */}
+      {/* Image — right on desktop, second on mobile */}
       <div
         className="
           relative order-2 lg:order-2 lg:col-span-1 overflow-hidden
-          h-40 sm:h-48 md:h-56           /* ~1/3 height on mobile/tablet */
-          lg:h-auto lg:min-h-[500px]     /* tall on desktop */
+          h-40 sm:h-48 md:h-56
+          lg:h-auto lg:min-h-[500px]
         "
       >
         <img
@@ -135,15 +135,14 @@ const FAQ: React.FC = () => {
           alt="Professional using mobile phone and laptop with coffee"
           className="
             w-full h-full object-cover
-            object-[center_20%]   /* crop slightly lower on mobile */
-            lg:object-center      /* center on desktop */
-            lg:scale-[1.03]       /* subtle zoom to fill on desktop */
+            object-[center_62%]      /* crop a touch lower on mobile */
+            lg:object-center         /* center on desktop */
+            lg:scale-[1.03]          /* small zoom to fill */
             transition-transform duration-200
           "
           loading="lazy"
           decoding="async"
         />
-        {/* Transparent overlay so the image fills its column with no tint */}
         <div className="pointer-events-none absolute inset-0 bg-transparent" />
       </div>
     </div>
