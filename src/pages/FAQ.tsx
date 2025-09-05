@@ -84,20 +84,19 @@ const FAQ: React.FC = () => {
             <CardContent className="p-0">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
                 {/* Image Section */}
-           <div className="relative lg:col-span-1 overflow-hidden">
+<div className="relative lg:col-span-1 overflow-hidden">
   <img
     src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
     alt="Professional using mobile phone and laptop with coffee"
     className="
       w-full h-full object-cover
-      object-[62%_center]  /* ← shift focus to the right; tweak 55–75% */
+      object-[60%_center]
       min-h-[300px] lg:min-h-[500px]
     "
     loading="lazy"
     decoding="async"
   />
-  {/* Remove the left tint altogether (or keep but make it transparent) */}
-  {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent" /> */}
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent to-navy/0" />
 </div>
 
                 {/* Text Content Section */}
