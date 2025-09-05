@@ -100,7 +100,7 @@ const FAQ: React.FC = () => {
                     <p className="font-body text-blanc">
                       KYC stands for <span className="text-blanc font-bold">"Know Your Client"</span>.
                     </p>
-                    <p className="font-body text-blanc font-bold">It's the process regulated businesses use to:</p>
+                    <p className="font-body text-blanc">It's the process regulated businesses use to:</p>
                     <ul className="space-y-2 ml-6 font-body list-disc">
                       <li className="text-blanc font-bold">
                         <span className="text-blanc font-bold">Verify identity:</span> Confirm customers are who they say they are (ID, passport, proof of address, etc.).
