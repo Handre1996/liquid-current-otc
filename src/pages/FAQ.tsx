@@ -135,7 +135,7 @@ const FAQ: React.FC = () => {
           alt="Professional using mobile phone and laptop with coffee"
           className="
             w-full h-full object-cover
-            object-[center_62%]   /* crop slightly lower on mobile */
+            object-[center_20%]   /* crop slightly lower on mobile */
             lg:object-center      /* center on desktop */
             lg:scale-[1.03]       /* subtle zoom to fill on desktop */
             transition-transform duration-200
