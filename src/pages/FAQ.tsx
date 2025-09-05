@@ -102,7 +102,7 @@ const FAQ: React.FC = () => {
                     </p>
                     <p className="font-body text-blanc">It's the process regulated businesses use to:</p>
                     <ul className="space-y-2 ml-6 font-body list-disc">
-                      <li className="text-blanc font-bold">
+                      <li className="text-blanc">
                         <span className="text-blanc font-bold">Verify identity:</span> Confirm customers are who they say they are (ID, passport, proof of address, etc.).
                       </li>
                       <li className="text-blanc font-bold">
