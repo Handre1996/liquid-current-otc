@@ -70,7 +70,7 @@ const FAQ: React.FC = () => {
       className="
         absolute inset-0 w-full h-full
         object-cover
-        object-[50%_10%]           /* 👈 bias crop upward to keep head visible */
+        object-[50%_20%]           /* 👈 bias crop upward to keep head visible */
         scale-[1.10] sm:scale-[1.06] lg:scale-[1.00]  /* 👈 slight zoom on mobile/tablet */
         lg:translate-x-[20px]      /* optional: keep your desktop nudge */
         transition-transform duration-300
