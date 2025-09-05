@@ -90,7 +90,7 @@ const FAQ: React.FC = () => {
     alt="Professional using mobile phone and laptop with coffee"
     className="
       w-full h-full object-cover
-      object-[70%_center]
+      object-[30%_center]
       min-h-[300px] lg:min-h-[500px]
     "
     loading="lazy"
