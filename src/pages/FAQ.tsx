@@ -30,7 +30,7 @@ const FAQ: React.FC = () => {
                   <h2 className="text-3xl font-heading font-bold text-teal mb-6">What is an OTC desk?</h2>
                   <div className="space-y-4 text-lg leading-relaxed">
                     <p className="font-body text-navy font-bold">
-                      An <span className="text-navy font-bold">OTC (Over-the-Counter) desk</span> lets you trade cryptocurrencies directly,
+                      An <span className="text-navy text-xl font-bold">OTC (Over-the-Counter) desk</span> lets you trade cryptocurrencies directly,
                       rather than on a public exchange. In simple terms, we make it easy to:
                     </p>
                     <ul className="space-y-2 ml-6 font-body list-disc text-navy">
