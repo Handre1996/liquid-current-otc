@@ -90,7 +90,7 @@ const FAQ: React.FC = () => {
 <Card className="mb-12 bg-navy border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
   <CardContent className="p-0">
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-      {/* Text Section — first on mobile, left on desktop */}
+      {/* Text — left on desktop, first on mobile */}
       <div className="order-1 lg:order-1 lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
         <h2 className="text-3xl font-heading font-bold text-teal mb-6">
           What is a wallet KYC?
@@ -109,8 +109,8 @@ const FAQ: React.FC = () => {
               (like an exchange or platform).
             </li>
             <li>
-              <span className="font-bold">Unhosted Wallets</span> — controlled directly by you, where
-              only you hold the private keys.
+              <span className="font-bold">Unhosted Wallets</span> — controlled directly by you,
+              where only you hold the private keys.
             </li>
           </ul>
 
@@ -148,6 +148,7 @@ const FAQ: React.FC = () => {
     </div>
   </CardContent>
 </Card>
+
 
           {/* Third Card - Why it's important */}
           <Card className="mb-12 bg-blanc border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
