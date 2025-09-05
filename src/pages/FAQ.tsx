@@ -61,12 +61,12 @@ const FAQ: React.FC = () => {
                   </div>
 
                 {/* Image Section */}
-              <div className="relative lg:col-span-1 overflow-hidden">
+              <div className="relative lg:col-span-1 overflow-hidden min-h-[320px] sm:min-h-[360px] lg:min-h-[500px]">
                 <img
                   src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
                   alt="Professional trading environment"
                   className="
-                    absolute inset-0 h-full w-full object-cover
+                    absolute inset-0 w-full h-full object-cover
                     lg:translate-x-[20px] lg:scale-[1.0]
                     transition-transform duration-200
                   "
