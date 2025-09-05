@@ -90,8 +90,8 @@ const FAQ: React.FC = () => {
 <Card className="mb-12 bg-navy border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
   <CardContent className="p-0">
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-      {/* TEXT — left on desktop, first on mobile */}
-      <div className="order-1 lg:order-1 lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
+      {/* TEXT — first on mobile, RIGHT on desktop */}
+      <div className="order-1 lg:order-2 lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
         <h2 className="text-3xl font-heading font-bold text-teal mb-6">
           What is a wallet KYC?
         </h2>
@@ -102,31 +102,34 @@ const FAQ: React.FC = () => {
             cryptocurrency wallet, as well as confirming the type of wallet being used.
           </p>
 
-          <p className="font-body text-blanc font-bold">There are two kinds of wallets:</p>
-          <ul className="space-y-2 ml-6 font-body list-disc text-blanc">
-            <li>
-              <span className="font-bold">Hosted Wallets</span> — managed by a third-party provider
-              (like an exchange or platform).
+          <p className="font-body text-blanc">
+            There are two kinds of wallets:
+          </p>
+
+          <ul className="space-y-2 ml-6 font-body list-disc">
+            <li className="text-blanc">
+              <span className="font-bold text-blanc">Hosted Wallets</span> — managed by a third-party
+              provider (like an exchange or platform).
             </li>
-            <li>
-              <span className="font-bold">Unhosted Wallets</span> — controlled directly by you,
-              where only you hold the private keys.
+            <li className="text-blanc">
+              <span className="font-bold text-blanc">Unhosted Wallets</span> — controlled directly by
+              you, where only you hold the private keys.
             </li>
           </ul>
 
           <p className="font-body text-blanc">
-            KYC helps confirm that the wallet belongs to you and ensures it is being used safely and
-            legally. This protects both our clients and our business, while keeping transactions
+            KYC helps us confirm that the wallet belongs to you and ensures it is being used safely and
+            legally. This process protects both our clients and our business, while keeping transactions
             secure, transparent, and compliant with regulations.
           </p>
         </div>
       </div>
 
-      {/* IMAGE — right on desktop, second on mobile */}
+      {/* IMAGE — second on mobile, LEFT on desktop */}
       <div
         className="
-          relative order-2 lg:order-2 lg:col-span-1 overflow-hidden
-          h-44 sm:h-56 md:h-64
+          relative order-2 lg:order-1 lg:col-span-1 overflow-hidden
+          h-40 sm:h-48 md:h-56
           lg:h-auto lg:min-h-[500px]
         "
       >
@@ -134,25 +137,21 @@ const FAQ: React.FC = () => {
           src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
           alt="Professional using mobile phone and laptop with coffee"
           className="
-            w-full h-full object-cover
-            object-[center_22%]      /* 🔹 Mobile: move image DOWN by 22% */
-            lg:object-[60%_center]   /* 🔹 Desktop: bias crop to the RIGHT */
-            lg:scale-[1.03]          /* slight zoom on desktop to fill */
+            absolute inset-0 w-full h-full object-cover
+            object-[center_22%]      /* mobile: nudge image down 22% */
+            lg:object-center          /* desktop: centered crop */
+            lg:scale-[1.04]           /* slight zoom on desktop to fill */
             transition-transform duration-200
           "
           loading="lazy"
           decoding="async"
         />
+        {/* No overlay to avoid any color block; keep this transparent */}
         <div className="pointer-events-none absolute inset-0 bg-transparent" />
       </div>
     </div>
   </CardContent>
 </Card>
-
-
-
-
-
 
 
           {/* Third Card - Why it's important */}
