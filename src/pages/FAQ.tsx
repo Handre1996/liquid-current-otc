@@ -210,7 +210,7 @@ const FAQ: React.FC = () => {
       absolute inset-0 w-full h-full object-cover
       object-[center_26%]        /* nudge crop down a bit; tweak 20–40% if needed */
       scale-[1.05]               /* zoom IN on mobile */
-      md:scale-100               /* normal scale from md+ */
+      md:scale-80               /* normal scale from md+ */
       transition-transform duration-200
     "
     loading="lazy"
