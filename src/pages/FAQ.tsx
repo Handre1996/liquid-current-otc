@@ -84,21 +84,21 @@ const FAQ: React.FC = () => {
             <CardContent className="p-0">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
                 {/* Image Section */}
-              <div className="relative lg:col-span-1 order-2 lg:order-1 overflow-hidden">
-                <img
-                  src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
-                  alt="Professional using mobile phone and laptop with coffee"
-                  className="
-                    absolute inset-0 w-full h-full object-cover
-                    lg:translate-x-[151px] lg:scale-[1.12]
-                    transition-transform duration-200
-                    min-h-[200px] lg:min-h-[300px]
-                  "
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className=
-              </div>
+           <div className="relative lg:col-span-1 overflow-hidden">
+  <img
+    src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
+    alt="Professional using mobile phone and laptop with coffee"
+    className="
+      w-full h-full object-cover
+      object-[62%_center]  /* ← shift focus to the right; tweak 55–75% */
+      min-h-[300px] lg:min-h-[500px]
+    "
+    loading="lazy"
+    decoding="async"
+  />
+  {/* Remove the left tint altogether (or keep but make it transparent) */}
+  {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent" /> */}
+</div>
 
                 {/* Text Content Section */}
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy order-1 lg:order-2">
