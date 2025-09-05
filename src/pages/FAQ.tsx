@@ -67,7 +67,7 @@ const FAQ: React.FC = () => {
                   alt="Professional trading environment"
                   className="
                     absolute inset-0 h-full w-full object-cover
-                    lg:translate-x-[20px] lg:scale-[1.1]
+                    lg:translate-x-[20px] lg:scale-[1.0]
                     transition-transform duration-200
                   "
                   loading="lazy"
