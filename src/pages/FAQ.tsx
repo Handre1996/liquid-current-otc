@@ -196,16 +196,28 @@ const FAQ: React.FC = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="relative lg:col-span-1">
-                  <img
-                    src="/young-confident-broker-suit-explaining-female-colleague-online-data.jpg"
-                    alt="Professional consultation at a desk"
-                    className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-l from-blanc/10 to-transparent" />
-                </div>
+<div
+  className="
+    relative lg:col-span-1 overflow-hidden
+    h-40 sm:h-48 md:h-56        /* shorter on mobile */
+    lg:h-auto lg:min-h-[500px]  /* original size on desktop */
+  "
+>
+  <img
+    src="/young-confident-broker-suit-explaining-female-colleague-online-data.jpg"
+    alt="Professional consultation at a desk"
+    className="
+      absolute inset-0 w-full h-full object-cover
+      object-[center_30%]        /* nudge crop down a bit; tweak 20–40% if needed */
+      scale-[1.18]               /* zoom IN on mobile */
+      md:scale-100               /* normal scale from md+ */
+      transition-transform duration-200
+    "
+    loading="lazy"
+    decoding="async"
+  />
+  <div className="absolute inset-0 bg-gradient-to-l from-blanc/10 to-transparent" />
+</div>
               </div>
             </CardContent>
           </Card>
