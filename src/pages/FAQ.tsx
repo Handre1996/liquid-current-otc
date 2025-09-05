@@ -140,7 +140,7 @@ const FAQ: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-heading font-bold text-navy mb-2">3. Trust & Transparency</h3>
-                      <p className="font-body text-navy font-bold">
+                      <p className="font-body text-navy">
                         By verifying identities, providers build credibility and trust with clients, partners, and regulators.
                       </p>
                     </div>
