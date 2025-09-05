@@ -97,7 +97,7 @@ const FAQ: React.FC = () => {
                     What does KYC mean and why is it important?
                   </h2>
                   <div className="space-y-4 text-lg leading-relaxed">
-                    <p className="font-body text-blanc font-bold">
+                    <p className="font-body text-blanc">
                       KYC stands for <span className="text-blanc font-bold">"Know Your Client"</span>.
                     </p>
                     <p className="font-body text-blanc font-bold">It's the process regulated businesses use to:</p>
