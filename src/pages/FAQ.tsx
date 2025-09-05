@@ -151,7 +151,7 @@ const FAQ: React.FC = () => {
                       </p>
                     </div>
                     <div className="bg-gradient-to-r from-teal/20 to-navy/20 border border-teal/30 rounded-lg p-4 mt-6">
-                      <p className="font-body text-navy font-bold">
+                      <p className="font-body text-navy">
                         In short: <span className="text-navy font-bold">KYC is a cornerstone of responsible financial services</span> — it keeps the business compliant, safe, and trustworthy.
                       </p>
                     </div>
