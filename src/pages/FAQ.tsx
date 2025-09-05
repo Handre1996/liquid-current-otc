@@ -126,7 +126,7 @@ const FAQ: React.FC = () => {
       <div
         className="
           relative order-2 lg:order-2 lg:col-span-1 overflow-hidden
-          h-40 sm:h-48 md:h-56
+          h-44 sm:h-56 md:h-64
           lg:h-auto lg:min-h-[500px]
         "
       >
@@ -148,6 +148,7 @@ const FAQ: React.FC = () => {
     </div>
   </CardContent>
 </Card>
+
 
 
 
