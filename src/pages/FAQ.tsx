@@ -92,7 +92,7 @@ const FAQ: React.FC = () => {
                     absolute inset-0 w-full h-full object-cover
                     lg:translate-x-[151px] lg:scale-[1.12]
                     transition-transform duration-200
-                    min-h-[200px] lg:min-h-[500px]
+                    min-h-[200px] lg:min-h-[300px]
                   "
                   loading="lazy"
                   decoding="async"
