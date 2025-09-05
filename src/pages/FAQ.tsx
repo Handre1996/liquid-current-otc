@@ -90,33 +90,8 @@ const FAQ: React.FC = () => {
 <Card className="mb-12 bg-navy border-foam/50 dark:border-teal/30 shadow-lg overflow-hidden">
   <CardContent className="p-0">
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-      {/* Image — LEFT on desktop (order-1), second on mobile */}
-      <div
-        className="
-          relative order-2 lg:order-1 lg:col-span-1 overflow-hidden
-          h-40 sm:h-48 md:h-56
-          lg:h-auto lg:min-h-[500px]
-        "
-      >
-        <img
-          src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
-          alt="Professional using mobile phone and laptop with coffee"
-          className="
-            w-full h-full object-cover
-            object-[center_22%]   /* slight lower crop on mobile */
-            lg:object-center
-            lg:scale-[1.03]       /* tiny zoom to fill */
-            transition-transform duration-200
-          "
-          loading="lazy"
-          decoding="async"
-        />
-        {/* No overlay tint to avoid colored block */}
-        <div className="pointer-events-none absolute inset-0 bg-transparent" />
-      </div>
-
-      {/* Text — RIGHT on desktop (order-2), first on mobile */}
-      <div className="order-1 lg:order-2 lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
+      {/* TEXT — left on desktop, first on mobile */}
+      <div className="order-1 lg:order-1 lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-navy">
         <h2 className="text-3xl font-heading font-bold text-teal mb-6">
           What is a wallet KYC?
         </h2>
@@ -146,9 +121,34 @@ const FAQ: React.FC = () => {
           </p>
         </div>
       </div>
+
+      {/* IMAGE — right on desktop, second on mobile */}
+      <div
+        className="
+          relative order-2 lg:order-2 lg:col-span-1 overflow-hidden
+          h-40 sm:h-48 md:h-56
+          lg:h-auto lg:min-h-[500px]
+        "
+      >
+        <img
+          src="/corporate-coffee-black-man-with-phone-internet-research-work-break-online-news-app-office-african-guy-latte-mobile-notification-stock-exchange-with-business-investment.jpg"
+          alt="Professional using mobile phone and laptop with coffee"
+          className="
+            w-full h-full object-cover
+            object-center
+            lg:object-[60%_center]   /* bias crop a bit to the right on desktop */
+            lg:scale-[1.03]          /* tiny zoom to fill */
+            transition-transform duration-200
+          "
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-transparent" />
+      </div>
     </div>
   </CardContent>
 </Card>
+
 
 
 
