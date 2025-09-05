@@ -61,16 +61,20 @@ const FAQ: React.FC = () => {
                   </div>
 
                 {/* Image Section */}
-                <div className="relative lg:col-span-1">
-                  <img
-                    src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
-                    alt="Professional trading environment"
-                    className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent" />
-                </div>
+              <div className="relative lg:col-span-1 overflow-hidden">
+                <img
+                  src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
+                  alt="Professional trading environment"
+                  className="
+                    absolute inset-0 h-full w-full object-cover
+                    lg:translate-x-[151px] lg:scale-[1.12]
+                    transition-transform duration-200
+                  "
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent" />
+              </div>
               </div>
             </CardContent>
           </Card>
