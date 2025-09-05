@@ -61,22 +61,26 @@ const FAQ: React.FC = () => {
                   </div>
 
                 {/* Image Section */}
-              <div className="relative lg:col-span-1 overflow-hidden min-h-[320px] sm:min-h-[360px] lg:min-h-[500px]">
-                <img
-                  src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
-                  alt="Professional trading environment"
-                  className="
-                    absolute inset-0 w-full h-full object-cover
-                    object-top sm:object-[50%_10%] lg:object-center
-                    lg:translate-x-[20px] lg:scale-[1.0]
-                    transition-transform duration-200
-                  "
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent" />
-              </div>
-              </div>
+<div className="relative lg:col-span-1 overflow-hidden bg-navy/5">
+  {/* Mobile/tablet: fixed aspect so the image can fully fit */}
+  <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:min-h-[500px]">
+    <img
+      src="/businesswoman-sitting-couch-office-typing-looking-pc-screen.jpg"
+      alt="Professional trading environment"
+      className="
+        absolute inset-0 w-full h-full
+        object-contain              /* 🔹 mobile: show full image */
+        lg:object-cover            /* 🔹 desktop: fill & crop nicely */
+        lg:translate-x-[20px] lg:scale-[1.0]
+        transition-transform duration-200
+      "
+      loading="lazy"
+      decoding="async"
+    />
+    {/* Optional overlay */}
+    <div className="absolute inset-0 bg-gradient-to-l from-navy/10 to-transparent lg:block" />
+  </div>
+</div>
             </CardContent>
           </Card>
 
