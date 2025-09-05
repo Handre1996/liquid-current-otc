@@ -126,12 +126,14 @@ const FAQ: React.FC = () => {
                 <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-blanc">
                   <h2 className="text-3xl font-heading font-bold text-teal mb-6">Why it's important:</h2>
                   <div className="space-y-6 text-lg leading-relaxed">
-                    <div>
-                      <h3 className="text-xl font-heading font-bold text-navy mb-2">1. Legal Compliance</h3>
-                      <p className="font-body text-navy font-bold">
-                        Regulators require KYC to combat money laundering (AML), terrorist financing (CFT), and fraud. Without it, a financial services provider could face fines, penalties, or license revocation.
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="text-xl font-heading font-bold text-navy mb-2">1. Legal Compliance</h3>
+                    <p className="font-body text-navy">
+                      Regulators require KYC to{' '}
+                      <span className="font-bold">combat money laundering (AML), terrorist financing (CFT),</span>{' '}
+                      and <span className="font-bold">fraud</span>. Without it, a financial services provider could face fines, penalties, or license revocation.
+                    </p>
+                  </div>
                     <div>
                       <h3 className="text-xl font-heading font-bold text-navy mb-2">2. Risk Management</h3>
                       <p className="font-body text-navy">
