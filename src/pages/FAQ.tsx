@@ -299,16 +299,27 @@ const FAQ: React.FC = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="relative lg:col-span-1">
-                  <img
-                    src="/expert-secures-high-tech-workplace.jpg"
-                    alt="Expert securing high-tech workplace"
-                    className="w-full h-full object-cover min-h-[300px] lg:min-h-[500px]"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-l from-foam/10 to-transparent" />
-                </div>
+<div
+  className="
+    relative lg:col-span-1 overflow-hidden
+    h-28 sm:h-32 md:h-40        /* <<< make mobile shorter here */
+    lg:h-auto lg:min-h-[500px]  /* desktop: original tall block */
+  "
+>
+  <img
+    src="/expert-secures-high-tech-workplace.jpg"
+    alt="Expert securing high-tech workplace"
+    className="
+      absolute inset-0 w-full h-full object-cover
+      object-[center_30%]        /* adjust vertical framing; try 20–40% */
+      scale-100                   /* no extra zoom; keeps more of the image visible */
+      transition-transform duration-200
+    "
+    loading="lazy"
+    decoding="async"
+  />
+  <div className="absolute inset-0 bg-gradient-to-l from-foam/10 to-transparent" />
+</div>
               </div>
             </CardContent>
           </Card>
