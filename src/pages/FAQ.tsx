@@ -225,19 +225,28 @@ const FAQ: React.FC = () => {
                   <h2 className="text-3xl font-heading font-bold text-teal mb-6">
                     What is a wallet KYC?
                   </h2>
+          
                   <div className="space-y-4 text-lg leading-relaxed">
-                    <p className="font-body text-navy font-bold">
+                    <p className="font-body text-navy">
                       A crypto wallet KYC is the process of verifying the identity of the person who owns a cryptocurrency wallet, as well as confirming the type of wallet being used.
                     </p>
-                    <p className="font-body text-navy font-bold">
+          
+                    <p className="font-body text-navy">
                       There are two kinds of wallets:
                     </p>
+          
                     <ul className="space-y-2 ml-6 font-body list-disc text-navy">
-                      <li className="font-bold">Hosted Wallets - managed by a third-party provider (like an exchange or platform).</li>
-                      <li className="font-bold">Unhosted Wallets - controlled directly by you, where only you hold the private keys.</li>
+                      <li>
+                        <span className="font-bold">Hosted Wallets</span> — managed by a third-party provider (like an exchange or platform).
+                      </li>
+                      <li>
+                        <span className="font-bold">Unhosted Wallets</span> — controlled directly by you, where only you hold the private keys.
+                      </li>
                     </ul>
-                    <p className="font-body text-navy font-bold">
-                      KYC helps us confirm that the wallet belongs to you and ensures it is being used safely and legally. This process protects both our clients and our business, while keeping transactions secure, transparent and compliant with regulations.
+          
+                    <p className="font-body text-navy">
+                      KYC helps us confirm that the wallet belongs to you and ensures it is being used safely and legally. This process protects both our clients and our business, while keeping transactions{' '}
+                      <span className="font-bold">secure, transparent, and compliant with regulations</span>.
                     </p>
                   </div>
                 </div>
