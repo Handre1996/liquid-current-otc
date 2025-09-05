@@ -192,20 +192,26 @@ const FAQ: React.FC = () => {
                 </div>
 
                 {/* Text Content Section */}
-                <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-teal order-1 lg:order-2">
-                  <h2 className="text-3xl font-heading font-bold text-foam mb-6">
-                    Why do you need my KYC and are my documents safe?
-                  </h2>
-                  <div className="space-y-4 text-lg leading-relaxed">
-                    <p className="font-body text-blanc font-bold">
-                      We are required by law to complete KYC (Know Your Customer) checks. 
-                      This helps us verify your identity, comply with anti-money laundering regulations, and keep our services safe, transparent, and secure for all clients.
-                    </p>
-                    <p className="font-body text-blanc font-bold">
-                      Your documents are kept strictly confidential and stored on a separate, secure company database. We never, share your information with third parties, unless required by law. Protecting your privacy and safeguarding your information is a top priority for us.
-                    </p>
-                  </div>
+              <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center bg-teal order-1 lg:order-2">
+                <h2 className="text-3xl font-heading font-bold text-foam mb-6">
+                  Why do you need my KYC and are my documents safe?
+                </h2>
+              
+                <div className="space-y-4 text-lg leading-relaxed">
+                  <p className="font-body text-blanc">
+                    We are required by law to complete
+                    {' '}<span className="font-bold">KYC (Know Your Customer)</span>{' '}
+                    checks. This helps us verify your identity, comply with anti-money laundering regulations, and keep our services safe, transparent, and secure for all clients.
+                  </p>
+              
+                  <p className="font-body text-blanc">
+                    Your documents are kept <span className="font-bold">strictly confidential</span> and stored on a{' '}
+                    <span className="font-bold">separate, secure company database</span>.{' '}
+                    <span className="font-bold">We never share your information with third parties</span>, unless required by law.
+                    Protecting your privacy and safeguarding your information is a top priority for us.
+                  </p>
                 </div>
+              </div>
               </div>
             </CardContent>
           </Card>
