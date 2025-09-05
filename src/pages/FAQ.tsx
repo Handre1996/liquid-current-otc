@@ -135,9 +135,9 @@ const FAQ: React.FC = () => {
           alt="Professional using mobile phone and laptop with coffee"
           className="
             w-full h-full object-cover
-            object-center
-            lg:object-[60%_center]   /* bias crop a bit to the right on desktop */
-            lg:scale-[1.03]          /* tiny zoom to fill */
+            object-[center_22%]      /* 🔹 Mobile: move image DOWN by 22% */
+            lg:object-[60%_center]   /* 🔹 Desktop: bias crop to the RIGHT */
+            lg:scale-[1.03]          /* slight zoom on desktop to fill */
             transition-transform duration-200
           "
           loading="lazy"
