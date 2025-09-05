@@ -311,7 +311,7 @@ const FAQ: React.FC = () => {
     alt="Expert securing high-tech workplace"
     className="
       absolute inset-0 w-full h-full object-cover
-      object-[center_80%]        /* adjust vertical framing; try 20–40% */
+      object-[center_60%]        /* adjust vertical framing; try 20–40% */
       scale-100                   /* no extra zoom; keeps more of the image visible */
       transition-transform duration-200
     "
