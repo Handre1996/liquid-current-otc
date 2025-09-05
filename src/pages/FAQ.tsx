@@ -208,7 +208,7 @@ const FAQ: React.FC = () => {
     alt="Professional consultation at a desk"
     className="
       absolute inset-0 w-full h-full object-cover
-      object-[center_10%]        /* nudge crop down a bit; tweak 20–40% if needed */
+      object-[center_30%]        /* nudge crop down a bit; tweak 20–40% if needed */
       scale-[1.05]               /* zoom IN on mobile */
       md:scale-100               /* normal scale from md+ */
       transition-transform duration-200
