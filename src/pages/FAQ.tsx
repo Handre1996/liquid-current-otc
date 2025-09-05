@@ -134,7 +134,7 @@ const FAQ: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-heading font-bold text-navy mb-2">2. Risk Management</h3>
-                      <p className="font-body text-navy font-bold">
+                      <p className="font-body text-navy">
                         It protects the business from being used (knowingly or unknowingly) for illegal activities. KYC helps identify high-risk clients before onboarding.
                       </p>
                     </div>
