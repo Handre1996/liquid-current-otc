@@ -302,7 +302,7 @@ const FAQ: React.FC = () => {
 <div
   className="
     relative lg:col-span-1 overflow-hidden
-    h-40 sm:h-48 md:h-56        /* <<< make mobile shorter here */
+    h-44 sm:h-56 md:h-64        /* <<< make mobile shorter here */
     lg:h-auto lg:min-h-[500px]  /* desktop: original tall block */
   "
 >
