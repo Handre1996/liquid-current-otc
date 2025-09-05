@@ -207,7 +207,7 @@ const FAQ: React.FC = () => {
                   <p className="font-body text-blanc">
                     Your documents are kept <span className="font-bold">strictly confidential</span> and stored on a{' '}
                     <span className="font-bold">separate, secure company database</span>.{' '}
-                    <span className="font-bold">We never share your information with third parties</span>, unless required by law.
+                    <span className="font-bol">We never share your information with third parties</span>, unless required by law.
                     Protecting your privacy and safeguarding your information is a top priority for us.
                   </p>
                 </div>
