@@ -105,7 +105,7 @@ const FAQ: React.FC = () => {
                       <li className="text-blanc">
                         <span className="text-blanc font-bold">Verify identity:</span> Confirm customers are who they say they are (ID, passport, proof of address, etc.).
                       </li>
-                      <li className="text-blanc font-bold">
+                      <li className="text-blanc">
                         <span className="text-blanc font-bold">Understand financial background:</span> Assess the nature of a client's activities, source of funds, and the purpose of the relationship.
                       </li>
                       <li className="text-blanc font-bold">
