@@ -3,53 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liquid Current OTC Desk - KYC Portal</title>
-    <meta
-      name="description"
-      content="Liquid Current OTC Desk - Complete your KYC process to trade crypto for fiat or fiat for crypto."
-    />
-    <meta name="author" content="Liquid Current" />
 
-    <meta
-      property="og:title"
-      content="Liquid Current OTC Desk - KYC Portal"
-    />
-    <meta
-      property="og:description"
-      content="Complete your KYC process to trade crypto for fiat or fiat for crypto."
-    />
+    <!-- Force HTTPS for any leftover http:// assets -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+    <title>Liquid Current OTC Desk - KYC Portal</title>
+    <meta name="description" content="Liquid Current OTC Desk - Complete your KYC process to trade crypto for fiat or fiat for crypto." />
+    <meta name="author" content="Liquid Current" />
+    <link rel="canonical" href="https://www.liquidcurrent.co.za/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Liquid Current OTC Desk - KYC Portal" />
+    <meta property="og:description" content="Complete your KYC process to trade crypto for fiat or fiat for crypto." />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="/LiquidCurrent_Logo_CMYK_PrimaryLogoBlack.png"
-    />
+    <meta property="og:url" content="https://www.liquidcurrent.co.za/" />
+    <meta property="og:image" content="https://www.liquidcurrent.co.za/LiquidCurrent_Logo_CMYK_PrimaryLogoBlack.png" />
+    <meta property="og:image:secure_url" content="https://www.liquidcurrent.co.za/LiquidCurrent_Logo_CMYK_PrimaryLogoBlack.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Liquid Current OTC Desk - KYC Portal"
-    />
-    <meta
-      name="twitter:description"
-      content="Complete your KYC process to trade crypto for fiat or fiat for crypto."
-    />
-    <meta
-      name="twitter:image"
-      content="/LiquidCurrent_Logo_CMYK_PrimaryLogoBlack.png"
-    />
+    <meta name="twitter:title" content="Liquid Current OTC Desk - KYC Portal" />
+    <meta name="twitter:description" content="Complete your KYC process to trade crypto for fiat or fiat for crypto." />
+    <meta name="twitter:image" content="https://www.liquidcurrent.co.za/LiquidCurrent_Logo_CMYK_PrimaryLogoBlack.png" />
 
-    <!-- Custom Font Loading -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Load Bodoni alternative (Playfair Display) and Helvetica alternative -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- ✅ Cookiebot banner script (must be first in <head>) -->
+    <!-- ✅ Cookiebot (can stay early in head) -->
     <script
       id="Cookiebot"
       src="https://consent.cookiebot.com/uc.js"
@@ -62,17 +46,18 @@
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
     <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="/LiquidCurrent_Logo_CMYK_PrimaryLogoBlack.png"
-    />
+    <link rel="icon" type="image/png" href="https://www.liquidcurrent.co.za/LiquidCurrent_Logo_CMYK_PrimaryLogoBlack.png" />
   </head>
 
   <body>
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+
+    <!-- IMPORTANT: DO NOT REMOVE -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+
+    <noscript>
+      JavaScript is required to use the Liquid Current KYC Portal. Please enable JavaScript in your browser settings.
+    </noscript>
   </body>
 </html>
