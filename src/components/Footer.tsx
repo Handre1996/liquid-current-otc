@@ -95,7 +95,7 @@ export default function Footer() {
         rel="noopener noreferrer"
         className={`${linkColor} ${linkHoverColor}`}
       >
-        FSCA Licence
+        FSCA License
       </a>
     </li>
     <li>
